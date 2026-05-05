@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Course on Power BI | Interactive Cares</title>
+    <title>Register | Data Science & ML Internship Program</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -15,9 +15,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        .bn-font {
-            font-family: 'Hind Siliguri', sans-serif;
-        }
+        .bn-font { font-family: 'Hind Siliguri', sans-serif; }
 
         /* Surface Colors */
         .surface-dark { background-color: #102127; }
@@ -46,777 +44,251 @@
             color: #ffffff;
         }
 
-        /* Accordion transition */
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
         /* Scrollbars */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #08171a; }
-        ::-webkit-scrollbar-thumb { background: #21363e; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #324b55; }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased selection:bg-brand-green selection:text-white pb-20">
 
-    <!-- 1. Navbar -->
-    <nav class="sticky top-0 w-full surface-dark border-b border-subtle z-50 py-3 px-4 md:px-12 flex justify-between items-center">
-        <div class="flex items-center gap-8 w-full md:w-auto">
-            <!-- Logo Mockup -->
-            <a href="#" class="flex items-center gap-2 text-xl font-bold text-white tracking-tight">
-                <div class="w-6 h-6 rounded bg-brand-green flex items-center justify-center">
-                    <div class="w-3 h-3 bg-white rounded-sm transform rotate-45"></div>
-                </div>
-                Skill Jobs
-            </a>
-        </div>
-
-        <!-- Right Links & Buttons -->
-        <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-300">
-            <a href="#curriculum" class="hover:text-white transition-colors">Course Curriculum</a>
-            <a href="#reviews" class="hover:text-white transition-colors">Feedback</a>
-            <a href="#enroll" class="hover:text-white transition-colors">Enroll</a>
-            <a href="#instructor" class="hover:text-white transition-colors">Instructor</a>
-        </div>
+    <!-- 1. Page Main Headline -->
+    <header class="w-full pt-16 pb-10 px-4 text-center relative z-10">
+        <!-- Ambient Glow -->
+        <div class="absolute top-0 left-[50%] -translate-x-1/2 w-[600px] h-[300px] bg-[#00a859]/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
         
-        <!-- Mobile Menu Icon -->
-        <button class="lg:hidden text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
-    </nav>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight max-w-5xl mx-auto tracking-tight">
+            Data Science and Machine learning:<br>
+            <span class="text-brand-green mt-2 block">Virtual to Internship Program</span>
+        </h1>
+    </header>
 
-    <!-- 2. Hero Section -->
-    <section class="relative pt-12 pb-16 px-4 md:px-12 surface-dark overflow-hidden">
-        <!-- Subtle Top Gradient -->
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#062226] to-transparent opacity-50 pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16 relative z-10 pt-8">
+    <!-- 2. The Enrollment Form Block -->
+    <section class="max-w-xl mx-auto px-4 relative z-20 mb-16">
+        <div class="surface-dark border border-subtle rounded-2xl overflow-hidden shadow-2xl">
             
-            <!-- Left: Course Thumbnail & Button -->
-            <div class="w-full lg:w-[40%] flex flex-col gap-6">
-                <!-- Added aspect-video to force a horizontal rectangle format -->
-                <div class="w-full aspect-video relative rounded-lg overflow-hidden shadow-2xl border border-subtle bg-gray-800">
-                    <!-- Dummy Image (Replace with your actual course thumbnail) -->
-                    <img src="13445.png" alt="Data Science Course Thumbnail" class="w-full h-full object-cover object-top">
-            
-                </div>
-                <!-- Enroll Button Placed Under Image -->
-                <div class="w-full flex justify-center lg:justify-start lg:pl-10">
-                    <a href="#enroll" class="bg-[#00a859] hover:bg-[#008f4c] text-white px-12 py-3 rounded text-sm font-semibold transition-colors shadow-lg text-center w-56">
-                        Enroll Now
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right: Course Meta Data -->
-            <div class="w-full lg:w-[60%] flex flex-col items-start pt-2">
-                <h1 class="text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-4">Data Science & Machine Learning</h1>
+            <!-- Top Section of Form Container -->
+            <div class="text-center pt-8 pb-6 px-6 relative overflow-hidden">
+                <h2 class="text-3xl font-bold text-white mb-4">Register for free</h2>
                 
-                <div class="flex flex-wrap items-center gap-4 mb-6">
-                    <span class="bg-[#9c27b0] text-white px-3 py-1 rounded text-xs font-bold">Online</span>
-                    <div class="flex items-center text-yellow-400">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    </div>
-                    <span class="text-white text-sm font-semibold ml-2">4.7 <span class="text-gray-400 font-normal">(19)</span></span>
+                <!-- Subheadline Badge -->
+                <div class="inline-flex items-center gap-2 bg-brand-green/10 border border-brand-green/30 px-4 py-1.5 rounded-full mb-6">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-green"></span>
+                    </span>
+                    <span class="text-brand-green font-semibold text-sm">180+ students already registered</span>
                 </div>
 
-                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white mb-8 font-medium">
-                    <!-- Students Joined -->
-                    <div class="flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        <span>721 students joined</span>
+                <!-- Countdown 4 Small Cards -->
+                <div class="flex justify-center gap-3 md:gap-4 mb-2">
+                    <div class="bg-[#0b131a] border border-[#21363e] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                        <span id="days" class="text-xl font-bold text-white leading-none mb-1">02</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest font-semibold">Days</span>
                     </div>
-                    <span class="text-gray-500 font-light hidden sm:inline-block">|</span>
-                    <!-- Total Lessons -->
-                    <div class="flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                        <span>35 classes</span>
+                    <div class="bg-[#0b131a] border border-[#21363e] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                        <span id="hours" class="text-xl font-bold text-white leading-none mb-1">14</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest font-semibold">Hours</span>
                     </div>
-                    <span class="text-gray-500 font-light hidden sm:inline-block">|</span>
-                    <!-- Hours of Lessons -->
-                    <div class="flex items-center gap-1.5">
-                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>80+ hours of lessons</span>
+                    <div class="bg-[#0b131a] border border-[#21363e] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                        <span id="mins" class="text-xl font-bold text-white leading-none mb-1">45</span>
+                        <span class="text-[9px] text-gray-500 uppercase tracking-widest font-semibold">Mins</span>
                     </div>
-                </div>
-
-                <div class="flex items-end gap-3 mt-2">
-                    <span class="text-white text-base font-medium mb-0.5">Registration Fee</span>
-                    <span class="text-white text-2xl font-bold">৳6000</span>
-                    <span class="text-gray-400 text-sm line-through mb-0.5">৳10000</span>
+                    <div class="bg-[#0b131a] border border-[#21363e] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                        <span id="secs" class="text-xl font-bold text-brand-green leading-none mb-1">30</span>
+                        <span class="text-[9px] text-brand-green/70 uppercase tracking-widest font-semibold">Secs</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Sub-Hero Alert Banner (Divider Style) -->
-    <div class="relative py-8 flex items-center justify-center surface-dark">
-        <div class="absolute inset-0 flex items-center px-4 md:px-12" aria-hidden="true">
-            <div class="w-full border-t border-[#21363e]"></div>
-        </div>
-        <div class="relative flex justify-center">
-            <div class="bg-[#121c22] border border-[#21363e] rounded-full px-6 py-2 text-center text-xs text-gray-300 flex items-center justify-center gap-2 shadow-lg">
-                <svg class="w-4 h-4 text-[#00a859]" style="animation: spin 0.5s linear infinite;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>Course starts on 12th Aug'24 • Enrollment ends in <strong class="text-white font-semibold">1 day, 11 hours</strong></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 3. Main 2-Column Content Layout -->
-    <div class="max-w-7xl mx-auto px-4 md:px-12 flex flex-col lg:flex-row gap-8 py-10">
-        
-        <!-- ========================================== -->
-        <!-- LEFT COLUMN (Main Content - 70%)           -->
-        <!-- ========================================== -->
-        <div class="w-full lg:w-[68%] space-y-8">
-            
-            <!-- A. Instructors -->
-            <section class="surface-card rounded-xl p-6 border border-subtle">
-                <h2 class="text-xl font-bold text-white mb-5">Instructors</h2>
+            <!-- Mentor Image Banner Holder -->
+            <div class="w-full h-48 sm:h-56 bg-[#0f1c22] border-y border-subtle relative overflow-hidden">
+                <!-- Replaced with the requested image -->
+                <img src="13445.png" alt="Instructor Banner" class="w-full h-full object-cover object-top opacity-90">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#102127] to-transparent opacity-60"></div>
                 
-                <div class="flex items-center gap-4">
-                    <div class="w-14 h-14 rounded-full overflow-hidden border border-[#2c444e] bg-gray-800">
-                        <img src="13445.png" alt="Shahriar Jahan Rafi" class="w-full h-full object-cover object-top">
+                <!-- Floating Name Badge (Optional aesthetic) -->
+                <div class="absolute bottom-4 left-6 bg-[#0b131a]/80 backdrop-blur-md border border-[#21363e] px-4 py-2 rounded-lg">
+                    <p class="text-white font-bold text-sm">Shahriar Jahan Rafi</p>
+                    <p class="text-[10px] text-brand-green uppercase tracking-wide font-semibold">Lead Instructor</p>
+                </div>
+            </div>
+
+            <!-- Full Enrollment Form -->
+            <form id="enrollmentForm" class="p-6 md:p-8 space-y-5 bn-font bg-[#102127]">
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1.5">পূর্ণ নাম (Full Name)</label>
+                    <input type="text" required class="input-field w-full px-4 py-3 rounded-lg text-sm placeholder-gray-600" placeholder="আপনার নাম লিখুন">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1.5">ফোন নম্বর (Phone Number)</label>
+                    <input type="tel" inputmode="numeric" pattern="[0-9]*" required class="input-field w-full px-4 py-3 rounded-lg text-sm placeholder-gray-600" placeholder="০১৭XXXXXXXX">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-300 mb-1.5">ইমেইল (Email Address)</label>
+                    <input type="email" required class="input-field w-full px-4 py-3 rounded-lg text-sm placeholder-gray-600" placeholder="example@email.com">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-300 mb-1.5">বিভাগ (Division)</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>নির্বাচন করুন</option>
+                            <option value="Dhaka">ঢাকা (Dhaka)</option>
+                            <option value="Chattogram">চট্টগ্রাম (Chattogram)</option>
+                            <option value="Rajshahi">রাজশাহী (Rajshahi)</option>
+                            <option value="Khulna">খুলনা (Khulna)</option>
+                            <option value="Sylhet">সিলেট (Sylhet)</option>
+                            <option value="Other">অন্যান্য (Other)</option>
+                        </select>
                     </div>
                     <div>
-                        <h3 class="text-base font-bold text-white">Rakib Hasan</h3>
-                        <p class="text-xs text-gray-400 mt-0.5 flex items-center gap-1.5">
-                            <span class="w-2.5 h-2.5 bg-gray-600 rounded-sm inline-block"></span>
-                            Data Scientist
-                        </p>
+                        <label class="block text-xs font-medium text-gray-300 mb-1.5">পেশা (Profession)</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>নির্বাচন করুন</option>
+                            <option value="Student">শিক্ষার্থী (Student)</option>
+                            <option value="Professional">পেশাজীবী (Professional)</option>
+                            <option value="JobSeeker">চাকরিপ্রার্থী (Job Seeker)</option>
+                        </select>
                     </div>
-                </div>
-            </section>
-
-            <!-- C. Course Curriculum -->
-            <section class="mt-4">
-                <h2 class="text-2xl font-bold text-white mb-6">Course Curriculum</h2>
-                
-                <!-- Tab Menu -->
-                <div class="flex border-b border-[#21363e] mb-6">
-                    <div class="text-white font-semibold text-sm pb-3 border-b-2 border-white px-1">Recorded Classes</div>
                 </div>
                 
-                <!-- Module List Container -->
-                <div class="rounded-lg border border-[#21363e] bg-[#121c22] overflow-hidden">
-                    
-                    <!-- Week 1-2 -->
-                    <div class="border-b border-[#21363e]">
-                        <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#1a2830] transition">
-                            <div>
-                                <span class="text-sm font-bold text-white block">Weeks 1–2: Introduction to Data Science and Python Programming</span>
-                                <span class="text-[11px] text-[#00a859] mt-1 block">Instructor: Shahriar Jahan Rafi</span>
-                            </div>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </button>
-                        <div class="accordion-content bg-[#0f1c22]">
-                            <div class="px-5 pb-5 text-gray-300 text-sm space-y-3 pt-4 border-t border-[#21363e]">
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 1–2: Introduction to Data Science</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 3–4: Mathematics for Data Science</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 5–6: Statistics – 1</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 7–8: Statistics – 2</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Day 9: Basics of Computing</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 10–11: Introduction to Python Programming</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Day 12: Variables, Data Types, and Strings</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 13–14: Lists, Tuples, and Dictionaries</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Week 3-4 -->
-                    <div class="border-b border-[#21363e]">
-                        <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#1a2830] transition">
-                            <div>
-                                <span class="text-sm font-bold text-white block">Weeks 3–4: Programming Concepts and SQL</span>
-                                <span class="text-[11px] text-[#00a859] mt-1 block">Instructor: Shahriar Jahan Rafi</span>
-                            </div>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </button>
-                        <div class="accordion-content bg-[#0f1c22]">
-                            <div class="px-5 pb-5 text-gray-300 text-sm space-y-3 pt-4 border-t border-[#21363e]">
-                                <h4 class="text-[#00a859] font-semibold mb-2">Module 2: Fundamentals of Programming and Databases</h4>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Day 15: Conditional Statements</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Day 16: Looping</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 17–18: Functions and Scope</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Day 19: Modules and Exception Handling</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Day 20: Working with Files in Python</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 21–22: Using APIs in Python</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 23–24: OOP in Python – 1</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 25–26: OOP in Python – 2</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 27–28: SQL – 1 (Basic)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 29–30: SQL – 2 (Advanced)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Week 5-6 -->
-                    <div class="border-b border-[#21363e]">
-                        <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#1a2830] transition">
-                            <div>
-                                <span class="text-sm font-bold text-white block">Weeks 5–6: Data Manipulation and Visualization</span>
-                                <span class="text-[11px] text-[#00a859] mt-1 block">Instructor: Shahriar Jahan Rafi</span>
-                            </div>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </button>
-                        <div class="accordion-content bg-[#0f1c22]">
-                            <div class="px-5 pb-5 text-gray-300 text-sm space-y-3 pt-4 border-t border-[#21363e]">
-                                <h4 class="text-[#00a859] font-semibold mb-2">Module 3: Data Manipulation and Visualization</h4>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 31–32: NumPy – 1</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 33–34: NumPy – 2</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 35–36: Pandas – 1</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 37–38: Pandas – 2</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 39–40: Pandas – 3</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 41–42: Matplotlib and Seaborn – 1 (Basic Visualization)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 43–44: Matplotlib and Seaborn – 2 (Advanced Visualization)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Week 7-8 -->
-                    <div>
-                        <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-[#1a2830] transition">
-                            <div>
-                                <span class="text-sm font-bold text-white block">Weeks 7–8: Machine Learning and Advanced Topics</span>
-                                <span class="text-[11px] text-[#00a859] mt-1 block">Instructor: Shahriar Jahan Rafi</span>
-                            </div>
-                            <svg class="w-5 h-5 text-gray-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </button>
-                        <div class="accordion-content bg-[#0f1c22]">
-                            <div class="px-5 pb-5 text-gray-300 text-sm space-y-3 pt-4 border-t border-[#21363e]">
-                                <h4 class="text-[#00a859] font-semibold mb-2">Module 4: Machine Learning and Unsupervised Learning</h4>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 45–46: Introduction to Machine Learning</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 47–50: Linear Regression Theory (4 lectures)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 51–52: Linear Regression using Scikit-learn (2 lectures)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 53–54: Logistic Regression using Scikit-learn (2 lectures)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 55–56: Decision Tree (2 lectures)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 57–58: Random Forest (2 lectures)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 59–60: Gradient Boosting (2 lectures)</p>
-                                <p class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span> Days 61–62: Unsupervised Learning: Clustering, Means, Recommender Systems (2 lectures)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- G. Detailed Enrollment Form (Moved up for better conversion) -->
-            <section id="enroll" class="surface-card rounded-xl p-6 md:p-8 border border-subtle bn-font mt-8">
-                <h2 class="text-xl font-bold text-white mb-2">আপনার সিট বুক করুন</h2>
-                <p class="text-xs text-gray-400 mb-6">Course Enrollment Form</p>
-                
-                <form id="enrollmentForm" class="space-y-5">
-                    <div>
-                        <label class="block text-xs font-medium text-gray-300 mb-1.5">পূর্ণ নাম</label>
-                        <input type="text" required class="input-field w-full px-3 py-2.5 rounded text-sm placeholder-gray-600" placeholder="আপনার নাম লিখুন">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-medium text-gray-300 mb-1.5">ফোন নম্বর</label>
-                        <input type="tel" inputmode="numeric" pattern="[0-9]*" required class="input-field w-full px-3 py-2.5 rounded text-sm placeholder-gray-600" placeholder="০১৭XXXXXXXX">
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-xs font-medium text-gray-300 mb-1.5">বিভাগ</label>
-                            <select required class="input-field w-full px-3 py-2.5 rounded text-sm">
-                                <option value="" disabled selected>বিভাগ নির্বাচন করুন</option>
-                                <option value="Dhaka">ঢাকা</option>
-                                <option value="Chattogram">চট্টগ্রাম</option>
-                                <option value="Rajshahi">রাজশাহী</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-gray-300 mb-1.5">পেশা</label>
-                            <select required class="input-field w-full px-3 py-2.5 rounded text-sm">
-                                <option value="" disabled selected>পেশা নির্বাচন করুন</option>
-                                <option value="Student">শিক্ষার্থী</option>
-                                <option value="Professional">পেশাজীবী</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-xs font-medium text-gray-300 mb-1.5">লিঙ্গ</label>
-                            <select required class="input-field w-full px-3 py-2.5 rounded text-sm">
-                                <option value="" disabled selected>নির্বাচন করুন</option>
-                                <option value="Male">পুরুষ</option>
-                                <option value="Female">নারী</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-gray-300 mb-1.5">প্রতিষ্ঠানের ধরন</label>
-                            <select required class="input-field w-full px-3 py-2.5 rounded text-sm">
-                                <option value="" disabled selected>নির্বাচন করুন</option>
-                                <option value="University">বিশ্ববিদ্যালয়</option>
-                                <option value="College">কলেজ</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="space-y-5">
-                        <div>
-                            <label class="block text-xs font-medium text-gray-300 mb-1.5">সর্বশেষ শিক্ষাগত যোগ্যতা</label>
-                            <select required class="input-field w-full px-3 py-2.5 rounded text-sm">
-                                <option value="" disabled selected>যোগ্যতা নির্বাচন করুন</option>
-                                <option value="Honors">স্নাতক বা সমমান</option>
-                                <option value="Masters">স্নাতকোত্তর বা সমমান</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-medium text-gray-300 mb-1.5">আপনি আমাদের কথা জানতে পেরেছেন</label>
-                            <select required class="input-field w-full px-3 py-2.5 rounded text-sm">
-                                <option value="" disabled selected>মাধ্যম নির্বাচন করুন</option>
-                                <option value="Facebook">ফেসবুক</option>
-                                <option value="LinkedIn">লিঙ্কডইন</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="pt-4">
-                        <button type="submit" class="w-full brand-green hover:bg-[#008f4c] text-white font-bold text-sm py-3.5 rounded transition-colors flex items-center justify-center gap-2 font-inter">
-                            Proceed to Register
-                        </button>
-                    </div>
-                </form>
-            </section>
-
-            <!-- D. Course Included Items (Card 1) -->
-            <div class="surface-card rounded-xl p-6 border border-subtle bn-font mt-8">
-                <h2 class="text-xl font-bold text-white mb-6">এই কোর্সে যা যা থাকছে</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 text-sm text-gray-300 font-medium">
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        প্রি-রেকর্ডেড ভিডিও
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        প্রবলেম সলভিং সেশন
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        লাইফটাইম অ্যাক্সেস
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        সার্টিফিকেট
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        প্রাইভেট সাপোর্ট গ্রুপ
-                    </div>
-                </div>
-            </div>
-
-            <!-- E. What you will learn (Card 2) -->
-            <div class="surface-card rounded-xl p-6 border border-subtle bn-font mt-6">
-                <h2 class="text-xl font-bold text-white mb-6">এই কোর্সে আপনি কী কী শিখবেন?</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 text-sm text-gray-300 font-medium">
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Power BI এর গুরুত্ব
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Power BI এর ব্যবহার
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        ডেটা মডেলিং
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        তথ্য বিশ্লেষণ
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <svg class="w-5 h-5 text-[#00a859] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        ডেটা ভিজ্যুয়ালাইজেশন
-                    </div>
-                </div>
-            </div>
-
-            <!-- F. Description -->
-            <section class="bn-font mt-8 mb-4">
-                <h2 class="text-2xl font-bold text-white mb-4">Description</h2>
-                <p class="text-[13px] md:text-sm text-gray-300 leading-[1.8] font-medium text-justify">
-                    Power BI মূলত একটি ব্যবসায়িক বিশ্লেষণমূলক টুল। এর অসংখ্য ইন্টারফেস রয়েছে। এ ইন্টারফেসগুলোর সঠিক ব্যবহার জানা থাকলে Power BI ব্যবহার করে খুব সহজেই ও অল্প সময়েই ব্যবসায়িক বিশ্লেষণমূলক কাজগুলো করা সম্ভব ননটেকনিক্যাল ব্যবসা প্রতিষ্ঠানের ডেটা একত্রীকরণ, বিশ্লেষণ, দৃশ্যমান এবং শেয়ার করার যাবতীয় টুল সরবরাহকারী অন্যতম ডেটা এনালাইটিক্যাল সফটওয়্যার হলো Power BI।আমাদের প্রয়োজনীয় ডেটাগুলি সংরক্ষণ করে রাখার জন্য একটি গুরুত্বপূর্ণ টুল হচ্ছে Power BI এর Data Transformation যা পাওয়ার কোয়েরির একটি প্রক্রিয়া।"Power BI" এর মাধ্যমে বিভিন্ন source থেকে ডাটা লোড করা থেকে শুরু করে সেই ডাটা cleaning করে Excel এর মতো ফর্মুলা লিখে attractive visuals তৈরি করতে পারি।যেকোনো ধরনের ব্যবসায়িক প্রতিষ্ঠানের বিভিন্ন স্ট্রাকচার্ড এবং আনস্ট্রাকচার্ড ডেটার বিশ্লেষণ ও ভিজ্যুয়ালাইজেশনে অন্যান্য এনালাইটিক্যাল সফটওয়্যারের তুলনায় Power BI এর চার্ট খুবই কার্যকরী।অফিসিয়াল অনেক গুরুত্বপূর্ণ কাজের জন্য অনেক সময় বিভিন্ন ধরনের Dashboard তৈরি করার প্রয়োজন পরে। কিন্তু আপনি যদি এটি তৈরি করতে না জানেন তাহলে তখন সমস্যায় পরে যেতে পারেন।
-                </p>
-            </section>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- RIGHT COLUMN (Sticky Sidebar - 32%)        -->
-        <!-- ========================================== -->
-        <div class="w-full lg:w-[32%] relative">
-            <div class="sticky top-20">
-                <!-- Course Overview Card -->
-                <div class="surface-card border border-subtle rounded-xl p-6 shadow-xl mb-6">
-                    <h3 class="text-lg font-bold text-white pb-4 border-b border-[#21363e] mb-5">Course Overview</h3>
-                    
-                    <ul class="space-y-6 mb-6">
-                        <li class="flex items-start gap-4">
-                            <svg class="w-5 h-5 text-gray-400 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
-                            <div>
-                                <div class="text-sm font-bold text-white">Platform</div>
-                                <div class="text-sm text-gray-400 mt-0.5">Recorded Classes</div>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-4">
-                            <svg class="w-5 h-5 text-gray-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path></svg>
-                            <div>
-                                <div class="text-sm font-bold text-white">Certification</div>
-                                <div class="text-sm text-gray-400 mt-0.5">Industry-recognized credential</div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="border-t border-[#21363e] pt-5 mb-5 space-y-3">
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm font-bold text-white">Registration Fee</span>
-                            <span class="text-lg font-bold text-white">৳6000</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Regular Fee</span>
-                            <span class="text-sm text-gray-500 line-through">৳10000</span>
-                        </div>
-                        
-                        <div class="flex items-center justify-between mt-5 gap-2">
-                            <input type="text" placeholder="Enter Coupon" class="bg-transparent border-none text-sm text-gray-400 focus:outline-none w-full placeholder-gray-500">
-                            <button class="bg-transparent border border-gray-600 text-white text-xs font-semibold py-1.5 px-3 rounded flex items-center gap-1.5 hover:bg-gray-700 transition flex-shrink-0">
-                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
-                                Coupon
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <a href="#enroll" class="block w-full brand-green hover:bg-[#008f4c] text-white font-bold text-center py-3 rounded transition-colors text-sm shadow-md">
-                        Enroll Now
-                    </a>
-                </div>
-                
-                <!-- Extra Info Box in Sidebar -->
-                <div class="surface-card border border-subtle rounded-xl p-5 shadow-xl bg-gradient-to-br from-[#102127] to-[#172a31]">
-                    <div class="flex items-start gap-3">
-                        <svg class="w-6 h-6 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <p class="text-xs text-gray-300 leading-relaxed bn-font">
-                            কোর্স সম্পর্কে কোনো প্রশ্ন থাকলে বা ভর্তির প্রসিডিউর জানতে চাইলে সরাসরি আমাদের ফর্মে ডিটেইলস দিন, আমাদের টিম আপনাকে কল করবে।
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div> <!-- End Main Content Layout -->
-
-    <!-- Full Width Benefit Section -->
-    <section class="py-16 bn-font bg-[#262c32]">
-        <div class="max-w-7xl mx-auto px-4 md:px-12 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Interactive Cares এর কোর্স ও ক্যারিয়ার পাথগুলোর বেনিফিট</h2>
-            <p class="text-[#a1a7ac] text-sm md:text-base mb-10">ইন্ডাস্ট্রি স্ট্যান্ডার্ড আউটলাইন এবং দেশের সেরা মেন্টরদের গাইডলাইনে নিজেকে প্রিপেয়ার করুন জব মার্কেটের জন্য!</p>
-            
-            <div class="bg-[#1f252a] rounded-xl p-8 md:p-10 shadow-lg border border-[#2d353b]">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6 text-sm font-semibold text-gray-200 text-left">
-                    <div class="flex items-center gap-4"><span class="text-2xl">🔥</span> ইন্ডাস্ট্রি এক্সপার্ট মেন্টরদের গাইডলাইন</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">🧿</span> রিয়েল-লাইফ প্রজেক্ট ও প্র্যাকটিক্যাল লার্নিং</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">🎓</span> ইন্ডাস্ট্রি রিলেভেন্ট স্কিলস ডেভেলপমেন্ট</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">💬</span> বেস্ট কোর্স আউটলাইন</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">🪜</span> ক্যারিয়ার পাথ বেইজড সাপোর্ট সেশন</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">🏅</span> জব প্লেসমেন্ট সাপোর্ট</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">📑</span> টেকনিক্যাল সাপোর্ট</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">💼</span> ইন্টার্নশিপ ও চাকরির সুযোগ</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">🏷️</span> অ্যাফোর্ডেবল প্রাইসে লার্নিং</div>
-                    <div class="flex items-center gap-4"><span class="text-2xl">♾️</span> লাইফটাইম লার্নিং অ্যাক্সেস</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificate Section -->
-    <section class="max-w-7xl mx-auto px-4 md:px-12 py-16 lg:py-24">
-        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            <!-- Certificate Image -->
-            <div class="w-full lg:w-[55%]">
-                <div class="bg-white p-2 rounded-xl shadow-2xl border border-gray-700">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80" alt="Certificate Preview" class="w-full rounded-lg object-cover">
-                </div>
-            </div>
-            
-            <!-- Text Content -->
-            <div class="w-full lg:w-[45%] flex flex-col items-start text-left">
-                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">Earn an Industry-Recognized Certificate</h2>
-                <p class="text-sm text-gray-400 mb-10 leading-relaxed">Showcase your digital marketing expertise with our professional certificate, recognized by leading employers in the industry.</p>
-                
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <div class="w-6 h-6 rounded-full bg-[#2a363b] text-gray-300 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-inner">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-white text-sm font-bold mb-1">LinkedIn-Ready Credentials</h4>
-                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Showcase your certificate on your LinkedIn profile to attract recruiters</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <div class="w-6 h-6 rounded-full bg-[#2a363b] text-gray-300 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-inner">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-white text-sm font-bold mb-1">Employer Recognition</h4>
-                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">Certificate recognized by 2,000+ companies worldwide</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <div class="w-6 h-6 rounded-full bg-[#2a363b] text-gray-300 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-inner">
-                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="text-white text-sm font-bold mb-1">Career Advancement</h4>
-                            <p class="text-gray-400 text-xs md:text-sm leading-relaxed">85% of graduates report career growth within 6 months</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Student Reviews Section -->
-    <section id="reviews" class="py-12 border-t border-subtle">
-        <div class="max-w-7xl mx-auto px-4 md:px-12">
-            <h2 class="text-xl font-bold text-white mb-8">Student Reviews</h2>
-            
-            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-5 pb-4">
-                
-                <!-- Review Card 1 -->
-                <div class="flex-none w-[85vw] sm:w-[350px] snap-center surface-card border border-subtle rounded-xl p-5">
-                    <div class="flex items-center gap-3 mb-4 border-b border-gray-800 pb-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="User" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h4 class="text-white text-sm font-semibold">Tanzim Ahmed</h4>
-                            <div class="flex text-yellow-400 gap-0.5 mt-0.5">
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-xs text-gray-400 leading-relaxed italic">"The curriculum is exactly what the industry needs. The instructor made Power BI so easy to understand. I secured an internship right after completing the projects!"</p>
-                </div>
-
-                <!-- Review Card 2 -->
-                <div class="flex-none w-[85vw] sm:w-[350px] snap-center surface-card border border-subtle rounded-xl p-5">
-                    <div class="flex items-center gap-3 mb-4 border-b border-gray-800 pb-4">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="User" class="w-10 h-10 rounded-full object-cover">
-                        <div>
-                            <h4 class="text-white text-sm font-semibold">Sadia Rahman</h4>
-                            <div class="flex text-yellow-400 gap-0.5 mt-0.5">
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-xs text-gray-400 leading-relaxed italic">"Highly recommend this for anyone struggling with DAX. The step by step approach cleared all my confusions. Support team is very responsive."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Detailed Footer (Matching Screenshot) -->
-    <footer class="bg-[#08171a] pt-12 pb-32 border-t border-[#21363e] text-[13px] text-[#9ba8b5]">
-        <div class="max-w-7xl mx-auto px-4 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
-                
-                <!-- Logo & Socials (Col Span 3) -->
-                <div class="md:col-span-4 lg:col-span-3">
-                    <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-2">
-                        <!-- Interactive Cares Logo SVG -->
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center p-1.5 flex-shrink-0">
-                            <svg class="w-full h-full text-blue-600" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                            </svg>
-                        </div>
-                        <div class="leading-none">
-                            Interactive<br><span class="text-[10px] font-normal tracking-[0.2em] text-brand-green uppercase mt-1 inline-block">CARES</span>
-                        </div>
-                    </h2>
-                    <p class="mb-6 leading-relaxed text-white font-medium text-sm pr-4">Interactive Cares is Bangladesh's leading Upskilling & Job Placement Platform</p>
-                    
-                    <div class="flex gap-2.5 mb-6">
-                        <!-- Social Icons -->
-                        <a href="#" class="w-8 h-8 bg-[#0077b5] rounded shadow flex items-center justify-center text-white hover:opacity-80 transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                        <a href="#" class="w-8 h-8 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded shadow flex items-center justify-center text-white hover:opacity-80 transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.945.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.253-1.663 4.771-4.919 4.945-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.945-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.584.07-4.849.149-3.227 1.664-4.771 4.919-4.945 1.265-.058 1.645-.07 4.849-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        <a href="#" class="w-8 h-8 bg-[#1877f2] rounded shadow flex items-center justify-center text-white hover:opacity-80 transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg></a>
-                        <a href="#" class="w-8 h-8 bg-[#ff0000] rounded shadow flex items-center justify-center text-white hover:opacity-80 transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-                        <a href="#" class="w-8 h-8 bg-black rounded shadow flex items-center justify-center text-white hover:opacity-80 transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.28-.96 4.45-2.43 6.07-1.46 1.63-3.5 2.63-5.7 2.87-2.18.23-4.42-.23-6.27-1.44-1.84-1.2-3.14-3.1-3.6-5.26-.45-2.14-.14-4.4.9-6.31 1.05-1.89 2.85-3.32 4.9-3.99 1.11-.36 2.28-.48 3.44-.45v4.09c-1.39-.12-2.82.16-3.96.95-1.14.78-1.88 2.11-1.95 3.5-.06 1.39.46 2.76 1.41 3.76 1.05 1.11 2.67 1.62 4.22 1.42 1.54-.19 2.87-1.11 3.55-2.46.66-1.33.81-2.86.78-4.35-.01-5.18-.01-10.36-.02-15.54z"/></svg></a>
-                    </div>
-                    
-                    <p class="text-white font-bold text-sm mb-3">Download our App</p>
-                    <a href="#" class="inline-flex items-center gap-2 bg-black border border-gray-700 rounded px-3 py-1.5 hover:bg-gray-900 transition w-36">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                            <path fill="#ea4335" d="M3.6 2.6L14 14.5l3.4-1.9L3.6 2.6z"/>
-                            <path fill="#fbbc04" d="M14 14.5L3.6 21.4V2.6L14 14.5z"/>
-                            <path fill="#4285f4" d="M14 14.5l3.4 1.9 4-2.3c.7-.4.7-1.5 0-1.9L14 14.5z"/>
-                            <path fill="#34a853" d="M14 14.5L3.6 21.4l13.8-7.8-3.4-1.9z"/>
-                        </svg>
-                        <div class="text-left">
-                            <div class="text-[9px] text-gray-300 uppercase leading-none mb-0.5">GET IT ON</div>
-                            <div class="text-sm text-white font-semibold leading-none">Google Play</div>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Quick Links (Col Span 2) -->
-                <div class="md:col-span-2 lg:col-span-2 md:pl-2">
-                    <h3 class="text-white font-bold mb-6 text-base">Quick Links</h3>
-                    <ul class="space-y-4 font-medium text-white text-[13px]">
-                        <li><a href="#" class="hover:text-brand-green transition-colors">Courses</a></li>
-                        <li><a href="#" class="hover:text-brand-green transition-colors">Hire Talents</a></li>
-                        <li><a href="#" class="hover:text-brand-green transition-colors">Affiliation</a></li>
-                        <li><a href="#" class="hover:text-brand-green transition-colors">Career</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Us (Col Span 4) -->
-                <div class="md:col-span-6 lg:col-span-4">
-                    <h3 class="text-white font-bold mb-6 text-base">Contact Us</h3>
-                    <ul class="space-y-5">
-                        <li class="flex items-start gap-3">
-                            <div class="w-7 h-7 rounded-md bg-[#13262d] border border-[#21363e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                            <span class="text-white text-sm leading-relaxed">Head office- 1/E/2, Adabor,<br>Mohammadpur, Dhaka-1207</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="w-7 h-7 rounded-md bg-[#13262d] border border-[#21363e] flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                            <span class="text-white text-sm leading-relaxed">Learning Center- Khan ABC<br>Tradeplex, Level #7, House #37,<br>Road #02, Dhanmondi 2, Dhaka-<br>1209</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-md bg-[#13262d] border border-[#21363e] flex items-center justify-center flex-shrink-0">
-                                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <span class="text-white text-sm font-medium">operations@interactivecares.com</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded-md bg-[#13262d] border border-[#21363e] flex items-center justify-center flex-shrink-0">
-                                <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            </div>
-                            <span class="text-white text-sm font-medium">+88018XXXXXXXX</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Secure Payment & Accepted Methods (Col Span 3) -->
-                <div class="md:col-span-6 lg:col-span-3">
-                    <div class="flex rounded overflow-hidden w-fit mb-3 border border-[#21363e]">
-                        <div class="bg-brand-green px-3 py-2 flex items-center justify-center">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <div class="bg-white px-3 py-1.5 flex flex-col justify-center">
-                            <span class="text-[10px] font-bold text-[#08171a] leading-tight tracking-wide">GUARANTEED</span>
-                            <span class="text-[10px] font-bold text-[#08171a] leading-tight tracking-wide">SECURE PAYMENT</span>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-center gap-2 mb-8 text-[#9ba8b5] text-xs font-medium">
-                        <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                        No hidden charges required.
-                    </div>
-
-                    <h3 class="text-gray-300 text-sm font-semibold mb-3">We Accept</h3>
-                    <div class="flex flex-wrap gap-2.5 opacity-90">
-                        <div class="bg-white px-2 py-1 rounded shadow-sm flex items-center justify-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/u/u8/bKash_logo.png/1200px-bKash_logo.png" alt="bKash" class="h-4 object-contain">
-                        </div>
-                        <div class="bg-white px-2 py-1 rounded shadow-sm flex items-center justify-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Nagad_Logo.png/1200px-Nagad_Logo.png" alt="Nagad" class="h-4 object-contain">
-                        </div>
-                        <div class="bg-white px-2 py-1 rounded shadow-sm flex items-center justify-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png" alt="Mastercard" class="h-4 object-contain">
-                        </div>
-                        <div class="bg-white px-2 py-1 rounded shadow-sm flex items-center justify-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="VISA" class="h-3 object-contain">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bottom Sticky Bar (Visible on all devices exactly like screenshot) -->
-    <div class="fixed bottom-0 left-0 w-full bg-[#102127] border-t border-[#21363e] py-3.5 px-4 md:px-12 flex justify-between items-center z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
-        <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-0 md:px-4">
-            
-            <!-- Left Info Stack -->
-            <div class="flex flex-col">
-                <div class="flex items-center gap-4 mb-1">
-                    <h4 class="text-white text-base md:text-lg font-bold">Complete Course on Power BI</h4>
-                </div>
-                
-                <div class="flex items-center gap-3">
-                    <div class="flex items-center text-yellow-400 text-[11px] md:text-xs">
-                        <svg class="w-3 h-3 fill-current mr-0.5" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-3 h-3 fill-current mr-0.5" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-3 h-3 fill-current mr-0.5" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-3 h-3 fill-current mr-0.5" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="w-3 h-3 fill-current mr-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <span class="font-bold text-white mr-1">4.7</span>
-                        <span class="text-gray-400 font-normal">(3 Reviews)</span>
-                    </div>
-                    <div class="flex items-center text-gray-300 text-[11px] md:text-xs gap-1.5">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                        Recorded
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-3 mt-2">
-                    <span class="text-white text-sm md:text-base font-bold">6000 TK</span>
-                    <span class="text-gray-500 text-xs md:text-sm line-through">10000 TK</span>
-                    <button class="bg-transparent border border-gray-600 text-white text-[10px] md:text-xs font-semibold py-0.5 px-2 rounded flex items-center gap-1.5 hover:bg-gray-800 transition">
-                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
-                        Coupon
+                <div class="pt-4">
+                    <button type="submit" class="w-full brand-green hover:bg-[#008f4c] text-white font-bold text-lg py-4 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#00a859]/20 font-inter">
+                        Submit
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </button>
+                    <p class="text-xs text-gray-500 text-center mt-4">We respect your privacy. No spam.</p>
                 </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 3. Things you will learn in this course -->
+    <section class="max-w-3xl mx-auto px-4 py-12 border-t border-subtle relative z-10 bn-font">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center sm:text-left">Things you will learn in this course</h2>
+        
+        <ul class="space-y-4 text-base text-gray-300 leading-relaxed font-medium">
+            <li class="flex items-start gap-4 p-4 rounded-xl surface-card border border-subtle hover:border-[#21363e] transition-colors">
+                <div class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span>Python প্রোগ্রামিং এর একদম বেসিক থেকে শুরু করে Data Science এর জন্য প্রয়োজনীয় লাইব্রেরি (NumPy, Pandas) এর ব্যবহার।</span>
+            </li>
+            
+            <li class="flex items-start gap-4 p-4 rounded-xl surface-card border border-subtle hover:border-[#21363e] transition-colors">
+                <div class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span>Matplotlib এবং Seaborn ব্যবহার করে বিশাল ডেটাসেট থেকে ইন্টারেক্টিভ ও মিনিংফুল Data Visualization তৈরি করা।</span>
+            </li>
+            
+            <li class="flex items-start gap-4 p-4 rounded-xl surface-card border border-subtle hover:border-[#21363e] transition-colors">
+                <div class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span>ডেটাবেস ম্যানেজমেন্ট এবং Advanced SQL Query লেখা যা কর্পোরেট জবের জন্য সবচেয়ে বেশি গুরুত্বপূর্ণ।</span>
+            </li>
+            
+            <li class="flex items-start gap-4 p-4 rounded-xl surface-card border border-subtle hover:border-[#21363e] transition-colors">
+                <div class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span>Supervised এবং Unsupervised Machine Learning অ্যালগরিদমের (Linear Regression, Random Forest, Clustering) গভীরে প্রবেশ।</span>
+            </li>
+
+            <li class="flex items-start gap-4 p-4 rounded-xl surface-card border border-subtle hover:border-[#21363e] transition-colors">
+                <div class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span>ইন্ডাস্ট্রি-স্ট্যান্ডার্ড পোর্টফোলিও বিল্ডিং এবং এন্ড-টু-এন্ড রিয়েল লাইফ প্রজেক্ট সলভিং।</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 4. Why should learn ML in 2026 -->
+    <section class="max-w-3xl mx-auto px-4 py-12 border-t border-subtle relative z-10 bn-font">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 text-center sm:text-left">Why should learn ML in 2026</h2>
+        
+        <ul class="space-y-4 text-base text-gray-300 leading-relaxed font-medium">
+            <li class="flex items-start gap-4">
+                <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2.5 flex-shrink-0 shadow-[0_0_8px_#eab308]"></div>
+                <p><strong class="text-white">সবচেয়ে ডিমান্ডিং স্কিল:</strong> ২০২৬ সালে এসে প্রায় প্রতিটি লোকাল ও গ্লোবাল কোম্পানিতে এআই এবং মেশিন লার্নিং স্কিলের চাহিদা অতীতের যেকোনো সময়ের চেয়ে বেশি।</p>
+            </li>
+            
+            <li class="flex items-start gap-4">
+                <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2.5 flex-shrink-0 shadow-[0_0_8px_#eab308]"></div>
+                <p><strong class="text-white">ভবিষ্যৎ ক্যারিয়ার সিকিউরিটি:</strong> অটোমেশনের যুগে যে স্কিলগুলো এআই দ্বারা রিপ্লেস করা কঠিন, তার মধ্যে Machine Learning Engineer এবং Data Scientist সবার উপরে।</p>
+            </li>
+            
+            <li class="flex items-start gap-4">
+                <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2.5 flex-shrink-0 shadow-[0_0_8px_#eab308]"></div>
+                <p><strong class="text-white">হাই-পেইং স্যালারি স্ট্রাকচার:</strong> সাধারণ সফটওয়্যার ডেভেলপমেন্ট বা অন্যান্য আইটি সেক্টরের তুলনায় ডেটা প্রফেশনালদের স্টার্টিং স্যালারি এবং গ্রোথ অনেক বেশি।</p>
+            </li>
+            
+            <li class="flex items-start gap-4">
+                <div class="w-2 h-2 rounded-full bg-yellow-500 mt-2.5 flex-shrink-0 shadow-[0_0_8px_#eab308]"></div>
+                <p><strong class="text-white">গ্লোবাল রিমোট অপারচুনিটি:</strong> ডেটা সাইন্স স্কিল থাকলে আপনি ঘরে বসেই ইউএস, কানাডা, বা ইউরোপের টপ টেক কোম্পানিগুলোর সাথে রিমোটলি কাজ করার সুযোগ পাবেন।</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- 5. Data science and ML course (guidelines) Card -->
+    <section class="max-w-3xl mx-auto px-4 py-16 flex justify-center">
+        <div class="surface-card border border-brand-green/30 rounded-2xl p-8 md:p-12 text-center max-w-lg w-full shadow-[0_0_40px_rgba(0,168,89,0.08)] relative overflow-hidden">
+            <!-- Background Graphic inside card -->
+            <div class="absolute -top-10 -right-10 text-brand-green/5 w-40 h-40">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM18 20H6V4h6v6h6v10z"/></svg>
             </div>
 
-            <!-- Right Enroll Button -->
-            <a href="#enroll" class="brand-green text-white px-6 md:px-10 py-2.5 rounded font-bold shadow-md hover:bg-[#008f4c] transition-colors text-sm md:text-base flex-shrink-0">
-                Enroll Now
-            </a>
+            <div class="relative z-10">
+                <div class="w-16 h-16 bg-[#102127] border border-brand-green/40 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner text-brand-green">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                </div>
+                
+                <h3 class="text-2xl font-bold text-white mb-3">Data science and ML course (guidelines)</h3>
+                <p class="text-gray-400 text-sm mb-8">Click below to download the complete PDF syllabus and course blueprint for this internship program.</p>
+                
+                <button type="button" onclick="alert('Downloading PDF...')" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-transparent border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white px-10 py-3.5 rounded-lg font-bold transition-colors font-inter">
+                    Download
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-gray-600">
+        <p>© 2026 Skill Jobs. All rights reserved.</p>
+    </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // Accordion Logic
-            const buttons = document.querySelectorAll('.accordion-btn');
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const content = button.nextElementSibling;
-                    const icon = button.querySelector('svg');
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        icon.style.transform = 'rotate(0deg)';
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        icon.style.transform = 'rotate(180deg)';
-                    }
-                });
-            });
+            // Countdown Logic for the Form Header
+            let time = 2 * 24 * 60 * 60 + 14 * 3600 + 45 * 60 + 30; // 2 Days, 14 Hours, 45 Mins, 30 Secs
+            
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minsEl = document.getElementById('mins');
+            const secsEl = document.getElementById('secs');
+            
+            if(daysEl && hoursEl && minsEl && secsEl) {
+                setInterval(() => {
+                    if(time > 0) time--;
+                    
+                    let d = Math.floor(time / (24 * 3600));
+                    let h = Math.floor((time % (24 * 3600)) / 3600);
+                    let m = Math.floor((time % 3600) / 60);
+                    let s = Math.floor(time % 60);
+                    
+                    daysEl.innerText = d.toString().padStart(2, '0');
+                    hoursEl.innerText = h.toString().padStart(2, '0');
+                    minsEl.innerText = m.toString().padStart(2, '0');
+                    secsEl.innerText = s.toString().padStart(2, '0');
+                }, 1000);
+            }
 
             // Form Submit Simulation
             const form = document.getElementById('enrollmentForm');
@@ -826,11 +298,11 @@
                     const btn = form.querySelector('button');
                     const originalText = btn.innerHTML;
                     
-                    btn.innerHTML = 'Processing...';
+                    btn.innerHTML = 'Sending Details...';
                     btn.classList.add('opacity-75', 'cursor-not-allowed');
                     
                     setTimeout(() => {
-                        btn.innerHTML = 'Details Submitted! ✓';
+                        btn.innerHTML = 'Registration Successful! ✓';
                         btn.classList.replace('brand-green', 'bg-blue-600');
                         btn.classList.replace('hover:bg-[#008f4c]', 'hover:bg-blue-500');
                         
@@ -843,17 +315,6 @@
                         }, 3000);
                     }, 1500);
                 });
-            }
-
-            // Top Banner Countdown Timer
-            let time = 7 * 24 * 60 * 60; 
-            const countdownEl = document.getElementById('countdown');
-            if(countdownEl) {
-                setInterval(() => {
-                    let d = Math.floor(time / (24 * 3600));
-                    countdownEl.innerText = `${d} Days`;
-                    if(time > 0) time--;
-                }, 1000);
             }
         });
     </script>
