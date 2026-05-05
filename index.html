@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill.Jobs | Premium Enrollment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b131a; /* Deep Slate/Teal Background */
+            color: #94a3b8; /* Slate 400 text */
+        }
+
+        /* Form styling for dark mode */
+        .input-field {
+            background: #15202b;
+            border: 1px solid #334155;
+            color: #f8fafc;
+            transition: all 0.3s ease;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #3b82f6; /* Blue 500 */
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+            background: #1e293b;
+        }
+        /* Style select dropdowns text color in dark mode */
+        select.input-field option {
+            background-color: #1e293b;
+            color: #f8fafc;
+        }
+
+        /* Accordion transition */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        /* Horizontal Scroll Hide */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Custom Scrollbar for the page */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b131a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-300">
+
+    <!-- 1. Top Banner -->
+    <div class="bg-blue-600 text-white text-sm font-bold py-2 px-4 text-center relative z-50">
+        <span class="inline-block animate-pulse mr-2 text-yellow-300">🔥</span> 
+        আজই যোগাযোগ করুন ৪০% ডিসকাউন্টের জন্য। Offer ends in : <span id="countdown" class="font-extrabold text-white">7 Days</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full bg-[#0d161f]/90 backdrop-blur-md border-b border-gray-800 z-40 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300" id="navbar">
+        <div class="text-xl font-bold tracking-tighter text-white">
+            Skill.<span class="text-blue-500">Jobs</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+            <a href="#curriculum" class="hover:text-blue-400 transition-colors">Curriculum</a>
+            <a href="#instructor" class="hover:text-blue-400 transition-colors">Instructor</a>
+            <a href="#reviews" class="hover:text-blue-400 transition-colors">Reviews</a>
+            <a href="#faq" class="hover:text-blue-400 transition-colors">FAQ</a>
+        </div>
+        <a href="#enroll" class="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-blue-500 transition-colors shadow-lg">
+            Contact now
+        </a>
+    </nav>
+
+    <!-- 2. Hero Section (Split Layout) -->
+    <section class="pt-16 pb-12 px-6 md:px-12 border-b border-gray-800 bg-[#0d161f]">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+            
+            <!-- Left: Course Thumbnail/Video Placeholder -->
+            <div class="w-full lg:w-1/2 relative rounded-xl overflow-hidden shadow-2xl border border-gray-700/50 group">
+                <div class="aspect-video bg-gray-800 relative">
+                    <img src="assets/pictures/hero_section_image_1.jpg" alt="Course Preview" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                    <!-- Play Button Overlay Mockup -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-16 h-16 bg-blue-600/90 rounded-full flex items-center justify-center backdrop-blur-sm shadow-lg">
+                            <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Course Title & Meta -->
+            <div class="w-full lg:w-1/2 flex flex-col items-start" style="font-family: 'Hind Siliguri', sans-serif;">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded text-xs font-bold uppercase tracking-wider border border-blue-500/30">Bestseller</span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-xs font-bold border border-gray-700">ভর্তি চলছে - ব্যাচ ৩৩</span>
+                </div>
+                
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight" style="font-family: 'Inter', sans-serif;">
+                    Complete Course on <br/> <span class="text-blue-400">Data Science & ML</span>
+                </h1>
+                
+                <p class="text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
+                    দেশ সেরা মেন্টরদের কাছ থেকে Data Science এবং Machine Learning শিখে দেশের শীর্ষ কোম্পানিতে কাজের সুযোগ তৈরি করতে হলে আপনি সঠিক জায়গায় আছেন।
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-8 font-medium">
+                    <div class="flex items-center gap-1 text-yellow-400">
+                        <span>4.9</span>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <span class="text-gray-400 ml-1">(৫০০+ রেভিউজ)</span>
+                    </div>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>৮ সপ্তাহের প্রোগ্রাম</span>
+                    <span class="w-1 h-1 bg-gray-600 rounded-full"></span>
+                    <span>সার্টিফিকেট প্রদান</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <a href="#enroll" class="bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-bold hover:bg-blue-500 transition-colors shadow-lg text-center">
+                        যোগাযোগ করুন
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Instructor & Course Includes (Side-by-Side Split) -->
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-8 flex flex-col lg:flex-row gap-10">
+        
+        <!-- Left: Instructor Section (Takes ~65% space) -->
+        <section id="instructor" class="w-full lg:w-2/3 flex flex-col" style="font-family: 'Hind Siliguri', sans-serif;">
+            <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-2">Course Instructor</h2>
+            
+            <div class="bg-[#15202b] border border-gray-800 rounded-xl p-6 flex flex-col md:flex-row items-center md:items-start gap-6 shadow-sm w-full box-border flex-grow">
+                <div class="w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-2 border-blue-500/30">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Shahriar Jahan Rafi" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="text-center md:text-left w-full">
+                    <h3 class="text-xl font-bold text-white mb-1">Shahriar Jahan Rafi</h3>
+                    <p class="text-blue-400 text-sm font-medium mb-4">Lead Data Scientist</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Former ML Engineer at top MNCs. Over 5 years of experience building scalable AI solutions. Focuses on making complex algorithms simple, practical, and ready for enterprise deployment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right: Course Includes (Takes ~35% space) -->
+        <section class="w-full lg:w-1/3 flex flex-col">
+            <div class="bg-[#15202b] border border-gray-800 rounded-2xl p-6 shadow-xl w-full box-border flex-grow" style="font-family: 'Hind Siliguri', sans-serif;">
+                <h3 class="text-xl font-bold text-white mb-6 border-b border-gray-800 pb-4">Course Includes</h3>
+                
+                <ul class="space-y-4 text-sm text-gray-300 mb-8">
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        লাইভ ক্লাস
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        ঘন্টা সেশন লার্ন
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        হ্যান্ডস-অন প্রজেক্ট (৪ টি)
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        ইন্টার্নশীপ সাপোর্ট
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        জব প্লেসমেন্ট সাপোর্ট
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        লাইফটাইম ক্লাস রেকর্ডিং অ্যাক্সেস
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        সম্পূর্ণ কারিকুলাম
+                    </li>
+                </ul>
+                
+                <a href="#enroll" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-center py-3.5 rounded-lg transition-colors shadow-lg mb-3">
+                    Enroll Now
+                </a>
+                <p class="text-xs text-center text-gray-500">Contact us to secure your spot. Limited seats available.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- 4. Problem & Solution -->
+    <section id="transformation" class="max-w-4xl mx-auto px-6 md:px-12 py-12 w-full" style="font-family: 'Hind Siliguri', sans-serif;">
+        <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-2">এই সমস্যাগুলো কি আপনারও হচ্ছে?</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6 w-full">
+            <!-- The Problems -->
+            <div class="space-y-3 bg-[#111921] p-6 rounded-xl border border-red-900/30 w-full box-border">
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-red-900/40 text-red-500 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✕</div>
+                    <p class="text-gray-300 text-sm leading-relaxed">শত শত ঘণ্টার ভিডিও দেখার পরও নিজে প্রজেক্ট বানাতে গেলে আটকে যান।</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-red-900/40 text-red-500 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✕</div>
+                    <p class="text-gray-300 text-sm leading-relaxed">আর্কিটেকচার না বুঝেই শুধু কোড কপি-পেস্ট করে কাজ চালান।</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-red-900/40 text-red-500 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✕</div>
+                    <p class="text-gray-300 text-sm leading-relaxed">পোর্টফোলিও না থাকায় টেকনিক্যাল ইন্টারভিউ ফেস করতে ভয় পান।</p>
+                </div>
+            </div>
+
+            <!-- The Solutions -->
+            <div class="space-y-3 bg-[#101b2b] p-6 rounded-xl border border-blue-900/30 w-full box-border">
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-900/40 text-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
+                    <p class="text-blue-100 text-sm leading-relaxed">প্রজেক্ট-বেইজড লার্নিং, যেখানে আপনি নিজে কোড লিখবেন এবং ডিবাগ করবেন।</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-900/40 text-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
+                    <p class="text-blue-100 text-sm leading-relaxed">কোডের পেছনের 'আর্কিটেকচার' শিখবেন, শুধু কপি-পেস্ট নয়।</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-6 h-6 rounded-full bg-blue-900/40 text-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold">✓</div>
+                    <p class="text-blue-100 text-sm leading-relaxed">জব-রেডি পোর্টফোলিও এবং মেন্টরদের সরাসরি গাইডলাইন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. What You Will Achieve (Dark Cards) -->
+    <section class="max-w-5xl mx-auto px-6 md:px-12 py-12 w-full" style="font-family: 'Hind Siliguri', sans-serif;">
+        <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-2">কোর্স শেষে যা পাবেন</h2>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+            <div class="bg-[#15202b] border border-gray-800 rounded-lg p-4 text-center hover:border-blue-500/50 transition-colors">
+                <div class="w-12 h-12 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-3 text-blue-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h4 class="text-white font-semibold text-sm">Industry Projects</h4>
+            </div>
+            <div class="bg-[#15202b] border border-gray-800 rounded-lg p-4 text-center hover:border-blue-500/50 transition-colors">
+                <div class="w-12 h-12 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-3 text-blue-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <h4 class="text-white font-semibold text-sm">Elite Network</h4>
+            </div>
+            <div class="bg-[#15202b] border border-gray-800 rounded-lg p-4 text-center hover:border-blue-500/50 transition-colors">
+                <div class="w-12 h-12 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-3 text-blue-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <h4 class="text-white font-semibold text-sm">Internships</h4>
+            </div>
+            <div class="bg-[#15202b] border border-gray-800 rounded-lg p-4 text-center hover:border-blue-500/50 transition-colors">
+                <div class="w-12 h-12 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-3 text-blue-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h4 class="text-white font-semibold text-sm">Certificate</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Course Curriculum (Centered & Aligned) -->
+    <section id="curriculum" class="max-w-4xl mx-auto px-6 md:px-12 py-12 w-full" style="font-family: 'Hind Siliguri', sans-serif;">
+        <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-2">Course Curriculum</h2>
+        
+        <div class="space-y-3 w-full">
+            <!-- Mod 1 -->
+            <div class="rounded-lg overflow-hidden border border-gray-800 bg-[#15202b] w-full">
+                <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800/50 transition">
+                    <span class="font-bold text-gray-200">সপ্তাহ ১-২: ডেটা সায়েন্সের প্রাথমিক ধারণা এবং পাইথন</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-[#0d161f]">
+                    <div class="px-5 pb-5 text-gray-400 text-sm space-y-3 pt-3 border-t border-gray-800">
+                        <p>১. দিন ১-২: ডেটা সায়েন্সের পরিচিতি</p>
+                        <p>২. দিন ৩-৪: ডেটা সায়েন্সের জন্য গণিত</p>
+                        <p>৩. দিন ৫-৮: পরিসংখ্যান</p>
+                        <p>৪. দিন ১০-১৪: পাইথন প্রোগ্রামিং, লিস্ট, টুপল</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mod 2 -->
+            <div class="rounded-lg overflow-hidden border border-gray-800 bg-[#15202b] w-full">
+                <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800/50 transition">
+                    <span class="font-bold text-gray-200">সপ্তাহ ৩-৪: প্রোগ্রামিং কনসেপ্ট এবং SQL</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-[#0d161f]">
+                    <div class="px-5 pb-5 text-gray-400 text-sm space-y-3 pt-3 border-t border-gray-800">
+                        <p>১. দিন ১৫-১৬: কন্ডিশনাল ও লুপিং</p>
+                        <p>২. দিন ১৭-২০: ফাংশন, স্কোপ ও ফাইল হ্যান্ডলিং</p>
+                        <p>৩. দিন ২৩-২৬: পাইথনে OOP</p>
+                        <p>৪. দিন ২৭-৩০: SQL (মৌলিক ও এডভান্সড)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mod 3 -->
+            <div class="rounded-lg overflow-hidden border border-gray-800 bg-[#15202b] w-full">
+                <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800/50 transition">
+                    <span class="font-bold text-gray-200">সপ্তাহ ৫-৬: ডেটা ম্যানিপুলেশন এবং ভিজুয়ালাইজেশন</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-[#0d161f]">
+                    <div class="px-5 pb-5 text-gray-400 text-sm space-y-3 pt-3 border-t border-gray-800">
+                        <p>১. দিন ৩১-৩৪: Numpy</p>
+                        <p>২. দিন ৩৫-৪০: Pandas</p>
+                        <p>৩. দিন ৪১-৪৪: Matplotlib এবং Seaborn</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mod 4 -->
+            <div class="rounded-lg overflow-hidden border border-gray-800 bg-[#15202b] w-full">
+                <button class="accordion-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800/50 transition">
+                    <span class="font-bold text-gray-200">সপ্তাহ ৭-৮: মেশিন লার্নিং এবং অ্যাডভান্সড টপিকস</span>
+                    <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content bg-[#0d161f]">
+                    <div class="px-5 pb-5 text-gray-400 text-sm space-y-3 pt-3 border-t border-gray-800">
+                        <p>১. লিনিয়ার ও লজিস্টিক রিগ্রেশন</p>
+                        <p>২. ডিসিশন ট্রি ও রেন্ডম ফরেস্ট</p>
+                        <p>৩. আনসুপারভাইজড লার্নিং: ক্লাস্টারিং</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Reviews Section (Fixed width constraint) -->
+    <section id="reviews" class="max-w-6xl mx-auto px-0 md:px-12 py-12 w-full overflow-hidden" style="font-family: 'Hind Siliguri', sans-serif;">
+        <h2 class="text-2xl font-bold text-white mb-6 border-b border-gray-800 pb-2 px-6 md:px-0">স্টুডেন্টদের রিভিউ</h2>
+        
+        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-4 pb-4 w-full px-6 md:px-0" id="reviews-slider">
+            
+            <div class="flex-none w-[280px] md:w-[320px] snap-center relative group">
+                <div class="bg-[#15202b] border border-gray-800 rounded-xl overflow-hidden shadow-lg h-[400px] relative w-full">
+                    <img src="https://images.unsplash.com/photo-1543269664-7eef42226a21?auto=format&fit=crop&w=600&q=80" alt="Review 1" class="w-full h-full object-cover opacity-80">
+                    <div class="review-overlay absolute bottom-0 left-0 w-full bg-[#1e293b] p-5 rounded-t-xl border-t border-gray-700 transform translate-y-full transition-transform duration-500">
+                        <button class="absolute top-2 right-3 text-gray-500 hover:text-white close-overlay-btn"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                        <div class="flex text-yellow-500 mb-2">★★★★★</div>
+                        <p class="text-gray-200 text-sm">"কোর্সটির কারিকুলাম আমাকে জিরো থেকে অ্যাডভান্স লেভেলে নিয়ে গেছে। খুব হেল্পফুল!"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-[280px] md:w-[320px] snap-center relative group">
+                <div class="bg-[#15202b] border border-gray-800 rounded-xl overflow-hidden shadow-lg h-[400px] relative w-full">
+                    <img src="https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?auto=format&fit=crop&w=600&q=80" alt="Review 2" class="w-full h-full object-cover opacity-80">
+                    <div class="review-overlay absolute bottom-0 left-0 w-full bg-[#1e293b] p-5 rounded-t-xl border-t border-gray-700 transform translate-y-full transition-transform duration-500">
+                        <button class="absolute top-2 right-3 text-gray-500 hover:text-white close-overlay-btn"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                        <div class="flex text-yellow-500 mb-2">★★★★★</div>
+                        <p class="text-gray-200 text-sm">"মেন্টরশিপ সাপোর্ট অসাধারণ। যখনই আটকে গেছি, সাপোর্ট পেয়েছি।"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-[280px] md:w-[320px] snap-center relative group">
+                <div class="bg-[#15202b] border border-gray-800 rounded-xl overflow-hidden shadow-lg h-[400px] relative w-full">
+                    <img src="https://images.unsplash.com/photo-1534339480783-6816b68be29c?auto=format&fit=crop&w=600&q=80" alt="Review 3" class="w-full h-full object-cover opacity-80">
+                    <div class="review-overlay absolute bottom-0 left-0 w-full bg-[#1e293b] p-5 rounded-t-xl border-t border-gray-700 transform translate-y-full transition-transform duration-500">
+                        <button class="absolute top-2 right-3 text-gray-500 hover:text-white close-overlay-btn"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                        <div class="flex text-yellow-500 mb-2">★★★★★</div>
+                        <p class="text-gray-200 text-sm">"কোর্স শেষে আমার তৈরি করা পোর্টফোলিও দেখেই ইন্টারভিউতে সিলেক্ট হয়েছি।"</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. The Full Detailed Enrollment Form -->
+    <section id="enroll" class="max-w-4xl mx-auto px-6 md:px-12 py-12 w-full" style="font-family: 'Hind Siliguri', sans-serif;">
+        <div class="bg-[#15202b] border border-gray-800 rounded-2xl p-6 md:p-10 shadow-2xl w-full box-border">
+            <h3 class="text-2xl font-bold text-white mb-2 text-center">To know more fill up the form</h3>
+            <p class="text-gray-400 text-sm mb-8 text-center">We will contact you shortly.</p>
+            
+            <form id="enrollmentForm" class="space-y-5 w-full">
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1.5">পূর্ণ নাম</label>
+                    <input type="text" required class="input-field w-full px-4 py-3 rounded-lg text-sm" placeholder="আপনার নাম লিখুন">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-1.5">ফোন নম্বর</label>
+                    <input type="tel" inputmode="numeric" pattern="[0-9]*" required class="input-field w-full px-4 py-3 rounded-lg text-sm" placeholder="০১৭XXXXXXXX">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">বিভাগ</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>বিভাগ নির্বাচন করুন</option>
+                            <option value="Dhaka">ঢাকা</option>
+                            <option value="Chattogram">চট্টগ্রাম</option>
+                            <option value="Rajshahi">রাজশাহী</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">পেশা</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>পেশা নির্বাচন করুন</option>
+                            <option value="Student">শিক্ষার্থী</option>
+                            <option value="Professional">পেশাজীবী</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">লিঙ্গ</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>নির্বাচন করুন</option>
+                            <option value="Male">পুরুষ</option>
+                            <option value="Female">নারী</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">প্রতিষ্ঠানের ধরন</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>নির্বাচন করুন</option>
+                            <option value="University">বিশ্ববিদ্যালয়</option>
+                            <option value="College">কলেজ</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">সর্বশেষ শিক্ষাগত যোগ্যতা</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>যোগ্যতা নির্বাচন করুন</option>
+                            <option value="Honors">স্নাতক বা সমমান</option>
+                            <option value="Masters">স্নাতকোত্তর বা সমমান</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-1.5">আপনি আমাদের কথা জানতে পেরেছেন</label>
+                        <select required class="input-field w-full px-4 py-3 rounded-lg text-sm">
+                            <option value="" disabled selected>মাধ্যম নির্বাচন করুন</option>
+                            <option value="Facebook">ফেসবুক</option>
+                            <option value="LinkedIn">লিঙ্কডইন</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="pt-4">
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg py-3.5 rounded-lg transition-colors shadow-lg flex items-center justify-center gap-2" style="font-family: 'Inter', sans-serif;">
+                        Submit details
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 4. FAQ (Restyled for Dark Theme) -->
+    <section id="faq" class="py-16 border-t border-gray-800 bg-[#0d161f]" style="font-family: 'Hind Siliguri', sans-serif;">
+        <div class="max-w-3xl mx-auto px-6 md:px-12 w-full">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-white mb-2">আপনার জিজ্ঞাসা (FAQ)</h3>
+                <p class="text-gray-400 text-sm">কোর্স এবং এর স্ট্রাকচার সম্পর্কে আপনার যা কিছু জানা প্রয়োজন।</p>
+            </div>
+            
+            <div class="space-y-3 w-full">
+                <div class="border border-gray-800 rounded-lg bg-[#15202b] w-full">
+                    <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-gray-200 text-sm md:text-base">আমার কি পূর্ব অভিজ্ঞতার প্রয়োজন আছে?</span>
+                        <svg class="w-5 h-5 text-blue-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-800 pt-3">
+                            না। মডিউল ১ একদম বেসিক থেকে শুরু হবে। তবে কোর্সটি দ্রুতগতিতে এগোবে, তাই আপনাকে নিয়মিত অনুশীলন করার মানসিকতা রাখতে হবে।
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-800 rounded-lg bg-[#15202b] w-full">
+                    <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-bold text-gray-200 text-sm md:text-base">আমি কতদিন কোর্সের অ্যাক্সেস পাবো?</span>
+                        <svg class="w-5 h-5 text-blue-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-5 pb-5 text-gray-400 text-sm leading-relaxed border-t border-gray-800 pt-3">
+                            আপনি লাইফটাইম অ্যাক্সেস পাবেন। আপনি নিজের সুবিধামতো সময়ে কোর্সটি করতে পারবেন এবং প্রয়োজন হলে যেকোনো সময় ম্যাটেরিয়াল রিভাইজ করতে পারবেন।
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Footer -->
+    <footer class="bg-[#080d12] border-t border-gray-800 pt-16 pb-8 text-sm w-full">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12 w-full">
+                
+                <div class="col-span-1 md:col-span-1">
+                    <h2 class="text-2xl font-bold mb-2 text-white">Skill.<span class="text-blue-500">Jobs</span></h2>
+                    <p class="text-gray-500 mb-4 uppercase tracking-widest text-xs font-bold">A Concern Of Daffodil Family</p>
+                    <p class="text-gray-400 leading-relaxed text-xs">A leading job application site and online career portal in Bangladesh. We bridge the gap between learning and employment.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Our Courses</h3>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Data Science & ML</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Full Stack Web</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Microsoft Power BI</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Legal & Info</h3>
+                    <ul class="space-y-2 text-gray-500 mb-6">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                    </ul>
+                    <div class="text-xs text-gray-500 space-y-1">
+                        <p>DT4, 102/1 Shukrabad, Mirpur Rd</p>
+                        <p>+880 1999-043556</p>
+                        <p>contact@skill.jobs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-600 text-xs">
+                <p>© 2026 Skill.Jobs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Accordion Logic (Curriculum & FAQ) ---
+            const setupAccordions = (selector) => {
+                const buttons = document.querySelectorAll(selector);
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const content = button.nextElementSibling;
+                        const icon = button.querySelector('svg');
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                            icon.style.transform = 'rotate(0deg)';
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                            icon.style.transform = 'rotate(180deg)';
+                        }
+                    });
+                });
+            };
+
+            setupAccordions('.accordion-btn');
+            setupAccordions('.faq-btn');
+
+            // --- 2. Form Submission Prevent Default (Dummy action) ---
+            const form = document.getElementById('enrollmentForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const originalText = btn.innerHTML;
+                
+                btn.innerHTML = 'Processing...';
+                btn.classList.add('opacity-75', 'cursor-not-allowed');
+                
+                setTimeout(() => {
+                    btn.innerHTML = 'Details Submitted! ✓';
+                    btn.classList.replace('bg-blue-600', 'bg-green-600');
+                    btn.classList.replace('hover:bg-blue-500', 'hover:bg-green-500');
+                    
+                    setTimeout(() => {
+                        form.reset();
+                        btn.innerHTML = originalText;
+                        btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                        btn.classList.replace('bg-green-600', 'bg-blue-600');
+                        btn.classList.replace('hover:bg-green-500', 'hover:bg-blue-500');
+                    }, 3000);
+                }, 1500);
+            });
+            
+            // --- 3. Countdown Timer ---
+            let time = 7 * 24 * 60 * 60; 
+            const countdownEl = document.getElementById('countdown');
+            setInterval(() => {
+                let d = Math.floor(time / (24 * 3600));
+                countdownEl.innerText = `${d} Days`;
+                if(time > 0) time--;
+            }, 1000);
+
+            // --- 4. Review Section Observer for Slide Up Animation ---
+            const reviewObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const overlays = entry.target.querySelectorAll('.review-overlay');
+                        overlays.forEach(overlay => {
+                            if (!overlay.classList.contains('force-closed')) {
+                                overlay.classList.remove('translate-y-full');
+                                overlay.classList.add('translate-y-0');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            const reviewSection = document.getElementById('reviews');
+            if (reviewSection) {
+                reviewObserver.observe(reviewSection);
+            }
+
+            document.querySelectorAll('.close-overlay-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const overlay = e.currentTarget.closest('.review-overlay');
+                    overlay.classList.add('translate-y-full', 'force-closed');
+                    overlay.classList.remove('translate-y-0');
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
