@@ -10,11 +10,11 @@
         html, body {
             max-width: 100vw;
             overflow-x: hidden;
-            /* High-end dark blue sci-fi base */
-            background-color: #020617; 
+            /* High-end dark violet sci-fi base */
+            background-color: #0B0914; 
             background-image: 
-                radial-gradient(circle at 15% 50%, rgba(29, 78, 216, 0.15), transparent 40%), 
-                radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.1), transparent 40%);
+                radial-gradient(circle at 15% 50%, rgba(157, 78, 221, 0.15), transparent 40%), 
+                radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.1), transparent 40%);
             color: #94a3b8;
             font-family: 'Inter', sans-serif;
         }
@@ -33,30 +33,25 @@
 
         .bn-font { font-family: 'Hind Siliguri', sans-serif; }
 
-        /* Surface Colors - Adapted to Blue/Slate */
-        .surface-dark { background-color: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); }
-        .surface-card { background-color: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); }
-        .border-subtle { border-color: #334155; }
+        /* Surface Colors - Neural Matrix Theme */
+        .surface-dark { background-color: rgba(22, 20, 39, 0.6); backdrop-filter: blur(12px); }
+        .surface-card { background-color: rgba(30, 28, 50, 0.7); backdrop-filter: blur(12px); }
+        .border-subtle { border-color: #2B2744; }
         
-        /* Brand Colors - Blue Theme */
-        .brand-blue { background-color: #3b82f6; }
-        .brand-blue-hover { background-color: #2563eb; }
-        .text-brand-blue { color: #60a5fa; }
-
         /* Form styling for dark mode */
         .input-field {
-            background-color: #0f172a;
-            border: 1px solid #334155;
+            background-color: #0F0D1A;
+            border: 1px solid #2B2744;
             color: #ffffff;
             transition: all 0.3s ease;
         }
         .input-field:focus {
             outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+            border-color: #00E5FF;
+            box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.25);
         }
         select.input-field option {
-            background-color: #0f172a;
+            background-color: #0F0D1A;
             color: #ffffff;
         }
 
@@ -65,7 +60,7 @@
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="antialiased selection:bg-blue-500 selection:text-white pb-20 relative">
+<body class="antialiased selection:bg-[#00E5FF] selection:text-[#0B0914] pb-20 relative">
 
     <!-- Technical Grid Overlay -->
     <div class="bg-grid"></div>
@@ -73,60 +68,60 @@
     <!-- 1. Page Main Headline -->
     <header class="w-full pt-16 pb-6 px-4 text-left relative z-10 max-w-xl mx-auto">
         <!-- Ambient Glow -->
-        <div class="absolute top-0 left-[50%] -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/20 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+        <div class="absolute top-0 left-[50%] -translate-x-1/2 w-[600px] h-[300px] bg-[#9D4EDD]/25 rounded-full blur-[100px] pointer-events-none -z-10"></div>
         
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
             Data Science and Machine Learning<br>
-            <span class="text-brand-blue mt-2 block">Zero to Mastery Details</span>
+            <span class="text-[#00E5FF] mt-2 block">Zero to Mastery Details</span>
         </h1>
     </header>
 
     <!-- 2. The Enrollment Form Block -->
     <section class="max-w-xl mx-auto px-4 relative z-20 mb-16">
-        <div class="surface-dark border border-subtle rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10">
+        <div class="surface-dark border border-subtle rounded-2xl overflow-hidden shadow-2xl shadow-[#9D4EDD]/10">
             
             <!-- Top Section of Form Container -->
             <div class="text-center pt-8 pb-6 px-6 relative overflow-hidden">
                 <h2 class="text-3xl font-bold text-white mb-4">Register for free</h2>
                 
                 <!-- Subheadline Badge -->
-                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 px-4 py-1.5 rounded-full mb-6 shadow-[0_0_15px_rgba(59,130,246,0.15)]">
+                <div class="inline-flex items-center gap-2 bg-[#00E5FF]/10 border border-[#00E5FF]/30 px-4 py-1.5 rounded-full mb-6 shadow-[0_0_15px_rgba(0,229,255,0.15)]">
                     <span class="relative flex h-2.5 w-2.5">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00E5FF] opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00E5FF]"></span>
                     </span>
-                    <span class="text-brand-blue font-semibold text-sm">180+ students already registered</span>
+                    <span class="text-[#00E5FF] font-semibold text-sm">180+ students already registered</span>
                 </div>
 
                 <!-- Countdown 4 Small Cards -->
                 <div class="flex justify-center gap-3 md:gap-4 mb-2">
-                    <div class="bg-[#020617] border border-subtle rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                    <div class="bg-[#0B0914] border border-[#2B2744] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
                         <span id="days" class="text-xl font-bold text-white leading-none mb-1">02</span>
                         <span class="text-[9px] text-slate-400 uppercase tracking-widest font-semibold">Days</span>
                     </div>
-                    <div class="bg-[#020617] border border-subtle rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                    <div class="bg-[#0B0914] border border-[#2B2744] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
                         <span id="hours" class="text-xl font-bold text-white leading-none mb-1">14</span>
                         <span class="text-[9px] text-slate-400 uppercase tracking-widest font-semibold">Hours</span>
                     </div>
-                    <div class="bg-[#020617] border border-subtle rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                    <div class="bg-[#0B0914] border border-[#2B2744] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
                         <span id="mins" class="text-xl font-bold text-white leading-none mb-1">45</span>
                         <span class="text-[9px] text-slate-400 uppercase tracking-widest font-semibold">Mins</span>
                     </div>
-                    <div class="bg-[#020617] border border-subtle rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
-                        <span id="secs" class="text-xl font-bold text-brand-blue leading-none mb-1">30</span>
-                        <span class="text-[9px] text-blue-400/80 uppercase tracking-widest font-semibold">Secs</span>
+                    <div class="bg-[#0B0914] border border-[#2B2744] rounded-lg w-16 h-16 flex flex-col items-center justify-center shadow-inner">
+                        <span id="secs" class="text-xl font-bold text-[#00E5FF] leading-none mb-1">30</span>
+                        <span class="text-[9px] text-[#00E5FF]/80 uppercase tracking-widest font-semibold">Secs</span>
                     </div>
                 </div>
             </div>
 
             <!-- Mentor Image Banner Holder -->
-            <div class="w-full h-48 sm:h-56 bg-[#0f172a] border-y border-subtle relative overflow-hidden">
+            <div class="w-full h-48 sm:h-56 bg-[#161427] border-y border-subtle relative overflow-hidden">
                 <img src="13445.png" alt="Instructor Banner" class="w-full h-full object-cover object-top opacity-80">
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent opacity-80"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#161427] to-transparent opacity-80"></div>
             </div>
 
             <!-- Full Enrollment Form -->
-            <form id="enrollmentForm" class="p-6 md:p-8 space-y-5 bn-font bg-[#0f172a]">
+            <form id="enrollmentForm" class="p-6 md:p-8 space-y-5 bn-font bg-[#161427]">
                 <div>
                     <label class="block text-xs font-medium text-slate-300 mb-1.5">পূর্ণ নাম (Full Name)</label>
                     <input type="text" required class="input-field w-full px-4 py-3 rounded-lg text-sm placeholder-slate-600" placeholder="আপনার নাম লিখুন">
@@ -182,7 +177,7 @@
                 </div>
                 
                 <div class="pt-4">
-                    <button type="submit" class="w-full brand-blue hover:bg-[#2563eb] text-white font-bold text-lg py-4 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 font-inter">
+                    <button type="submit" class="w-full bg-[#00E5FF] hover:bg-[#00B8CC] text-[#0B0914] font-bold text-lg py-4 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#00E5FF]/20 font-inter">
                         Submit
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </button>
@@ -194,31 +189,31 @@
 
     <!-- 3. Things you will learn in this course -->
     <section class="max-w-3xl mx-auto px-4 py-12 border-t border-subtle relative z-10 bn-font">
-        <h2 class="text-2xl md:text-3xl font-bold text-brand-blue mb-8 text-center sm:text-left drop-shadow-md">Things you will learn in this course</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#00E5FF] mb-8 text-center sm:text-left drop-shadow-md">Things you will learn in this course</h2>
         
         <ul class="space-y-4 text-base text-slate-300 leading-relaxed font-medium">
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p>Python প্রোগ্রামিং এর একদম বেসিক থেকে শুরু করে Data Science এর জন্য প্রয়োজনীয় লাইব্রেরি (NumPy, Pandas) এর ব্যবহার।</p>
             </li>
             
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p>Matplotlib এবং Seaborn ব্যবহার করে বিশাল ডেটাসেট থেকে ইন্টারেক্টিভ ও মিনিংফুল Data Visualization তৈরি করা।</p>
             </li>
             
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p>ডেটাবেস ম্যানেজমেন্ট এবং Advanced SQL Query লেখা যা কর্পোরেট জবের জন্য সবচেয়ে বেশি গুরুত্বপূর্ণ।</p>
             </li>
             
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p>Supervised এবং Unsupervised Machine Learning অ্যালগরিদমের (Linear Regression, Random Forest, Clustering) গভীরে প্রবেশ।</p>
             </li>
 
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p>ইন্ডাস্ট্রি-স্ট্যান্ডার্ড পোর্টফোলিও বিল্ডিং এবং এন্ড-টু-এন্ড রিয়েল লাইফ প্রজেক্ট সলভিং।</p>
             </li>
         </ul>
@@ -226,26 +221,26 @@
 
     <!-- 4. Why should learn ML in 2026 -->
     <section class="max-w-3xl mx-auto px-4 py-12 border-t border-subtle relative z-10 bn-font">
-        <h2 class="text-2xl md:text-3xl font-bold text-brand-blue mb-8 text-center sm:text-left drop-shadow-md">Why should learn ML in 2026</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-[#00E5FF] mb-8 text-center sm:text-left drop-shadow-md">Why should learn ML in 2026</h2>
         
         <ul class="space-y-4 text-base text-slate-300 leading-relaxed font-medium">
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
-                <p><strong class="text-white">সবচেয়ে ডিমান্ডিং স্কিল:</strong> ২০২৬ সালে এসে প্রায় প্রতিটি লোকাল ও গ্লোবাল কোম্পানিতে এআই এবং মেশিন লার্নিং স্কিলের চাহিদা অতীতের যেকোনো সময়ের চেয়ে বেশি।</p>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
+                <p><strong class="text-white">সবচেয়ে ডিমান্ডিং স্কিল:</strong> ২০২৬ সালে এসে প্রায় প্রতিটি লোকাল ও গ্লোবাল কোম্পানিতে এআই এবং মেশিন লার্নিং স্কিলের চাহিদা অতীতের যেকোনো সময়ের চেয়ে বেশি।</p>
             </li>
             
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p><strong class="text-white">ভবিষ্যৎ ক্যারিয়ার সিকিউরিটি:</strong> অটোমেশনের যুগে যে স্কিলগুলো এআই দ্বারা রিপ্লেস করা কঠিন, তার মধ্যে Machine Learning Engineer এবং Data Scientist সবার উপরে।</p>
             </li>
             
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p><strong class="text-white">হাই-পেইং স্যালারি স্ট্রাকচার:</strong> সাধারণ সফটওয়্যার ডেভেলপমেন্ট বা অন্যান্য আইটি সেক্টরের তুলনায় ডেটা প্রফেশনালদের স্টার্টিং স্যালারি এবং গ্রোথ অনেক বেশি।</p>
             </li>
             
             <li class="flex items-start gap-4">
-                <div class="w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 flex-shrink-0 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-[#9D4EDD] mt-2 flex-shrink-0 shadow-[0_0_10px_#9D4EDD]"></div>
                 <p><strong class="text-white">গ্লোবাল রিমোট অপারচুনিটি:</strong> ডেটা সাইন্স স্কিল থাকলে আপনি ঘরে বসেই ইউএস, কানাডা, বা ইউরোপের টপ টেক কোম্পানিগুলোর সাথে রিমোটলি কাজ করার সুযোগ পাবেন।</p>
             </li>
         </ul>
@@ -253,22 +248,22 @@
 
     <!-- 5. Data science and ML course (guidelines) Card -->
     <section class="max-w-3xl mx-auto px-4 pt-12 pb-4 flex flex-col items-center">
-        <h2 class="text-2xl md:text-3xl font-bold text-brand-blue mb-8 text-center bn-font drop-shadow-md">Download full course blueprint in bangla.</h2>
-        <div class="surface-card border border-blue-500/30 rounded-2xl p-8 md:p-12 text-center max-w-lg w-full shadow-[0_0_40px_rgba(59,130,246,0.1)] relative overflow-hidden">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#00E5FF] mb-8 text-center bn-font drop-shadow-md">Download full course blueprint in bangla.</h2>
+        <div class="surface-card border border-[#9D4EDD]/30 rounded-2xl p-8 md:p-12 text-center max-w-lg w-full shadow-[0_0_40px_rgba(157,78,221,0.15)] relative overflow-hidden">
             <!-- Background Graphic inside card -->
-            <div class="absolute -top-10 -right-10 text-blue-500/5 w-40 h-40">
+            <div class="absolute -top-10 -right-10 text-[#9D4EDD]/5 w-40 h-40">
                 <svg fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM18 20H6V4h6v6h6v10z"/></svg>
             </div>
 
             <div class="relative z-10">
-                <div class="w-16 h-16 bg-[#0f172a] border border-blue-500/40 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner text-blue-400">
+                <div class="w-16 h-16 bg-[#0B0914] border border-[#9D4EDD]/40 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner text-[#9D4EDD]">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 </div>
                 
                 <h3 class="text-2xl font-bold text-white mb-3">Data science and ML course (guidelines)</h3>
                 <p class="text-slate-400 text-sm mb-8">Click below to download the complete PDF syllabus and course blueprint for this internship program.</p>
                 
-                <button type="button" onclick="alert('Downloading PDF...')" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-10 py-3.5 rounded-lg font-bold transition-colors font-inter shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+                <button type="button" onclick="alert('Downloading PDF...')" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-transparent border-2 border-[#00E5FF] text-[#00E5FF] hover:bg-[#00E5FF] hover:text-[#0B0914] px-10 py-3.5 rounded-lg font-bold transition-colors font-inter shadow-[0_0_15px_rgba(0,229,255,0.2)]">
                     Download
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 </button>
@@ -316,18 +311,20 @@
                     
                     setTimeout(() => {
                         btn.innerHTML = 'Registration Successful! ✓';
-                        // Emerald success state
-                        btn.classList.replace('brand-blue', 'bg-emerald-500');
-                        btn.classList.replace('hover:bg-[#2563eb]', 'hover:bg-emerald-600');
-                        btn.classList.replace('shadow-blue-500/20', 'shadow-emerald-500/20');
+                        // Success state styling (Universal Success Green)
+                        btn.classList.replace('bg-[#00E5FF]', 'bg-[#10B981]');
+                        btn.classList.replace('hover:bg-[#00B8CC]', 'hover:bg-[#059669]');
+                        btn.classList.replace('text-[#0B0914]', 'text-white');
+                        btn.classList.replace('shadow-[#00E5FF]/20', 'shadow-[#10B981]/20');
                         
                         setTimeout(() => {
                             form.reset();
                             btn.innerHTML = originalText;
                             btn.classList.remove('opacity-75', 'cursor-not-allowed');
-                            btn.classList.replace('bg-emerald-500', 'brand-blue');
-                            btn.classList.replace('hover:bg-emerald-600', 'hover:bg-[#2563eb]');
-                            btn.classList.replace('shadow-emerald-500/20', 'shadow-blue-500/20');
+                            btn.classList.replace('bg-[#10B981]', 'bg-[#00E5FF]');
+                            btn.classList.replace('hover:bg-[#059669]', 'hover:bg-[#00B8CC]');
+                            btn.classList.replace('text-white', 'text-[#0B0914]');
+                            btn.classList.replace('shadow-[#10B981]/20', 'shadow-[#00E5FF]/20');
                         }, 3000);
                     }, 1500);
                 });
