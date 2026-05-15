@@ -4,219 +4,1105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Modeling WA#05 Generator</title>
+    <title>Product Management Career Bootcamp</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Include SheetJS for Excel generation -->
-    <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
-</head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen font-sans text-gray-800">
-
-    <div class="max-w-2xl w-full bg-white rounded-xl shadow-lg p-8 mx-4">
-        <div class="flex items-center space-x-4 mb-6">
-            <div class="bg-blue-600 p-3 rounded-full">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-            </div>
-            <div>
-                <h1 class="text-2xl font-bold text-gray-900">Assignment Solution Generator</h1>
-                <p class="text-sm text-gray-500">Weekly Assessment #05 (20B3-C5)</p>
-            </div>
-        </div>
-
-        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r">
-            <h3 class="text-lg font-semibold text-blue-800 mb-2">Ready for Download</h3>
-            <p class="text-sm text-blue-600 mb-2">
-                This tool will generate your <strong>strictly formatted .xlsx file</strong> containing:
-            </p>
-            <ul class="list-disc list-inside text-sm text-blue-600 space-y-1 ml-2">
-                <li><strong>Task 1:</strong> Short Questions & Answers</li>
-                <li><strong>Task 2-3:</strong> FMCG Historical Data & 2026 Forecast</li>
-                <li><strong>Task 4-5:</strong> Banking Revenue Drivers & Regression Forecast</li>
-                <li><strong>Task 6:</strong> IT Services Monthly Revenue & Q1-26 Forecast</li>
-            </ul>
-        </div>
-
-        <div class="mb-6">
-            <label class="block text-sm font-medium text-gray-700 mb-2">Your Name (for the file name):</label>
-            <input type="text" id="studentName" placeholder="e.g., Tasnuva" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" value="StudentName">
-        </div>
-
-        <button onclick="generateExcel()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 flex justify-center items-center space-x-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            <span>Download Solution (.xlsx)</span>
-        </button>
-        
-        <p class="text-xs text-center text-gray-400 mt-4">The file will be saved as <span id="previewName" class="font-mono">StudentName_WA05_20B3-C5.xlsx</span></p>
-    </div>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script>
-        // Update filename preview
-        document.getElementById('studentName').addEventListener('input', function(e) {
-            const name = e.target.value.trim() || 'StudentName';
-            document.getElementById('previewName').textContent = `${name}_WA05_20B3-C5.xlsx`;
-        });
-
-        function generateExcel() {
-            // Initialize Workbook
-            const wb = XLSX.utils.book_new();
-
-            // ==========================================
-            // SHEET 1: TASK 1 (Short Questions)
-            // ==========================================
-            const task1Data = [
-                ["Short Questions", "", "5 marks"],
-                [],
-                ["Question", "Answer"],
-                ["1. What does R-squared tell you about a regression model in simple words?", "R-squared explains the percentage of variation in the dependent variable (like Revenue) that is driven by the independent variable (like Volume). In simple terms, it tells you how well your data fits the model—a higher R-squared means the model is more accurate and reliable for forecasting."],
-                ["2. If a revenue-volume regression has R-squared = 0.85, how would you explain the model's accuracy to your manager?", "\"Our model is highly reliable. 85% of our revenue fluctuations can be directly explained by changes in our sales volume. This means we can trust this model to accurately forecast future revenue based on our projected volume targets.\""],
-                ["3. What is \"Adjusted R-squared\" and why is it preferred over normal R-squared when you add more independent variables?", "Normal R-squared will mechanically increase every time you add a new variable, even if that variable is completely useless. Adjusted R-squared penalizes the model for adding irrelevant variables, ensuring it only increases if the new driver genuinely improves the model's predictive power."],
-                ["4. What does a very small p-value (for example, less than 0.05) for a coefficient mean about that driver's relationship with the dependent variable?", "A very small p-value (≤ 0.05) indicates strong evidence that the driver has a statistically significant relationship with the dependent variable. It means we can confidently assume the relationship is real and did not occur simply due to random chance."],
-                ["5. An analyst runs a regression and gets p-value = 0.20 for the Volume coefficient. How should this be interpreted?", "b) There is weak statistical evidence that Volume affects Revenue; the relationship may not be reliable."]
-            ];
-            const ws1 = XLSX.utils.aoa_to_sheet(task1Data);
-            ws1['!cols'] = [{wch: 60}, {wch: 100}];
-            XLSX.utils.book_append_sheet(wb, ws1, "Task 1 - Short Questions");
-
-            // ==========================================
-            // SHEET 2: TASK 2-3 (FMCG)
-            // ==========================================
-            const task2Data = [
-                ["Shuddho Dairy Ltd. (Dairy & Beverage Sector)", "", "", "", "5+10=15 marks"],
-                [],
-                ["Historical Monthly Data (Last 24 Months) & Forecast calculations"],
-                ["Month", "Volume Sold (units)", "Price per Unit (BDT)", "Revenue (BDT)", "UPG", "UVG"],
-                // Base historical
-                ["2024-01-01", 122000, 45, 5490000, null, null],
-                ["2024-02-01", 123500, 45, 5557500, 0.0000, 0.0123],
-                ["2024-03-01", 126000, 45, 5670000, 0.0000, 0.0202],
-                ["2024-04-01", 135000, 45, 6075000, 0.0000, 0.0714],
-                ["2024-05-01", 138000, 45, 6210000, 0.0000, 0.0222],
-                ["2024-06-01", 142000, 45, 6390000, 0.0000, 0.0290],
-                ["2024-07-01", 145000, 45, 6525000, 0.0000, 0.0211],
-                ["2024-08-01", 147000, 45, 6615000, 0.0000, 0.0138],
-                // Projected historical values to fill 24 months up to Dec 2025
-                ["2024-09-01", 149500, 45, 6727500, 0.0000, 0.0170],
-                ["2024-10-01", 152000, 45, 6840000, 0.0000, 0.0167],
-                ["2024-11-01", 154500, 46, 7107000, 0.0222, 0.0164],
-                ["2024-12-01", 157000, 46, 7222000, 0.0000, 0.0162],
-                ["2025-01-01", 159500, 46, 7337000, 0.0000, 0.0159],
-                ["2025-02-01", 162000, 46, 7452000, 0.0000, 0.0157],
-                ["2025-03-01", 164000, 46, 7544000, 0.0000, 0.0123],
-                ["2025-04-01", 167000, 46, 7682000, 0.0000, 0.0183],
-                ["2025-05-01", 169000, 46, 7774000, 0.0000, 0.0120],
-                ["2025-06-01", 172000, 46, 7912000, 0.0000, 0.0178],
-                ["2025-07-01", 175000, 48, 8400000, 0.0435, 0.0174],
-                ["2025-08-01", 177500, 48, 8520000, 0.0000, 0.0143],
-                ["2025-09-01", 180000, 48, 8640000, 0.0000, 0.0141],
-                ["2025-10-01", 182500, 48, 8760000, 0.0000, 0.0139],
-                ["2025-11-01", 185000, 48, 8880000, 0.0000, 0.0137],
-                ["2025-12-01", 188000, 48, 9024000, 0.0000, 0.0162],
-                [],
-                ["Average Historical Growth", "", "", "", 0.0029, 0.0182],
-                [],
-                ["Forecasted Monthly Data (2026)"],
-                ["Month", "Volume Sold (units)", "Price per Unit (BDT)", "Revenue (BDT)", "Assumptions Used"],
-                ["2026-01-01", 191422, 48.14, 9215055, "Volume *(1+Avg_UVG), Price *(1+Avg_UPG)"],
-                ["2026-02-01", 194906, 48.28, 9410313, ""],
-                ["2026-03-01", 198453, 48.42, 9609711, ""],
-                ["2026-04-01", 202065, 48.56, 9813337, ""],
-                ["2026-05-01", 205743, 48.70, 10021276, ""],
-                ["2026-06-01", 209487, 48.84, 10233621, ""],
-                ["2026-07-01", 213300, 48.98, 10450468, ""],
-                ["2026-08-01", 217182, 49.12, 10671912, ""],
-                ["2026-09-01", 221135, 49.26, 10898051, ""],
-                ["2026-10-01", 225159, 49.40, 11128984, ""],
-                ["2026-11-01", 229257, 49.55, 11364811, ""],
-                ["2026-12-01", 233429, 49.69, 11605634, ""]
-            ];
-            const ws2 = XLSX.utils.aoa_to_sheet(task2Data);
-            ws2['!cols'] = [{wch: 15}, {wch: 20}, {wch: 20}, {wch: 20}, {wch: 15}, {wch: 15}];
-            XLSX.utils.book_append_sheet(wb, ws2, "Task 2-3 FMCG");
-
-            // ==========================================
-            // SHEET 3: TASK 4-5 (Banking)
-            // ==========================================
-            const task3Data = [
-                ["Noborup Bank Bangladesh", "", "", "5+10=15 marks"],
-                [],
-                ["Historical Quarterly Data (Last 8 Quarters)"],
-                ["Quarter", "Active Users", "Avg Trans/User", "Fee/Trans (BDT)", "Loan Portfolio", "Interest Margin", "Premium Subs", "Fee/Sub"],
-                ["Q1", 145000, 14, 12, 2500000000, 0.035, 8750, 199],
-                ["Q2", 158000, 11, 12, 2750000000, 0.035, 9950, 199],
-                ["Q3", 172000, 10, 13, 3000000000, 0.036, 11340, 219],
-                ["Q4", 188000, 12, 13, 3350000000, 0.036, 12500, 219],
-                ["Q5", 201000, 13, 14, 3600000000, 0.037, 13800, 249],
-                ["Q6", 215000, 15, 14, 3900000000, 0.037, 15200, 249],
-                ["Q7", 228000, 14, 15, 4200000000, 0.038, 16500, 299],
-                ["Q8", 245000, 16, 15, 4500000000, 0.038, 18000, 299],
-                [],
-                ["Total Revenue Calculations"],
-                ["Quarter", "Total Revenue (BDT)", "Variable Cost (Assumed 40%)", "Gross Profit Margin (%)"],
-                ["Q1", (145000*14*12)+(2500000000*0.035/4)+(8750*199*3), ((145000*14*12)+(2500000000*0.035/4)+(8750*199*3))*0.4, 0.60],
-                ["Q2", (158000*11*12)+(2750000000*0.035/4)+(9950*199*3), ((158000*11*12)+(2750000000*0.035/4)+(9950*199*3))*0.4, 0.60],
-                ["Q3", (172000*10*13)+(3000000000*0.036/4)+(11340*219*3), ((172000*10*13)+(3000000000*0.036/4)+(11340*219*3))*0.4, 0.60],
-                ["Q4", (188000*12*13)+(3350000000*0.036/4)+(12500*219*3), ((188000*12*13)+(3350000000*0.036/4)+(12500*219*3))*0.4, 0.60],
-                ["Q5", (201000*13*14)+(3600000000*0.037/4)+(13800*249*3), ((201000*13*14)+(3600000000*0.037/4)+(13800*249*3))*0.4, 0.60],
-                ["Q6", (215000*15*14)+(3900000000*0.037/4)+(15200*249*3), ((215000*15*14)+(3900000000*0.037/4)+(15200*249*3))*0.4, 0.60],
-                ["Q7", (228000*14*15)+(4200000000*0.038/4)+(16500*299*3), ((228000*14*15)+(4200000000*0.038/4)+(16500*299*3))*0.4, 0.60],
-                ["Q8", (245000*16*15)+(4500000000*0.038/4)+(18000*299*3), ((245000*16*15)+(4500000000*0.038/4)+(18000*299*3))*0.4, 0.60],
-                [],
-                ["Forecast Growth Assumptions"],
-                ["Compounded Quarterly Growth Rate (Users)", 0.067, "Formula: ((Q8/Q1)^(1/4))-1"],
-                ["Quarterly Loan Growth Rate", 0.076, "Formula: ((Q8/Q1)^(1/4))-1"],
-                ["Premium Subscribers Intercept (b)", 7393],
-                ["Premium Subscribers Slope (a)", 1303],
-                [],
-                ["Forecasted Revenue & Growth (2026 - Q9 to Q12)"],
-                ["Item", "Q9", "Q10", "Q11", "Q12"],
-                ["Forecasted Users", 261415, 278930, 297618, 317558],
-                ["Forecasted Loan Portfolio", 4842000000, 5209992000, 5605951392, 6031998592],
-                ["Forecasted Premium Subs", (1303*9)+7393, (1303*10)+7393, (1303*11)+7393, (1303*12)+7393]
-            ];
-            const ws3 = XLSX.utils.aoa_to_sheet(task3Data);
-            ws3['!cols'] = [{wch: 35}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}, {wch: 15}];
-            XLSX.utils.book_append_sheet(wb, ws3, "Task 4-5 Banking");
-
-            // ==========================================
-            // SHEET 4: TASK 6 (IT Services)
-            // ==========================================
-            const task6Data = [
-                ["TechBD Solutions (Software Services)", "", "", "", "5 marks"],
-                [],
-                ["Historical Monthly Data & Revenue Calculation"],
-                ["Month", "Active Projects", "Billable Hours", "Billing Rate (USD)", "Fixed Retainers (USD)", "Product Sales (USD)", "Total Revenue (USD)"],
-                ["2024-07-01", 8, 4200, 25, 15000, 8000, (4200*25)+15000+8000],
-                ["2024-08-01", 9, 4500, 25, 18000, 9500, (4500*25)+18000+9500],
-                ["2024-09-01", 9, 4800, 26, 18000, 12000, (4800*26)+18000+12000],
-                ["2024-10-01", 10, 5100, 26, 22000, 11000, (5100*26)+22000+11000],
-                ["2024-11-01", 11, 5400, 27, 25000, 14000, (5400*27)+25000+14000],
-                // Base data to reach Dec-25 based on snippet
-                ["...", "...", "...", "...", "...", "...", "..."],
-                ["2025-09-01", 18, 8400, 32, 54000, 32000, (8400*32)+54000+32000],
-                ["2025-10-01", 18, 8700, 32, 54000, 29000, (8700*32)+54000+29000],
-                ["2025-11-01", 19, 9000, 33, 58000, 35000, (9000*33)+58000+35000],
-                ["2025-12-01", 20, 9300, 33, 60000, 38000, (9300*33)+60000+38000],
-                [],
-                ["Forecast Jan-26, Feb-26 & Mar-26"],
-                ["Month", "Billable Hours (+10% MoM)", "Billing Rate (Constant)", "Fixed Retainers (+$5000/m)", "Product Sales (Avg)", "Total Revenue (USD)"],
-                ["2026-01-01", 9300*1.1, 33, 60000+5000, 40000, (9300*1.1*33)+(60000+5000)+40000],
-                ["2026-02-01", (9300*1.1)*1.1, 33, 65000+5000, 40000, ((9300*1.1)*1.1*33)+(65000+5000)+40000],
-                ["2026-03-01", ((9300*1.1)*1.1)*1.1, 33, 70000+5000, 40000, (((9300*1.1)*1.1)*1.1*33)+(70000+5000)+40000],
-            ];
-            const ws4 = XLSX.utils.aoa_to_sheet(task6Data);
-            ws4['!cols'] = [{wch: 15}, {wch: 25}, {wch: 25}, {wch: 25}, {wch: 25}, {wch: 25}, {wch: 25}];
-            XLSX.utils.book_append_sheet(wb, ws4, "Task 6 IT Services");
-
-            // ==========================================
-            // EXPORT FILE
-            // ==========================================
-            let studentName = document.getElementById('studentName').value.trim();
-            if(!studentName) studentName = "StudentName";
-            
-            const fileName = `${studentName}_WA05_20B3-C5.xlsx`;
-            XLSX.writeFile(wb, fileName);
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#E5252A',
+                            blue: '#008CFF',
+                            orange: '#F26522',
+                            purple: '#92278F',
+                            green: '#00A651',
+                            dark: '#2D2D2D',
+                            gray: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
         }
     </script>
+    <style>
+        body {
+            background-color: #f9fafb;
+        }
+        .diagram-line {
+            position: absolute;
+            z-index: 10;
+        }
+        .arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+        
+        /* Arrow Right */
+        .arrow-r-blue {
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 6px solid #008CFF;
+            right: -6px;
+            top: -3px;
+        }
+        
+        /* Arrow Down */
+        .arrow-d-blue {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 6px solid #008CFF;
+            bottom: -6px;
+            right: -3px;
+        }
+        .arrow-d-purple {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 6px solid #92278F;
+            bottom: -6px;
+            right: -3px;
+        }
+        
+        /* Arrow Up */
+        .arrow-u-orange {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 6px solid #F26522;
+            top: -6px;
+            right: -3px;
+        }
+        .arrow-u-green {
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 6px solid #00A651;
+            top: -6px;
+            right: -3px;
+        }
+        
+        /* Ensure images blend beautifully into colored backgrounds */
+        .mentor-img {
+            mix-blend-mode: luminosity;
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-start min-h-screen">
+
+    <!-- Mobile Container mimicking the screenshot view -->
+    <div class="w-full max-w-md bg-white min-h-screen shadow-2xl relative pb-10">
+
+        <!-- ================= SECTION: Enrollment Form (Before Hero Section) ================= -->
+        <div class="w-full pt-8 px-5 pb-8 bg-[#f8f9fa] border-b border-gray-200">
+            <div class="text-center mb-6">
+                <p class="text-gray-500 text-[0.8rem] font-medium tracking-wide mb-0.5">Secure Your Seat</p>
+                <h2 class="text-brand-blue text-[1.65rem] font-black tracking-tight leading-none">Enrollment Form</h2>
+            </div>
+
+            <form class="w-full bg-white p-5 rounded-[4px] border border-gray-200 shadow-sm space-y-4">
+                
+                <!-- Full Name -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">পূর্ণ নাম (Full Name) <span class="text-brand-red">*</span></label>
+                    <input type="text" required placeholder="আপনার পূর্ণ নাম" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
+                </div>
+
+                <!-- Email Address -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">ইমেইল এড্রেস (Email Address) <span class="text-brand-red">*</span></label>
+                    <input type="email" required placeholder="example@mail.com" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
+                </div>
+
+                <!-- Phone Number -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">ফোন নম্বর (Phone Number) <span class="text-brand-red">*</span></label>
+                    <input type="tel" required placeholder="01XXXXXXXXX" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
+                </div>
+
+                <!-- Profession -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">পেশা (Profession) <span class="text-brand-red">*</span></label>
+                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
+                        <option value="" disabled selected>নির্বাচন করুন (Select)</option>
+                        <option value="student">১. শিক্ষার্থী (Student)</option>
+                        <option value="professional">২. পেশাজীবী (Professional)</option>
+                        <option value="job_seeker">৩. চাকরিপ্রার্থী (Job Seeker)</option>
+                    </select>
+                </div>
+
+                <!-- Division -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">বিভাগ (Division) <span class="text-brand-red">*</span></label>
+                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
+                        <option value="" disabled selected>নির্বাচন করুন (Select)</option>
+                        <option value="dhaka">১. ঢাকা (Dhaka)</option>
+                        <option value="chattogram">২. চট্টগ্রাম (Chattogram)</option>
+                        <option value="rajshahi">৩. রাজশাহী (Rajshahi)</option>
+                        <option value="khulna">৪. খুলনা (Khulna)</option>
+                        <option value="sylhet">৫. সিলেট (Sylhet)</option>
+                        <option value="other">৬. বরিশাল/রংপুর/অন্যান্য</option>
+                    </select>
+                </div>
+
+                <!-- Gender -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">লিঙ্গ (Gender) <span class="text-brand-red">*</span></label>
+                    <div class="flex items-center gap-5 mt-1.5">
+                        <label class="flex items-center gap-1.5 text-[0.85rem] text-gray-700 cursor-pointer">
+                            <input type="radio" name="gender" value="male" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
+                            ১. পুরুষ (Male)
+                        </label>
+                        <label class="flex items-center gap-1.5 text-[0.85rem] text-gray-700 cursor-pointer">
+                            <input type="radio" name="gender" value="female" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
+                            ২. নারী (Female)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Educational Qualification -->
+                <div>
+                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">শিক্ষাগত যোগ্যতা <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
+                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
+                        <option value="" disabled selected>নির্বাচন করুন (Select)</option>
+                        <option value="hsc">১. HSC বা সমমান</option>
+                        <option value="honors">২. স্নাতক (Honors/BSc)</option>
+                        <option value="masters">৩. স্নাতকোত্তর (Masters/MSc)</option>
+                        <option value="other">৪. অন্যান্য (Other)</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-3">
+                    <button type="button" class="w-full bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 rounded-[3px] text-[0.95rem] shadow-sm">
+                        Submit Application
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+        <!-- ================= HERO SECTION ================= -->
+        <div class="px-5 pt-8 pb-6">
+            <div class="flex items-start">
+                <div class="grid grid-cols-2 gap-[3px] w-6 h-6 mr-2 mt-1">
+                    <div class="bg-brand-red rounded-full"></div>
+                    <div class="bg-brand-green rounded-full"></div>
+                    <div class="bg-brand-blue rounded-full"></div>
+                    <div class="bg-[#FFC20E] rounded-full"></div>
+                </div>
+                <div>
+                    <h1 class="text-[1.7rem] font-black leading-none text-[#222] tracking-tight relative inline-block">
+                        HDNB<span class="text-[0.5rem] absolute -top-0.5 -right-3 text-gray-500 font-medium">™</span>
+                    </h1>
+                    <p class="text-[0.45rem] font-semibold text-gray-400 leading-[1.1] mt-0.5 tracking-wider w-[120px]">
+                        HUMAN DEVELOPMENT NETWORK BANGLADESH
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center px-4 mt-2">
+            <p class="text-gray-500 text-xs font-semibold mb-1 tracking-wide">Starting from June 13, 2026</p>
+            <h2 class="text-brand-blue text-[1.7rem] font-black leading-[1.1] tracking-tight">Product Management</h2>
+            <h2 class="text-brand-dark text-[1.7rem] font-black leading-[1.1] tracking-tight">Career Bootcamp</h2>
+            <p class="text-gray-600 text-[0.7rem] font-semibold mt-3">Designed & Instructed by the Top Instructors</p>
+        </div>
+
+        <div class="mx-6 mt-6 border border-gray-200 rounded py-2.5 flex justify-center items-center space-x-2 shadow-sm">
+            <span class="text-gray-600 text-[0.8rem] font-medium">Live online class with</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/2491px-Google_Meet_icon_%282020%29.svg.png" class="w-5 h-5 object-contain" alt="Google Meet">
+            <span class="text-gray-800 text-[0.8rem] font-bold">Google Meet</span>
+        </div>
+
+        <div class="flex justify-between items-center mx-10 mt-8 mb-8">
+            <div class="flex items-baseline space-x-1">
+                <span class="text-[2.5rem] font-black text-brand-dark leading-none">05</span>
+                <span class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest">Months.</span>
+            </div>
+            <div class="flex items-baseline space-x-1">
+                <span class="text-[2.5rem] font-black text-brand-dark leading-none">19</span>
+                <span class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest">Classes.</span>
+            </div>
+            <div class="flex items-baseline space-x-1">
+                <span class="text-[2.5rem] font-black text-brand-dark leading-none">90</span>
+                <span class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest">Seats.</span>
+            </div>
+        </div>
+
+        <div class="relative w-full h-[260px] flex overflow-hidden">
+            <div class="flex-1 bg-brand-red relative flex justify-center border-r border-white/20">
+                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">NAFEW</span>
+                <img src="https://randomuser.me/api/portraits/men/44.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Nafew">
+            </div>
+            <div class="flex-1 bg-brand-blue relative flex justify-center border-r border-white/20">
+                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">SUNIV</span>
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Suniv">
+            </div>
+            <div class="flex-1 bg-brand-orange relative flex justify-center border-r border-white/20">
+                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">ARNOB</span>
+                <img src="https://randomuser.me/api/portraits/men/47.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Arnob">
+            </div>
+            <div class="flex-1 bg-brand-purple relative flex justify-center border-r border-white/20">
+                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">SAMIHA</span>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Samiha">
+            </div>
+            <div class="flex-1 bg-brand-green relative flex justify-center">
+                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">MUNAEM</span>
+                <img src="https://randomuser.me/api/portraits/men/50.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Munaem">
+            </div>
+
+            <div class="absolute inset-0 z-20 pointer-events-none">
+                <div class="absolute left-[10%] bottom-[18px] -translate-x-1/2 bg-brand-red text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Management</div>
+                <div class="absolute left-[20%] top-[12px] -translate-x-1/2 bg-brand-blue text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Design</div>
+                <div class="absolute left-[40%] bottom-[18px] -translate-x-1/2 bg-brand-orange text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Data & Analytics</div>
+                <div class="absolute left-[60%] top-[12px] -translate-x-1/2 bg-brand-purple text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Growth & Scaling</div>
+                <div class="absolute left-[80%] bottom-[18px] -translate-x-1/2 bg-brand-green text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Interview</div>
+
+                <div class="diagram-line" style="left: 10%; bottom: 26px; width: 5%; height: calc(100% - 46px); border-left: 2px solid #008CFF; border-top: 2px solid #008CFF; border-top-left-radius: 4px;">
+                    <div class="arrow arrow-r-blue"></div>
+                </div>
+                <div class="diagram-line" style="left: 26%; top: 20px; width: 14%; height: calc(100% - 46px); border-top: 2px solid #008CFF; border-right: 2px solid #008CFF; border-top-right-radius: 4px;">
+                    <div class="arrow arrow-d-blue"></div>
+                </div>
+                <div class="diagram-line" style="left: 49%; bottom: 26px; width: 11%; height: calc(100% - 46px); border-bottom: 2px solid #F26522; border-right: 2px solid #F26522; border-bottom-right-radius: 4px;">
+                    <div class="arrow arrow-u-orange"></div>
+                </div>
+                <div class="diagram-line" style="left: 69%; top: 20px; width: 11%; height: calc(100% - 46px); border-top: 2px solid #92278F; border-right: 2px solid #92278F; border-top-right-radius: 4px;">
+                    <div class="arrow arrow-d-purple"></div>
+                </div>
+                <div class="diagram-line" style="left: 88%; bottom: 26px; width: 4%; height: calc(100% - 46px); border-bottom: 2px solid #00A651; border-right: 2px solid #00A651; border-bottom-right-radius: 4px;">
+                    <div class="arrow arrow-u-green"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-7 mt-6 text-center text-[0.65rem] text-gray-700 font-medium leading-[1.6]">
+            Prepare for Product Management career with our 19-class course led by five experts. Live sessions, comprehensive coverage of all aspects, and job placement support.
+        </div>
+
+        <div class="px-5 mt-6 space-y-3 pb-8">
+            <button class="w-full bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 rounded text-[0.9rem]">
+                Apply Now
+            </button>
+            <button class="w-full bg-white hover:bg-gray-50 transition-colors border-2 border-brand-red text-brand-red font-bold py-3 rounded text-[0.9rem]">
+                Browse Syllabus
+            </button>
+        </div>
+
+        <!-- ================= SECTION: Designed for You ================= -->
+        <div class="w-full border-t border-gray-100 pt-10 px-5">
+            <div class="flex items-start mb-6">
+                <div class="w-5 h-11 bg-brand-red mr-4 flex-shrink-0"></div>
+                <h2 class="text-[1.35rem] font-black text-gray-600 leading-[1.15] tracking-tight">
+                    Our Bootcamp<br>Designed for You
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
+                    <div class="text-brand-red mb-3 h-8 w-8">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2" stroke="#E5252A"></rect><line x1="7" y1="8" x2="14" y2="8" stroke="#E5252A" stroke-width="2.5"></line><line x1="7" y1="12" x2="11" y2="12" stroke="#E5252A" stroke-width="2.5"></line><circle cx="17" cy="15" r="5" fill="white" stroke="#E5252A"></circle><polyline points="17 13 17 15 19 15" stroke="#E5252A" stroke-width="1.5"></polyline></svg>
+                    </div>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">5-month timeline</h3>
+                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Total 19-week long, Starting from 13th June, 2026</p>
+                </div>
+
+                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
+                    <div class="text-brand-red mb-3 h-8 w-8">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-9a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v9" stroke="#E5252A"></path><path d="M2 20h20" stroke="#E5252A" stroke-width="2.5"></path><path d="M7 13l3 -3l2 2l4 -4" stroke="#E5252A" stroke-width="2"></path><polyline points="16 8 16 8 16 8" stroke="#E5252A" stroke-width="3"></polyline></svg>
+                    </div>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">19-online classes</h3>
+                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Live online classes via Google Meet & Google Classroom.</p>
+                </div>
+
+                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
+                    <div class="text-brand-red mb-3 h-8 w-8">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="8" r="2.5" fill="#E5252A"></circle><path d="M3 18c0-2.2 1.8-4 4-4h1c.6 0 1.2.1 1.7.4a5 5 0 0 0-.7 2.6V18H3z" fill="#E5252A"></path><circle cx="17" cy="8" r="2.5" fill="#E5252A"></circle><path d="M16 14h1c2.2 0 4 1.8 4 4v.01H15v-1c0-1-.2-1.9-.7-2.6.5-.3 1.1-.4 1.7-.4z" fill="#E5252A"></path><circle cx="12" cy="11" r="3.5" fill="#E5252A"></circle><path d="M8 21.01c0-2.8 2.2-5 5-5s5 2.2 5 5v.01H8z" fill="#E5252A"></path></svg>
+                    </div>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">90-student seats</h3>
+                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Limited seats for better & clear interaction with teachers.</p>
+                </div>
+
+                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
+                    <div class="text-brand-red mb-3 h-8 w-8">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" fill="#E5252A"></rect><path d="M12 7v5h4" stroke="white" stroke-width="2.5" stroke-linecap="square" fill="none"></path></svg>
+                    </div>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">100-hours duration</h3>
+                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Total time to complete the class, quiz and assignments.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-2 mt-8 mb-6 px-1">
+                <div class="h-2 w-16 bg-gray-300 rounded-full"></div>
+                <div class="h-2 w-7 bg-gray-200 rounded-full"></div>
+                <div class="h-2 w-4 bg-gray-200 rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- ================= SECTION: Complete Preparation ================= -->
+        <div class="w-full pt-4 px-5">
+            <div class="text-center mb-10">
+                <p class="text-gray-500 text-[0.75rem] font-medium tracking-wide mb-0.5">Everything in One Program</p>
+                <h2 class="text-brand-red text-[1.65rem] font-black tracking-tight leading-none">Complete Preparation</h2>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="flex justify-between items-center py-6 border-b border-gray-100 gap-4">
+                    <div class="flex-1">
+                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] px-1.5 py-0.5 font-medium inline-block mb-1">Need to ask questions to the teacher?</span>
+                        <h3 class="text-[#555] text-[1.35rem] font-black leading-none mb-2 mt-1 tracking-tight">Live Interactive Class</h3>
+                        <p class="text-gray-500 text-[0.7rem] leading-relaxed">Designed for real-time interaction with instructors. Instantly clarify doubts during <span class="font-bold">class via Google Meet</span>, Not recorded lectures.</p>
+                    </div>
+                    <div class="w-[85px] flex-shrink-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-sm"><rect x="5" y="15" width="90" height="60" rx="4" fill="#E5252A"/><rect x="10" y="20" width="80" height="50" fill="#2d3748"/><rect x="42" y="75" width="16" height="15" fill="#4a5568"/><path d="M25 90 L75 90 L80 95 L20 95 Z" fill="#2d3748"/><rect x="12" y="22" width="37" height="22" fill="#fff"/><circle cx="30" cy="33" r="5" fill="#fca5a5"/><rect x="51" y="22" width="37" height="22" fill="#fff"/><circle cx="70" cy="33" r="5" fill="#fca5a5"/><rect x="12" y="46" width="37" height="22" fill="#fff"/><circle cx="30" cy="57" r="5" fill="#fca5a5"/><rect x="51" y="46" width="37" height="22" fill="#fff"/><circle cx="70" cy="57" r="5" fill="#E5252A"/><circle cx="50" cy="15" r="4" fill="#2d3748"/></svg>
+                    </div>
+                </div>
+                 <div class="flex justify-between items-center py-6 gap-4 border-b border-gray-100">
+                    <div class="flex-1">
+                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] px-1.5 py-0.5 font-medium inline-block mb-1">Want a pair or group for preparation?</span>
+                        <h3 class="text-[#555] text-[1.35rem] font-black leading-none mb-2 mt-1 tracking-tight">Practice Partners</h3>
+                        <p class="text-gray-500 text-[0.7rem] leading-relaxed">We will be assigning groups and pairs, for collaborative task, and to help each other do their practice in a group for faster learning experience.</p>
+                    </div>
+                    <div class="w-[85px] flex-shrink-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-sm"><circle cx="50" cy="50" r="35" fill="none" stroke="#fca5a5" stroke-width="1.5" stroke-dasharray="3,3"/><circle cx="50" cy="50" r="22" fill="#ffe4e6"/><path d="M35 40 Q50 65 65 40" stroke="#fecdd3" stroke-width="2" fill="none"/><path d="M35 60 Q50 35 65 60" stroke="#fecdd3" stroke-width="2" fill="none"/><path d="M40 35 Q65 50 40 65" stroke="#fecdd3" stroke-width="2" fill="none"/><circle cx="50" cy="15" r="7" fill="#2d3748"/><circle cx="85" cy="50" r="7" fill="#E5252A"/><circle cx="50" cy="85" r="7" fill="#fca5a5"/><circle cx="15" cy="50" r="7" fill="#4a5568"/><circle cx="25" cy="25" r="7" fill="#9ca3af"/><circle cx="75" cy="75" r="7" fill="#4a5568"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SECTION: Teacher Overview ================= -->
+        <div class="w-full pt-10 px-5 pb-8 bg-white">
+            <div class="text-center mb-7">
+                <p class="text-gray-500 text-[0.8rem] font-medium mb-0.5">Meet the Instructors</p>
+                <h2 class="text-brand-blue text-[1.65rem] font-black tracking-tight leading-none">Teacher Overview</h2>
+            </div>
+
+            <div class="relative bg-white border border-gray-300 rounded-[4px] shadow-sm w-full mx-auto mt-2">
+                <div class="absolute -top-[2px] left-3 right-3 h-[4px] bg-brand-blue rounded-t-[4px]"></div>
+                <div class="p-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-brand-blue rounded-sm overflow-hidden flex-shrink-0">
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Suniv Ashraf" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="text-[#222] text-[1.2rem] font-bold leading-tight">Suniv Ashraf</h3>
+                            <p class="text-gray-500 text-[0.85rem] leading-tight mt-1">UX Designer</p>
+                            <p class="text-gray-500 text-[0.85rem] font-bold leading-tight">Grameenphone</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-gray-200 mx-5">
+                <div class="py-4 px-5 flex justify-between items-center">
+                    <div class="flex items-center gap-1.5">
+                        <svg viewBox="0 0 100 100" class="w-6 h-6 text-brand-blue" fill="currentColor"><path d="M 50 10 C 75 10 90 25 90 50 C 90 75 75 90 50 90 C 25 90 50 50 50 50 Z" style="transform: rotate(45deg); transform-origin: center;"></path></svg>
+                        <span class="text-[0.7rem] font-serif tracking-wider text-black font-semibold mt-0.5">গ্রামীণফোন</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg viewBox="0 0 100 100" class="w-7 h-7 text-[#1E3A8A]" fill="currentColor"><path d="M 10 40 Q 40 20 85 25 Q 70 55 50 85 Q 40 60 10 40 Z"></path></svg>
+                        <span class="text-[0.85rem] font-bold text-[#1E3A8A] tracking-tighter">gozayaan</span>
+                    </div>
+                    <div class="flex items-baseline">
+                        <span class="text-[0.95rem] font-bold text-black tracking-tighter">sheba</span>
+                        <span class="text-[0.6rem] text-black font-medium italic">.xyz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SECTION: Program Schedule (ALL MODULES DETAILED) ================= -->
+        <div class="w-full pt-10 px-5 pb-16 bg-white relative">
+            
+            <div class="text-center mb-8">
+                <p class="text-gray-500 text-[0.85rem] font-medium tracking-wide mb-0.5">Explore the Roadmap</p>
+                <h2 class="text-brand-blue text-[1.65rem] font-black tracking-tight leading-none">Program Schedule</h2>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative pl-[65px] mt-10 w-full pr-1">
+                
+                <!-- Master Vertical Line for ALL Modules -->
+                <div class="absolute left-[70px] top-6 bottom-4 w-[2.5px] bg-[#2D2D2D] z-0"></div>
+
+                <!-- ================= MODULE 01 (RED) ================= -->
+                <!-- Module 01 Header -->
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
+                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl font-black leading-none mt-0.5">01</span>
+                    </div>
+                    <div class="bg-brand-red text-white p-3 flex-1 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Management</h3>
+                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">5 Class, 5 Assessment</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-right leading-none">
+                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] font-bold">Nafew</span>
+                            </div>
+                            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Instructor Nafew" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M1 Item 1 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">13</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Introduction to Product Management</h4>
+                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">PM Journey Breakdown &bull; Networking &bull; Group Formation &bull; Icebreaker &bull; Expectation Setting</div>
+                    </div>
+                </div>
+
+                <!-- M1 Item 2 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">20</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Business Fundamentals for PMs</h4>
+                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Supply Chain Basics &bull; How Businesses Operate End-to-End &bull; Product Lifecycle &bull; Roles vs Reality</div>
+                    </div>
+                </div>
+                
+                <!-- M1 Item 3 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">27</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Customer Centered Approach + User Survey</h4>
+                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">User Persona &bull; Empathy Mapping &bull; User Interviews &bull; Pain Point Identification</div>
+                    </div>
+                </div>
+                
+                <!-- M1 Item 4 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">04</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Product Strategy, Planning & PRD</h4>
+                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Market &bull; Competitor Thinking &bull; Positioning</div>
+                    </div>
+                </div>
+                
+                <!-- M1 Item 5 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">11</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Roadmap, Agile & Sprint Execution</h4>
+                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Project Management &bull; Sprint Planning &bull; Scrum &bull; Jira workflows</div>
+                    </div>
+                </div>
+
+
+                <!-- ================= MODULE 02 (BLUE) ================= -->
+                <!-- Module 02 Header -->
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
+                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl font-black leading-none mt-0.5">02</span>
+                    </div>
+                    <div class="bg-brand-blue text-white p-3 flex-1 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Design</h3>
+                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">4 Class, 2 Assessment</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-right leading-none">
+                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] font-bold">Suniv</span>
+                            </div>
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Instructor Suniv" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M2 Item 1 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">18</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-blue rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">UI/UX Principles for PMs</h4>
+                                   <p class="text-brand-blue text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Typography &bull; Color Theory &bull; Layout Structure &bull; Visual Hierarchy</div>
+                    </div>
+                </div>
+
+                <!-- M2 Item 2 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">25</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-blue rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Prototyping & Wireframing</h4>
+                                   <p class="text-brand-blue text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Figma Basics &bull; Lo-Fi vs Hi-Fi &bull; User Flows &bull; Usability Testing</div>
+                    </div>
+                </div>
+
+                <!-- M2 Item 3 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">01</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-blue rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Usability Testing & Feedback</h4>
+                                   <p class="text-brand-blue text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">A/B Testing &bull; Heatmaps &bull; Iterative Design Process</div>
+                    </div>
+                </div>
+
+                <!-- ================= MODULE 03 (ORANGE) ================= -->
+                <!-- Module 03 Header -->
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
+                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl font-black leading-none mt-0.5">03</span>
+                    </div>
+                    <div class="bg-brand-orange text-white p-3 flex-1 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Data & Analytics</h3>
+                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">3 Class, 3 Assessment</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-right leading-none">
+                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] font-bold">Arnob</span>
+                            </div>
+                            <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Instructor Arnob" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M3 Item 1 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">08</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-orange rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Metrics that Matter</h4>
+                                   <p class="text-brand-orange text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">KPIs vs Vanity Metrics &bull; OKRs &bull; The North Star Metric Framework</div>
+                    </div>
+                </div>
+
+                <!-- M3 Item 2 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">15</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-orange rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Data-Driven Decision Making</h4>
+                                   <p class="text-brand-orange text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">SQL Basics for PMs &bull; Funnel Analysis &bull; Cohort Tracking &bull; Data Visualization</div>
+                    </div>
+                </div>
+
+                <!-- ================= MODULE 04 (PURPLE) ================= -->
+                <!-- Module 04 Header -->
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
+                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl font-black leading-none mt-0.5">04</span>
+                    </div>
+                    <div class="bg-brand-purple text-white p-3 flex-1 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Growth & Scaling</h3>
+                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">4 Class, 2 Assessment</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-right leading-none">
+                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] font-bold">Samiha</span>
+                            </div>
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor Samiha" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M4 Item 1 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">22</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-purple rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Go-to-Market Strategy</h4>
+                                   <p class="text-brand-purple text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">GTM Planning &bull; Launch Strategies &bull; Distribution Channels &bull; Marketing Alignment</div>
+                    </div>
+                </div>
+
+                <!-- M4 Item 2 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">29</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-purple rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Growth Loops & Acquisition</h4>
+                                   <p class="text-brand-purple text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Viral Engines &bull; Acquisition Tactics &bull; User Retention Strategies</div>
+                    </div>
+                </div>
+
+                <!-- ================= MODULE 05 (GREEN) ================= -->
+                <!-- Module 05 Header -->
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
+                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl font-black leading-none mt-0.5">05</span>
+                    </div>
+                    <div class="bg-brand-green text-white p-3 flex-1 flex justify-between items-center">
+                        <div>
+                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Interview Prep</h3>
+                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">3 Class, Mock Tests</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-right leading-none">
+                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] font-bold">Munaem</span>
+                            </div>
+                            <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Instructor Munaem" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M5 Item 1 -->
+                <div class="relative mb-6 group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">05</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">SEP</span>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-green rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Behavioral & Case Studies</h4>
+                                   <p class="text-brand-green text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">STAR Method &bull; Product Sense Scenarios &bull; Execution Queries</div>
+                    </div>
+                </div>
+                
+                <!-- Final Timeline Item with UP Arrow -->
+                <div class="relative group">
+                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
+                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">12</span>
+                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">SEP</span>
+                        
+                        <!-- Bottom Blue Button (Moved to very end) -->
+                        <div class="bg-[#008CFF] w-[38px] h-[38px] mx-auto mt-2 rounded-[3px] flex items-center justify-center shadow-md cursor-pointer hover:bg-blue-600 transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M18 15l-6-6-6 6"/></svg>
+                        </div>
+                    </div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-green rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="flex items-start gap-2.5">
+                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                               <div>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Final Mock Interviews</h4>
+                                   <p class="text-brand-green text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                               </div>
+                            </div>
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            </div>
+                        </div>
+                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">1-on-1 Evaluations &bull; Real-time Feedback &bull; Resume Polishing</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= SECTION: Class Management ================= -->
+        <div class="w-full pt-10 px-5 pb-16 bg-white">
+            <div class="text-center mb-8">
+                <p class="text-gray-500 text-[0.8rem] font-medium tracking-wide mb-0.5">What's our Modality of</p>
+                <h2 class="text-[#2DA94F] text-[1.7rem] font-black tracking-tight leading-none">Class Management</h2>
+            </div>
+            <div class="flex flex-col gap-6 px-1">
+                <div class="relative pt-[1.5px] w-full">
+                    <div class="absolute top-0 left-6 right-6 h-[6px] bg-[#2DA94F] rounded-t-[4px] z-0"></div>
+                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 rounded-[4px] z-10">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/512px-Google_Meet_icon_%282020%29.svg.png" alt="Google Meet" class="w-9 h-9 mb-4 object-contain">
+                        <h3 class="text-[1.35rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Meet</h3>
+                        <p class="text-gray-500 text-[0.75rem] leading-[1.55]">Online classes will be conducted via Google Meet, where students, instructors and Teaching Assistant will be present in real-time, to have an interactive class.</p>
+                    </div>
+                </div>
+                <div class="relative pt-[1.5px] w-full">
+                    <div class="absolute top-0 left-6 right-6 h-[6px] bg-[#F9AB00] rounded-t-[4px] z-0"></div>
+                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 rounded-[4px] z-10">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Google_Classroom_Logo.png/512px-Google_Classroom_Logo.png" alt="Google Classroom" class="w-9 h-9 mb-4 object-contain">
+                        <h3 class="text-[1.35rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Classroom</h3>
+                        <p class="text-gray-500 text-[0.75rem] leading-[1.55]">Online quiz, assessment needs to be submitted via Google Classroom, to have easier evaluation process adn weekly basis checking via Teaching Assistant.</p>
+                    </div>
+                </div>
+                <div class="relative pt-[1.5px] w-full">
+                    <div class="absolute top-0 left-6 right-6 h-[6px] bg-[#7884CB] rounded-t-[4px] z-0"></div>
+                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 rounded-[4px] z-10">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Google_Chat_icon_%282020%29.svg/512px-Google_Chat_icon_%282020%29.svg.png" alt="Google Chat" class="w-9 h-9 mb-4 object-contain">
+                        <h3 class="text-[1.35rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Chat</h3>
+                        <p class="text-gray-500 text-[0.75rem] leading-[1.55]">Communicate with your Teaching assistant anytime, also collaborate with your classmates for practice and for any kind of support, we have dedicated channels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SECTION: FAQ ================= -->
+        <div class="w-full pt-4 px-5 pb-10 bg-white">
+            <div class="border border-gray-200 rounded-[3px] flex flex-col shadow-sm">
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">What is the class modality?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">Are the classes recorded if I miss the class?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">What are the job placement opportunities?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How can I communicate with the instructors?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">What are the prerequisites for this course?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">Will I receive a certificate upon completion?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How can I communicate with teaching assistants and groupmates?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How much time do I need to invest in this course?</span>
+                </div>
+                
+                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] cursor-pointer rounded-b-[3px]">
+                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
+                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How can I contact you if I have more questions?</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= SECTION: Contact / Send us Message ================= -->
+        <div class="w-full pt-8 px-5 pb-16 bg-white">
+            
+            <div class="text-center mb-6">
+                <p class="text-gray-500 text-[0.85rem] font-medium tracking-wide mb-0.5">Have any Question?</p>
+                <h2 class="text-brand-red text-[1.65rem] font-black tracking-tight leading-none">Send us Message</h2>
+            </div>
+
+            <!-- Custom Vector Illustration (Support Agents) -->
+            <div class="w-full flex justify-center mb-8 px-2">
+                <svg viewBox="0 0 400 250" class="w-full h-auto drop-shadow-sm">
+                    <defs>
+                        <pattern id="dotsPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <circle fill="#e5e7eb" cx="2" cy="2" r="1.5"></circle>
+                        </pattern>
+                    </defs>
+                    <polygon points="40,160 140,60 140,160" fill="url(#dotsPattern)" />
+                    <polygon points="360,110 260,210 360,210" fill="url(#dotsPattern)" />
+
+                    <!-- Desks -->
+                    <rect x="20" y="230" width="360" height="3" fill="#e2e8f0" />
+                    
+                    <!-- Back Rests -->
+                    <rect x="50" y="160" width="30" height="70" fill="#cbd5e1" />
+                    <rect x="230" y="160" width="30" height="70" fill="#cbd5e1" />
+
+                    <!-- ================= Agent 1 ================= -->
+                    <path d="M70 230 Q70 150 120 150 Q170 150 170 230" fill="#E5252A" />
+                    <path d="M120 150 L105 180 L135 180 Z" fill="#c51f24" />
+                    <path d="M120 150 L100 170 L120 175 Z" fill="#fff" />
+                    <path d="M120 150 L140 170 L120 175 Z" fill="#fff" />
+                    <circle cx="120" cy="120" r="22" fill="#ffbfa9" />
+                    <path d="M110 135 L110 155 L130 155 L130 135 Z" fill="#ffbfa9" />
+                    <path d="M95 120 C95 85 145 85 145 120 C145 140 150 140 150 140 C120 160 90 140 90 140 C90 140 95 140 95 120 Z" fill="#2d3748" />
+                    <circle cx="120" cy="120" r="18" fill="#ffbfa9" />
+                    <path d="M105 105 Q120 90 135 105" fill="none" stroke="#2d3748" stroke-width="5" stroke-linecap="round" />
+                    <circle cx="125" cy="115" r="2" fill="#1a202c" />
+                    <circle cx="138" cy="115" r="2" fill="#1a202c" />
+                    <path d="M130 125 Q135 130 140 125" fill="none" stroke="#1a202c" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M100 120 A 20 20 0 0 1 140 120" fill="none" stroke="#4a5568" stroke-width="3" />
+                    <rect x="96" y="115" width="8" height="16" rx="4" fill="#4a5568" />
+                    <path d="M100 125 L120 132" stroke="#4a5568" stroke-width="2" stroke-linecap="round" />
+                    <path d="M80 180 Q60 210 100 220" fill="none" stroke="#ffbfa9" stroke-width="15" stroke-linecap="round" />
+                    <path d="M80 180 Q60 210 100 220" fill="none" stroke="#E5252A" stroke-width="15" stroke-linecap="round" stroke-dasharray="25 100" />
+                    <path d="M150 180 Q180 160 170 125" fill="none" stroke="#ffbfa9" stroke-width="12" stroke-linecap="round" />
+                    <path d="M150 180 Q180 160 170 125" fill="none" stroke="#E5252A" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 100" />
+                    <circle cx="170" cy="125" r="8" fill="#ffbfa9" />
+                    <path d="M165 125 L165 110 M170 125 L170 108 M175 125 L175 112" stroke="#ffbfa9" stroke-width="3" stroke-linecap="round" />
+                    <rect x="110" y="160" width="80" height="55" rx="3" fill="#2d3748" />
+                    <rect x="115" y="165" width="70" height="45" fill="#4a5568" />
+                    <path d="M140 215 L160 215 L155 230 L145 230 Z" fill="#1a202c" />
+                    <ellipse cx="150" cy="230" rx="18" ry="4" fill="#1a202c" />
+                    <rect x="95" y="225" width="40" height="5" fill="#4a5568" />
+                    <path d="M130 90 Q130 60 160 60 Q190 60 190 90 Q190 110 170 115 L160 125 L160 115 Q130 110 130 90 Z" fill="#fff" stroke="#cbd5e1" stroke-width="2" />
+                    <circle cx="150" cy="85" r="3" fill="#4a5568" />
+                    <circle cx="160" cy="85" r="3" fill="#4a5568" />
+                    <circle cx="170" cy="85" r="3" fill="#4a5568" />
+
+                    <!-- ================= Agent 2 ================= -->
+                    <path d="M230 230 Q230 150 280 150 Q330 150 330 230" fill="#E5252A" />
+                    <path d="M280 150 L265 180 L295 180 Z" fill="#c51f24" />
+                    <circle cx="280" cy="120" r="20" fill="#c58371" />
+                    <path d="M270 135 L270 155 L290 155 L290 135 Z" fill="#c58371" />
+                    <path d="M260 115 C260 85 300 85 300 115 C300 125 295 125 295 125 C275 115 265 115 265 125 C260 125 260 115 260 115 Z" fill="#1a202c" />
+                    <circle cx="275" cy="115" r="2" fill="#1a202c" />
+                    <circle cx="288" cy="115" r="2" fill="#1a202c" />
+                    <path d="M280 125 Q285 130 290 125" fill="none" stroke="#1a202c" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M260 120 A 20 20 0 0 1 300 120" fill="none" stroke="#4a5568" stroke-width="3" />
+                    <rect x="256" y="115" width="8" height="16" rx="4" fill="#4a5568" />
+                    <path d="M260 125 L280 132" stroke="#4a5568" stroke-width="2" stroke-linecap="round" />
+                    <path d="M240 180 Q220 210 260 220" fill="none" stroke="#c58371" stroke-width="15" stroke-linecap="round" />
+                    <path d="M240 180 Q220 210 260 220" fill="none" stroke="#E5252A" stroke-width="15" stroke-linecap="round" stroke-dasharray="25 100" />
+                    <path d="M310 180 Q340 170 330 135" fill="none" stroke="#c58371" stroke-width="12" stroke-linecap="round" />
+                    <path d="M310 180 Q340 170 330 135" fill="none" stroke="#E5252A" stroke-width="12" stroke-linecap="round" stroke-dasharray="25 100" />
+                    <circle cx="330" cy="135" r="10" fill="#c58371" />
+                    <path d="M325 135 L325 115 Q335 115 335 130" fill="#c58371" stroke="#a05e4c" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M340 130 L345 130 M340 135 L345 135 M340 140 L345 140" stroke="#a05e4c" stroke-width="1.5" stroke-linecap="round" />
+                    <rect x="270" y="160" width="80" height="55" rx="3" fill="#2d3748" />
+                    <rect x="275" y="165" width="70" height="45" fill="#4a5568" />
+                    <path d="M300 215 L320 215 L315 230 L305 230 Z" fill="#1a202c" />
+                    <ellipse cx="310" cy="230" rx="18" ry="4" fill="#1a202c" />
+                    <rect x="255" y="225" width="40" height="5" fill="#4a5568" />
+                    <path d="M280 80 Q280 50 310 50 Q340 50 340 80 Q340 100 320 105 L310 115 L310 105 Q280 100 280 80 Z" fill="#fff" stroke="#cbd5e1" stroke-width="2" />
+                    <circle cx="300" cy="75" r="3" fill="#4a5568" />
+                    <circle cx="310" cy="75" r="3" fill="#4a5568" />
+                    <circle cx="320" cy="75" r="3" fill="#4a5568" />
+                </svg>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="space-y-4">
+                <button class="w-full bg-[#006AFF] hover:bg-blue-700 transition-colors text-white font-bold py-4 rounded-[4px] text-[1.05rem] flex justify-center items-center gap-2">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.915 1.488 5.498 3.795 7.155v3.475a.5.5 0 0 0 .768.423l3.41-1.89c1.554.433 3.228.667 4.982.667 5.523 0 10-4.145 10-9.258C24 6.145 19.523 2 12 2zm1.182 12.39-3.08-3.29-6.002 3.29 6.6-7.008 3.167 3.29 5.914-3.29-6.6 7.008z"/></svg>
+                    Messenger
+                </button>
+                <button class="w-full bg-[#25D366] hover:bg-green-600 transition-colors text-white font-bold py-4 rounded-[4px] text-[1.05rem] flex justify-center items-center gap-2">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    WhatsApp
+                </button>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
+
 
 ```
