@@ -89,44 +89,49 @@
             opacity: 0.85;
             transition: all 0.3s ease;
         }
+
+        /* Smooth FAQ Transition */
+        .faq-answer {
+            transition: all 0.3s ease-in-out;
+        }
     </style>
 </head>
 <body class="flex justify-center items-start min-h-screen">
 
-    <!-- Mobile Container mimicking the screenshot view -->
-    <div class="w-full max-w-md bg-white min-h-screen shadow-2xl relative pb-10">
+    <!-- Main Container (Now fully responsive) -->
+    <div class="w-full bg-white min-h-screen shadow-2xl relative pb-10 overflow-x-hidden">
 
         <!-- ================= SECTION: Enrollment Form (Before Hero Section) ================= -->
-        <div class="w-full pt-8 px-5 pb-8 bg-[#f8f9fa] border-b border-gray-200">
-            <div class="text-center mb-6">
-                <p class="text-gray-500 text-[0.8rem] font-medium tracking-wide mb-0.5">Secure Your Seat</p>
-                <h2 class="text-brand-blue text-[1.65rem] font-black tracking-tight leading-none">Enrollment Form</h2>
+        <div class="w-full pt-8 px-5 pb-10 bg-[#f8f9fa] border-b border-gray-200">
+            <div class="text-center mb-6 max-w-3xl mx-auto">
+                <p class="text-gray-500 text-[0.8rem] md:text-[1rem] font-medium tracking-wide mb-0.5">Secure Your Seat</p>
+                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.2rem] font-black tracking-tight leading-none">Enrollment Form</h2>
             </div>
 
-            <form class="w-full bg-white p-5 rounded-[4px] border border-gray-200 shadow-sm space-y-4">
+            <form class="w-full max-w-3xl mx-auto bg-white p-5 md:p-8 rounded-[4px] border border-gray-200 shadow-sm space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
                 
                 <!-- Full Name -->
                 <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">পূর্ণ নাম (Full Name) <span class="text-brand-red">*</span></label>
-                    <input type="text" required placeholder="আপনার পূর্ণ নাম" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">পূর্ণ নাম (Full Name) <span class="text-brand-red">*</span></label>
+                    <input type="text" required placeholder="আপনার পূর্ণ নাম" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
                 </div>
 
                 <!-- Email Address -->
                 <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">ইমেইল এড্রেস (Email Address) <span class="text-brand-red">*</span></label>
-                    <input type="email" required placeholder="example@mail.com" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">ইমেইল এড্রেস (Email Address) <span class="text-brand-red">*</span></label>
+                    <input type="email" required placeholder="example@mail.com" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
                 </div>
 
                 <!-- Phone Number -->
                 <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">ফোন নম্বর (Phone Number) <span class="text-brand-red">*</span></label>
-                    <input type="tel" required placeholder="01XXXXXXXXX" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">ফোন নম্বর (Phone Number) <span class="text-brand-red">*</span></label>
+                    <input type="tel" required placeholder="01XXXXXXXXX" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
                 </div>
 
                 <!-- Profession -->
                 <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">পেশা (Profession) <span class="text-brand-red">*</span></label>
-                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">পেশা (Profession) <span class="text-brand-red">*</span></label>
+                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
                         <option value="" disabled selected>নির্বাচন করুন (Select)</option>
                         <option value="student">১. শিক্ষার্থী (Student)</option>
                         <option value="professional">২. পেশাজীবী (Professional)</option>
@@ -136,8 +141,8 @@
 
                 <!-- Division -->
                 <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">বিভাগ (Division) <span class="text-brand-red">*</span></label>
-                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">বিভাগ (Division) <span class="text-brand-red">*</span></label>
+                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
                         <option value="" disabled selected>নির্বাচন করুন (Select)</option>
                         <option value="dhaka">১. ঢাকা (Dhaka)</option>
                         <option value="chattogram">২. চট্টগ্রাম (Chattogram)</option>
@@ -150,13 +155,13 @@
 
                 <!-- Gender -->
                 <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">লিঙ্গ (Gender) <span class="text-brand-red">*</span></label>
-                    <div class="flex items-center gap-5 mt-1.5">
-                        <label class="flex items-center gap-1.5 text-[0.85rem] text-gray-700 cursor-pointer">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">লিঙ্গ (Gender) <span class="text-brand-red">*</span></label>
+                    <div class="flex items-center gap-5 mt-1.5 md:mt-3">
+                        <label class="flex items-center gap-1.5 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
                             <input type="radio" name="gender" value="male" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
                             ১. পুরুষ (Male)
                         </label>
-                        <label class="flex items-center gap-1.5 text-[0.85rem] text-gray-700 cursor-pointer">
+                        <label class="flex items-center gap-1.5 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
                             <input type="radio" name="gender" value="female" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
                             ২. নারী (Female)
                         </label>
@@ -164,9 +169,9 @@
                 </div>
 
                 <!-- Educational Qualification -->
-                <div>
-                    <label class="block text-[0.8rem] font-bold text-[#2D2D2D] mb-1">শিক্ষাগত যোগ্যতা <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
-                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 text-[0.85rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
+                <div class="md:col-span-2">
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">শিক্ষাগত যোগ্যতা <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
+                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
                         <option value="" disabled selected>নির্বাচন করুন (Select)</option>
                         <option value="hsc">১. HSC বা সমমান</option>
                         <option value="honors">২. স্নাতক (Honors/BSc)</option>
@@ -176,8 +181,8 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="pt-3">
-                    <button type="button" class="w-full bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 rounded-[3px] text-[0.95rem] shadow-sm">
+                <div class="pt-3 md:pt-4 md:col-span-2">
+                    <button type="button" class="w-full bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded-[3px] text-[0.95rem] md:text-[1.1rem] shadow-sm">
                         Submit Application
                     </button>
                 </div>
@@ -186,82 +191,85 @@
 
 
         <!-- ================= HERO SECTION ================= -->
-        <div class="px-5 pt-8 pb-6">
+        <div class="px-5 pt-10 pb-6 max-w-5xl mx-auto flex justify-between items-center">
             <div class="flex items-start">
-                <div class="grid grid-cols-2 gap-[3px] w-6 h-6 mr-2 mt-1">
+                <div class="grid grid-cols-2 gap-[3px] w-6 h-6 md:w-8 md:h-8 mr-2 md:mr-3 mt-1 md:mt-0.5">
                     <div class="bg-brand-red rounded-full"></div>
                     <div class="bg-brand-green rounded-full"></div>
                     <div class="bg-brand-blue rounded-full"></div>
                     <div class="bg-[#FFC20E] rounded-full"></div>
                 </div>
                 <div>
-                    <h1 class="text-[1.7rem] font-black leading-none text-[#222] tracking-tight relative inline-block">
-                        HDNB<span class="text-[0.5rem] absolute -top-0.5 -right-3 text-gray-500 font-medium">™</span>
+                    <h1 class="text-[1.7rem] md:text-[2.2rem] font-black leading-none text-[#222] tracking-tight relative inline-block">
+                        HDNB<span class="text-[0.5rem] md:text-[0.7rem] absolute -top-0.5 -right-3 md:-right-4 text-gray-500 font-medium">™</span>
                     </h1>
-                    <p class="text-[0.45rem] font-semibold text-gray-400 leading-[1.1] mt-0.5 tracking-wider w-[120px]">
+                    <p class="text-[0.45rem] md:text-[0.6rem] font-semibold text-gray-400 leading-[1.1] mt-0.5 md:mt-1 tracking-wider w-[120px] md:w-[160px]">
                         HUMAN DEVELOPMENT NETWORK BANGLADESH
                     </p>
                 </div>
             </div>
+            <!-- Desktop only Login placeholder (optional alignment helper) -->
+            <div class="hidden md:block"></div>
         </div>
 
-        <div class="text-center px-4 mt-2">
-            <p class="text-gray-500 text-xs font-semibold mb-1 tracking-wide">Starting from June 13, 2026</p>
-            <h2 class="text-brand-blue text-[1.7rem] font-black leading-[1.1] tracking-tight">Product Management</h2>
-            <h2 class="text-brand-dark text-[1.7rem] font-black leading-[1.1] tracking-tight">Career Bootcamp</h2>
-            <p class="text-gray-600 text-[0.7rem] font-semibold mt-3">Designed & Instructed by the Top Instructors</p>
+        <div class="text-center px-4 mt-2 max-w-3xl mx-auto">
+            <p class="text-gray-500 text-xs md:text-sm font-semibold mb-1 tracking-wide">Starting from June 13, 2026</p>
+            <h2 class="text-brand-blue text-[1.7rem] md:text-[3rem] font-black leading-[1.1] tracking-tight">Product Management</h2>
+            <h2 class="text-brand-dark text-[1.7rem] md:text-[3rem] font-black leading-[1.1] tracking-tight">Career Bootcamp</h2>
+            <p class="text-gray-600 text-[0.7rem] md:text-[1rem] font-semibold mt-3 md:mt-5">Designed & Instructed by the Top Instructors</p>
         </div>
 
-        <div class="mx-6 mt-6 border border-gray-200 rounded py-2.5 flex justify-center items-center space-x-2 shadow-sm">
-            <span class="text-gray-600 text-[0.8rem] font-medium">Live online class with</span>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/2491px-Google_Meet_icon_%282020%29.svg.png" class="w-5 h-5 object-contain" alt="Google Meet">
-            <span class="text-gray-800 text-[0.8rem] font-bold">Google Meet</span>
+        <div class="mx-6 md:mx-auto max-w-[300px] md:max-w-md mt-6 md:mt-8 border border-gray-200 rounded py-2.5 md:py-3 flex justify-center items-center space-x-2 shadow-sm bg-white">
+            <span class="text-gray-600 text-[0.8rem] md:text-[0.95rem] font-medium">Live online class with</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/2491px-Google_Meet_icon_%282020%29.svg.png" class="w-5 h-5 md:w-6 md:h-6 object-contain" alt="Google Meet">
+            <span class="text-gray-800 text-[0.8rem] md:text-[0.95rem] font-bold">Google Meet</span>
         </div>
 
-        <div class="flex justify-between items-center mx-10 mt-8 mb-8">
+        <div class="flex justify-between md:justify-around items-center mx-10 md:mx-auto max-w-2xl mt-8 md:mt-12 mb-8 md:mb-12">
             <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] font-black text-brand-dark leading-none">05</span>
-                <span class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest">Months.</span>
+                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">05</span>
+                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Months.</span>
             </div>
             <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] font-black text-brand-dark leading-none">19</span>
-                <span class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest">Classes.</span>
+                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">19</span>
+                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Classes.</span>
             </div>
             <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] font-black text-brand-dark leading-none">90</span>
-                <span class="text-[0.55rem] font-bold text-gray-400 uppercase tracking-widest">Seats.</span>
+                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">90</span>
+                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Seats.</span>
             </div>
         </div>
 
-        <div class="relative w-full h-[260px] flex overflow-hidden">
+        <div class="relative w-full max-w-4xl mx-auto h-[260px] md:h-[400px] flex overflow-hidden shadow-lg md:rounded-[8px]">
             <div class="flex-1 bg-brand-red relative flex justify-center border-r border-white/20">
-                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">NAFEW</span>
-                <img src="https://randomuser.me/api/portraits/men/44.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Nafew">
+                <span class="absolute top-2 md:top-4 text-white/90 text-[0.55rem] md:text-[0.8rem] font-bold tracking-widest z-0">NAFEW</span>
+                <img src="https://randomuser.me/api/portraits/men/44.jpg" class="w-full h-full object-cover mentor-img mt-4 md:mt-8" alt="Nafew">
             </div>
             <div class="flex-1 bg-brand-blue relative flex justify-center border-r border-white/20">
-                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">SUNIV</span>
-                <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Suniv">
+                <span class="absolute top-2 md:top-4 text-white/90 text-[0.55rem] md:text-[0.8rem] font-bold tracking-widest z-0">SUNIV</span>
+                <img src="https://randomuser.me/api/portraits/men/46.jpg" class="w-full h-full object-cover mentor-img mt-4 md:mt-8" alt="Suniv">
             </div>
             <div class="flex-1 bg-brand-orange relative flex justify-center border-r border-white/20">
-                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">ARNOB</span>
-                <img src="https://randomuser.me/api/portraits/men/47.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Arnob">
+                <span class="absolute top-2 md:top-4 text-white/90 text-[0.55rem] md:text-[0.8rem] font-bold tracking-widest z-0">ARNOB</span>
+                <img src="https://randomuser.me/api/portraits/men/47.jpg" class="w-full h-full object-cover mentor-img mt-4 md:mt-8" alt="Arnob">
             </div>
             <div class="flex-1 bg-brand-purple relative flex justify-center border-r border-white/20">
-                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">SAMIHA</span>
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Samiha">
+                <span class="absolute top-2 md:top-4 text-white/90 text-[0.55rem] md:text-[0.8rem] font-bold tracking-widest z-0">SAMIHA</span>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full object-cover mentor-img mt-4 md:mt-8" alt="Samiha">
             </div>
             <div class="flex-1 bg-brand-green relative flex justify-center">
-                <span class="absolute top-2 text-white/90 text-[0.55rem] font-bold tracking-widest z-0">MUNAEM</span>
-                <img src="https://randomuser.me/api/portraits/men/50.jpg" class="w-full h-full object-cover mentor-img mt-4" alt="Munaem">
+                <span class="absolute top-2 md:top-4 text-white/90 text-[0.55rem] md:text-[0.8rem] font-bold tracking-widest z-0">MUNAEM</span>
+                <img src="https://randomuser.me/api/portraits/men/50.jpg" class="w-full h-full object-cover mentor-img mt-4 md:mt-8" alt="Munaem">
             </div>
 
             <div class="absolute inset-0 z-20 pointer-events-none">
-                <div class="absolute left-[10%] bottom-[18px] -translate-x-1/2 bg-brand-red text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Management</div>
-                <div class="absolute left-[20%] top-[12px] -translate-x-1/2 bg-brand-blue text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Design</div>
-                <div class="absolute left-[40%] bottom-[18px] -translate-x-1/2 bg-brand-orange text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Data & Analytics</div>
-                <div class="absolute left-[60%] top-[12px] -translate-x-1/2 bg-brand-purple text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Growth & Scaling</div>
-                <div class="absolute left-[80%] bottom-[18px] -translate-x-1/2 bg-brand-green text-white text-[0.55rem] font-bold px-2 py-0.5 rounded-sm shadow-sm whitespace-nowrap">Interview</div>
+                <div class="absolute left-[10%] bottom-[18px] md:bottom-[24px] -translate-x-1/2 bg-brand-red text-white text-[0.55rem] md:text-[0.85rem] font-bold px-2 py-0.5 md:py-1 rounded-sm shadow-sm whitespace-nowrap">Management</div>
+                <div class="absolute left-[20%] top-[12px] md:top-[18px] -translate-x-1/2 bg-brand-blue text-white text-[0.55rem] md:text-[0.85rem] font-bold px-2 py-0.5 md:py-1 rounded-sm shadow-sm whitespace-nowrap">Design</div>
+                <div class="absolute left-[40%] bottom-[18px] md:bottom-[24px] -translate-x-1/2 bg-brand-orange text-white text-[0.55rem] md:text-[0.85rem] font-bold px-2 py-0.5 md:py-1 rounded-sm shadow-sm whitespace-nowrap">Data & Analytics</div>
+                <div class="absolute left-[60%] top-[12px] md:top-[18px] -translate-x-1/2 bg-brand-purple text-white text-[0.55rem] md:text-[0.85rem] font-bold px-2 py-0.5 md:py-1 rounded-sm shadow-sm whitespace-nowrap">Growth & Scaling</div>
+                <div class="absolute left-[80%] bottom-[18px] md:bottom-[24px] -translate-x-1/2 bg-brand-green text-white text-[0.55rem] md:text-[0.85rem] font-bold px-2 py-0.5 md:py-1 rounded-sm shadow-sm whitespace-nowrap">Interview</div>
 
+                <!-- Connecting Lines - Scaled perfectly with % based left positions -->
                 <div class="diagram-line" style="left: 10%; bottom: 26px; width: 5%; height: calc(100% - 46px); border-left: 2px solid #008CFF; border-top: 2px solid #008CFF; border-top-left-radius: 4px;">
                     <div class="arrow arrow-r-blue"></div>
                 </div>
@@ -280,63 +288,63 @@
             </div>
         </div>
 
-        <div class="px-7 mt-6 text-center text-[0.65rem] text-gray-700 font-medium leading-[1.6]">
+        <div class="px-7 mt-6 md:mt-10 text-center text-[0.65rem] md:text-[0.95rem] text-gray-700 font-medium leading-[1.6] max-w-4xl mx-auto">
             Prepare for Product Management career with our 19-class course led by five experts. Live sessions, comprehensive coverage of all aspects, and job placement support.
         </div>
 
-        <div class="px-5 mt-6 space-y-3 pb-8">
-            <button class="w-full bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 rounded text-[0.9rem]">
+        <div class="px-5 mt-6 md:mt-8 space-y-3 md:space-y-0 md:space-x-4 pb-8 max-w-2xl mx-auto md:flex justify-center">
+            <button class="w-full md:w-auto md:px-12 bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded text-[0.9rem] md:text-[1.05rem]">
                 Apply Now
             </button>
-            <button class="w-full bg-white hover:bg-gray-50 transition-colors border-2 border-brand-red text-brand-red font-bold py-3 rounded text-[0.9rem]">
+            <button class="w-full md:w-auto md:px-12 bg-white hover:bg-gray-50 transition-colors border-2 border-brand-red text-brand-red font-bold py-3 md:py-3.5 rounded text-[0.9rem] md:text-[1.05rem]">
                 Browse Syllabus
             </button>
         </div>
 
         <!-- ================= SECTION: Designed for You ================= -->
-        <div class="w-full border-t border-gray-100 pt-10 px-5">
-            <div class="flex items-start mb-6">
-                <div class="w-5 h-11 bg-brand-red mr-4 flex-shrink-0"></div>
-                <h2 class="text-[1.35rem] font-black text-gray-600 leading-[1.15] tracking-tight">
+        <div class="w-full border-t border-gray-100 pt-10 md:pt-16 px-5 max-w-6xl mx-auto">
+            <div class="flex items-start mb-6 md:mb-10 justify-center md:justify-start">
+                <div class="w-5 h-11 md:h-14 bg-brand-red mr-4 flex-shrink-0"></div>
+                <h2 class="text-[1.35rem] md:text-[2rem] font-black text-gray-600 leading-[1.15] tracking-tight">
                     Our Bootcamp<br>Designed for You
                 </h2>
             </div>
 
-            <div class="grid grid-cols-2 gap-3">
-                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
-                    <div class="text-brand-red mb-3 h-8 w-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+                <div class="border-[1.5px] border-brand-red p-3.5 md:p-5 bg-white rounded-[4px] hover:shadow-md transition-shadow">
+                    <div class="text-brand-red mb-3 md:mb-4 h-8 w-8 md:h-10 md:w-10">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2" stroke="#E5252A"></rect><line x1="7" y1="8" x2="14" y2="8" stroke="#E5252A" stroke-width="2.5"></line><line x1="7" y1="12" x2="11" y2="12" stroke="#E5252A" stroke-width="2.5"></line><circle cx="17" cy="15" r="5" fill="white" stroke="#E5252A"></circle><polyline points="17 13 17 15 19 15" stroke="#E5252A" stroke-width="1.5"></polyline></svg>
                     </div>
-                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">5-month timeline</h3>
-                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Total 19-week long, Starting from 13th June, 2026</p>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] md:text-[1.1rem] leading-tight mb-1.5 md:mb-2">5-month timeline</h3>
+                    <p class="text-gray-500 text-[0.65rem] md:text-[0.85rem] leading-[1.4]">Total 19-week long, Starting from 13th June, 2026</p>
                 </div>
 
-                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
-                    <div class="text-brand-red mb-3 h-8 w-8">
+                <div class="border-[1.5px] border-brand-red p-3.5 md:p-5 bg-white rounded-[4px] hover:shadow-md transition-shadow">
+                    <div class="text-brand-red mb-3 md:mb-4 h-8 w-8 md:h-10 md:w-10">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-9a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v9" stroke="#E5252A"></path><path d="M2 20h20" stroke="#E5252A" stroke-width="2.5"></path><path d="M7 13l3 -3l2 2l4 -4" stroke="#E5252A" stroke-width="2"></path><polyline points="16 8 16 8 16 8" stroke="#E5252A" stroke-width="3"></polyline></svg>
                     </div>
-                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">19-online classes</h3>
-                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Live online classes via Google Meet & Google Classroom.</p>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] md:text-[1.1rem] leading-tight mb-1.5 md:mb-2">19-online classes</h3>
+                    <p class="text-gray-500 text-[0.65rem] md:text-[0.85rem] leading-[1.4]">Live online classes via Google Meet & Google Classroom.</p>
                 </div>
 
-                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
-                    <div class="text-brand-red mb-3 h-8 w-8">
+                <div class="border-[1.5px] border-brand-red p-3.5 md:p-5 bg-white rounded-[4px] hover:shadow-md transition-shadow">
+                    <div class="text-brand-red mb-3 md:mb-4 h-8 w-8 md:h-10 md:w-10">
                         <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="7" cy="8" r="2.5" fill="#E5252A"></circle><path d="M3 18c0-2.2 1.8-4 4-4h1c.6 0 1.2.1 1.7.4a5 5 0 0 0-.7 2.6V18H3z" fill="#E5252A"></path><circle cx="17" cy="8" r="2.5" fill="#E5252A"></circle><path d="M16 14h1c2.2 0 4 1.8 4 4v.01H15v-1c0-1-.2-1.9-.7-2.6.5-.3 1.1-.4 1.7-.4z" fill="#E5252A"></path><circle cx="12" cy="11" r="3.5" fill="#E5252A"></circle><path d="M8 21.01c0-2.8 2.2-5 5-5s5 2.2 5 5v.01H8z" fill="#E5252A"></path></svg>
                     </div>
-                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">90-student seats</h3>
-                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Limited seats for better & clear interaction with teachers.</p>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] md:text-[1.1rem] leading-tight mb-1.5 md:mb-2">90-student seats</h3>
+                    <p class="text-gray-500 text-[0.65rem] md:text-[0.85rem] leading-[1.4]">Limited seats for better & clear interaction with teachers.</p>
                 </div>
 
-                <div class="border-[1.5px] border-brand-red p-3.5 bg-white">
-                    <div class="text-brand-red mb-3 h-8 w-8">
+                <div class="border-[1.5px] border-brand-red p-3.5 md:p-5 bg-white rounded-[4px] hover:shadow-md transition-shadow">
+                    <div class="text-brand-red mb-3 md:mb-4 h-8 w-8 md:h-10 md:w-10">
                         <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" fill="#E5252A"></rect><path d="M12 7v5h4" stroke="white" stroke-width="2.5" stroke-linecap="square" fill="none"></path></svg>
                     </div>
-                    <h3 class="text-brand-red font-bold text-[0.9rem] leading-tight mb-1.5">100-hours duration</h3>
-                    <p class="text-gray-500 text-[0.65rem] leading-[1.4]">Total time to complete the class, quiz and assignments.</p>
+                    <h3 class="text-brand-red font-bold text-[0.9rem] md:text-[1.1rem] leading-tight mb-1.5 md:mb-2">100-hours duration</h3>
+                    <p class="text-gray-500 text-[0.65rem] md:text-[0.85rem] leading-[1.4]">Total time to complete the class, quiz and assignments.</p>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-2 mt-8 mb-6 px-1">
+            <div class="flex items-center justify-center md:justify-start space-x-2 mt-8 md:mt-10 mb-6 px-1">
                 <div class="h-2 w-16 bg-gray-300 rounded-full"></div>
                 <div class="h-2 w-7 bg-gray-200 rounded-full"></div>
                 <div class="h-2 w-4 bg-gray-200 rounded-full"></div>
@@ -344,566 +352,585 @@
         </div>
 
         <!-- ================= SECTION: Complete Preparation ================= -->
-        <div class="w-full pt-4 px-5">
-            <div class="text-center mb-10">
-                <p class="text-gray-500 text-[0.75rem] font-medium tracking-wide mb-0.5">Everything in One Program</p>
-                <h2 class="text-brand-red text-[1.65rem] font-black tracking-tight leading-none">Complete Preparation</h2>
+        <div class="w-full pt-4 md:pt-10 px-5 max-w-5xl mx-auto">
+            <div class="text-center mb-10 md:mb-16">
+                <p class="text-gray-500 text-[0.75rem] md:text-[1rem] font-medium tracking-wide mb-0.5">Everything in One Program</p>
+                <h2 class="text-brand-red text-[1.65rem] md:text-[2.5rem] font-black tracking-tight leading-none">Complete Preparation</h2>
             </div>
 
-            <div class="flex flex-col">
-                <div class="flex justify-between items-center py-6 border-b border-gray-100 gap-4">
-                    <div class="flex-1">
-                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] px-1.5 py-0.5 font-medium inline-block mb-1">Need to ask questions to the teacher?</span>
-                        <h3 class="text-[#555] text-[1.35rem] font-black leading-none mb-2 mt-1 tracking-tight">Live Interactive Class</h3>
-                        <p class="text-gray-500 text-[0.7rem] leading-relaxed">Designed for real-time interaction with instructors. Instantly clarify doubts during <span class="font-bold">class via Google Meet</span>, Not recorded lectures.</p>
+            <div class="flex flex-col gap-6 md:gap-10">
+                <!-- Item 1 -->
+                <div class="flex flex-col-reverse md:flex-row justify-between items-center py-6 border-b border-gray-100 gap-4 md:gap-12">
+                    <div class="flex-1 text-center md:text-left">
+                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] md:text-[0.85rem] px-2 py-1 rounded-[2px] font-medium inline-block mb-2">Need to ask questions to the teacher?</span>
+                        <h3 class="text-[#555] text-[1.35rem] md:text-[1.8rem] font-black leading-none mb-3 mt-1 tracking-tight">Live Interactive Class</h3>
+                        <p class="text-gray-500 text-[0.7rem] md:text-[1rem] leading-relaxed">Designed for real-time interaction with instructors. Instantly clarify doubts during <span class="font-bold">class via Google Meet</span>, Not recorded lectures.</p>
                     </div>
-                    <div class="w-[85px] flex-shrink-0">
-                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-sm"><rect x="5" y="15" width="90" height="60" rx="4" fill="#E5252A"/><rect x="10" y="20" width="80" height="50" fill="#2d3748"/><rect x="42" y="75" width="16" height="15" fill="#4a5568"/><path d="M25 90 L75 90 L80 95 L20 95 Z" fill="#2d3748"/><rect x="12" y="22" width="37" height="22" fill="#fff"/><circle cx="30" cy="33" r="5" fill="#fca5a5"/><rect x="51" y="22" width="37" height="22" fill="#fff"/><circle cx="70" cy="33" r="5" fill="#fca5a5"/><rect x="12" y="46" width="37" height="22" fill="#fff"/><circle cx="30" cy="57" r="5" fill="#fca5a5"/><rect x="51" y="46" width="37" height="22" fill="#fff"/><circle cx="70" cy="57" r="5" fill="#E5252A"/><circle cx="50" cy="15" r="4" fill="#2d3748"/></svg>
+                    <div class="w-[120px] md:w-[180px] flex-shrink-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-md"><rect x="5" y="15" width="90" height="60" rx="4" fill="#E5252A"/><rect x="10" y="20" width="80" height="50" fill="#2d3748"/><rect x="42" y="75" width="16" height="15" fill="#4a5568"/><path d="M25 90 L75 90 L80 95 L20 95 Z" fill="#2d3748"/><rect x="12" y="22" width="37" height="22" fill="#fff"/><circle cx="30" cy="33" r="5" fill="#fca5a5"/><rect x="51" y="22" width="37" height="22" fill="#fff"/><circle cx="70" cy="33" r="5" fill="#fca5a5"/><rect x="12" y="46" width="37" height="22" fill="#fff"/><circle cx="30" cy="57" r="5" fill="#fca5a5"/><rect x="51" y="46" width="37" height="22" fill="#fff"/><circle cx="70" cy="57" r="5" fill="#E5252A"/><circle cx="50" cy="15" r="4" fill="#2d3748"/></svg>
                     </div>
                 </div>
-                 <div class="flex justify-between items-center py-6 gap-4 border-b border-gray-100">
-                    <div class="flex-1">
-                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] px-1.5 py-0.5 font-medium inline-block mb-1">Want a pair or group for preparation?</span>
-                        <h3 class="text-[#555] text-[1.35rem] font-black leading-none mb-2 mt-1 tracking-tight">Practice Partners</h3>
-                        <p class="text-gray-500 text-[0.7rem] leading-relaxed">We will be assigning groups and pairs, for collaborative task, and to help each other do their practice in a group for faster learning experience.</p>
+
+                 <!-- Item 2 -->
+                 <div class="flex flex-col-reverse md:flex-row-reverse justify-between items-center py-6 border-b border-gray-100 gap-4 md:gap-12">
+                    <div class="flex-1 text-center md:text-left">
+                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] md:text-[0.85rem] px-2 py-1 rounded-[2px] font-medium inline-block mb-2">Missed a class? or want to revise?</span>
+                        <h3 class="text-[#555] text-[1.35rem] md:text-[1.8rem] font-black leading-none mb-3 mt-1 tracking-tight">Recorded Sessions</h3>
+                        <p class="text-gray-500 text-[0.7rem] md:text-[1rem] leading-relaxed">Our classes are recorded, ensuring <span class="font-bold">access for 6 months</span>. Revise at your convenience for an enriched learning experience.</p>
                     </div>
-                    <div class="w-[85px] flex-shrink-0">
-                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-sm"><circle cx="50" cy="50" r="35" fill="none" stroke="#fca5a5" stroke-width="1.5" stroke-dasharray="3,3"/><circle cx="50" cy="50" r="22" fill="#ffe4e6"/><path d="M35 40 Q50 65 65 40" stroke="#fecdd3" stroke-width="2" fill="none"/><path d="M35 60 Q50 35 65 60" stroke="#fecdd3" stroke-width="2" fill="none"/><path d="M40 35 Q65 50 40 65" stroke="#fecdd3" stroke-width="2" fill="none"/><circle cx="50" cy="15" r="7" fill="#2d3748"/><circle cx="85" cy="50" r="7" fill="#E5252A"/><circle cx="50" cy="85" r="7" fill="#fca5a5"/><circle cx="15" cy="50" r="7" fill="#4a5568"/><circle cx="25" cy="25" r="7" fill="#9ca3af"/><circle cx="75" cy="75" r="7" fill="#4a5568"/></svg>
+                    <div class="w-[120px] md:w-[180px] flex-shrink-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-md"><rect x="10" y="10" width="80" height="45" fill="#2d3748"/><rect x="10" y="55" width="80" height="4" fill="#E5252A"/><circle cx="50" cy="32" r="12" fill="#fff"/><polygon points="46,25 46,39 57,32" fill="#2d3748"/><path d="M10 85 Q10 75 25 75 L75 75 Q90 75 90 85 L90 95 L10 95 Z" fill="#9ca3af"/><rect x="10" y="88" width="80" height="7" fill="#6b7280"/><path d="M30 70 L65 70" stroke="#E5252A" stroke-width="7" stroke-linecap="round"/><circle cx="75" cy="65" r="6" fill="#2d3748"/></svg>
+                    </div>
+                </div>
+
+                 <!-- Item 3 -->
+                 <div class="flex flex-col-reverse md:flex-row justify-between items-center py-6 border-b border-gray-100 gap-4 md:gap-12">
+                    <div class="flex-1 text-center md:text-left">
+                        <span class="bg-gray-100 text-gray-500 text-[0.65rem] md:text-[0.85rem] px-2 py-1 rounded-[2px] font-medium inline-block mb-2">Want a pair or group for preparation?</span>
+                        <h3 class="text-[#555] text-[1.35rem] md:text-[1.8rem] font-black leading-none mb-3 mt-1 tracking-tight">Practice Partners</h3>
+                        <p class="text-gray-500 text-[0.7rem] md:text-[1rem] leading-relaxed">We will be assigning groups and pairs, for collaborative task, and to help each other do their practice in a group for faster learning experience.</p>
+                    </div>
+                    <div class="w-[120px] md:w-[180px] flex-shrink-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-auto drop-shadow-md"><circle cx="50" cy="50" r="35" fill="none" stroke="#fca5a5" stroke-width="1.5" stroke-dasharray="3,3"/><circle cx="50" cy="50" r="22" fill="#ffe4e6"/><path d="M35 40 Q50 65 65 40" stroke="#fecdd3" stroke-width="2" fill="none"/><path d="M35 60 Q50 35 65 60" stroke="#fecdd3" stroke-width="2" fill="none"/><path d="M40 35 Q65 50 40 65" stroke="#fecdd3" stroke-width="2" fill="none"/><circle cx="50" cy="15" r="7" fill="#2d3748"/><circle cx="85" cy="50" r="7" fill="#E5252A"/><circle cx="50" cy="85" r="7" fill="#fca5a5"/><circle cx="15" cy="50" r="7" fill="#4a5568"/><circle cx="25" cy="25" r="7" fill="#9ca3af"/><circle cx="75" cy="75" r="7" fill="#4a5568"/></svg>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- ================= SECTION: Teacher Overview ================= -->
-        <div class="w-full pt-10 px-5 pb-8 bg-white">
-            <div class="text-center mb-7">
-                <p class="text-gray-500 text-[0.8rem] font-medium mb-0.5">Meet the Instructors</p>
-                <h2 class="text-brand-blue text-[1.65rem] font-black tracking-tight leading-none">Teacher Overview</h2>
+        <div class="w-full pt-12 md:pt-20 px-5 pb-8 bg-[#f9fafb]">
+            <div class="text-center mb-7 md:mb-12">
+                <p class="text-gray-500 text-[0.8rem] md:text-[1rem] font-medium mb-0.5">Meet the Instructors</p>
+                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.5rem] font-black tracking-tight leading-none">Teacher Overview</h2>
             </div>
 
-            <div class="relative bg-white border border-gray-300 rounded-[4px] shadow-sm w-full mx-auto mt-2">
-                <div class="absolute -top-[2px] left-3 right-3 h-[4px] bg-brand-blue rounded-t-[4px]"></div>
-                <div class="p-5">
-                    <div class="flex items-center gap-4">
-                        <div class="w-16 h-16 bg-brand-blue rounded-sm overflow-hidden flex-shrink-0">
-                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Suniv Ashraf" class="w-full h-full object-cover">
+            <!-- Instructor Cards Container -->
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Instructor Card 1 -->
+                <div class="relative bg-white border border-gray-300 rounded-[4px] shadow-sm w-full mx-auto mt-2 hover:-translate-y-1 transition-transform">
+                    <div class="absolute -top-[2px] left-3 right-3 h-[4px] bg-brand-blue rounded-t-[4px]"></div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-16 h-16 bg-brand-blue rounded-sm overflow-hidden flex-shrink-0">
+                                <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Suniv Ashraf" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="text-[#222] text-[1.2rem] font-bold leading-tight">Suniv Ashraf</h3>
+                                <p class="text-gray-500 text-[0.85rem] leading-tight mt-1">UX Designer</p>
+                                <p class="text-gray-500 text-[0.85rem] font-bold leading-tight">Grameenphone</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-[#222] text-[1.2rem] font-bold leading-tight">Suniv Ashraf</h3>
-                            <p class="text-gray-500 text-[0.85rem] leading-tight mt-1">UX Designer</p>
-                            <p class="text-gray-500 text-[0.85rem] font-bold leading-tight">Grameenphone</p>
+                    </div>
+                    <hr class="border-gray-200 mx-5">
+                    <div class="py-4 px-5 flex justify-between items-center">
+                        <div class="flex items-center gap-1.5">
+                            <svg viewBox="0 0 100 100" class="w-6 h-6 text-brand-blue" fill="currentColor"><path d="M 50 10 C 75 10 90 25 90 50 C 90 75 75 90 50 90 C 25 90 50 50 50 50 Z" style="transform: rotate(45deg); transform-origin: center;"></path></svg>
+                            <span class="text-[0.7rem] font-serif tracking-wider text-black font-semibold mt-0.5">গ্রামীণফোন</span>
                         </div>
-                    </div>
-                </div>
-                <hr class="border-gray-200 mx-5">
-                <div class="py-4 px-5 flex justify-between items-center">
-                    <div class="flex items-center gap-1.5">
-                        <svg viewBox="0 0 100 100" class="w-6 h-6 text-brand-blue" fill="currentColor"><path d="M 50 10 C 75 10 90 25 90 50 C 90 75 75 90 50 90 C 25 90 50 50 50 50 Z" style="transform: rotate(45deg); transform-origin: center;"></path></svg>
-                        <span class="text-[0.7rem] font-serif tracking-wider text-black font-semibold mt-0.5">গ্রামীণফোন</span>
-                    </div>
-                    <div class="flex items-center gap-1">
-                        <svg viewBox="0 0 100 100" class="w-7 h-7 text-[#1E3A8A]" fill="currentColor"><path d="M 10 40 Q 40 20 85 25 Q 70 55 50 85 Q 40 60 10 40 Z"></path></svg>
-                        <span class="text-[0.85rem] font-bold text-[#1E3A8A] tracking-tighter">gozayaan</span>
-                    </div>
-                    <div class="flex items-baseline">
-                        <span class="text-[0.95rem] font-bold text-black tracking-tighter">sheba</span>
-                        <span class="text-[0.6rem] text-black font-medium italic">.xyz</span>
+                        <div class="flex items-center gap-1">
+                            <svg viewBox="0 0 100 100" class="w-7 h-7 text-[#1E3A8A]" fill="currentColor"><path d="M 10 40 Q 40 20 85 25 Q 70 55 50 85 Q 40 60 10 40 Z"></path></svg>
+                            <span class="text-[0.85rem] font-bold text-[#1E3A8A] tracking-tighter">gozayaan</span>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-[0.95rem] font-bold text-black tracking-tighter">sheba</span>
+                            <span class="text-[0.6rem] text-black font-medium italic">.xyz</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- ================= SECTION: Program Schedule (ALL MODULES DETAILED) ================= -->
-        <div class="w-full pt-10 px-5 pb-16 bg-white relative">
+        <div class="w-full pt-10 md:pt-16 px-5 pb-16 bg-white relative">
             
-            <div class="text-center mb-8">
-                <p class="text-gray-500 text-[0.85rem] font-medium tracking-wide mb-0.5">Explore the Roadmap</p>
-                <h2 class="text-brand-blue text-[1.65rem] font-black tracking-tight leading-none">Program Schedule</h2>
+            <div class="text-center mb-10 md:mb-14 max-w-3xl mx-auto">
+                <p class="text-gray-500 text-[0.85rem] md:text-[1rem] font-medium tracking-wide mb-0.5">Explore the Roadmap</p>
+                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.5rem] font-black tracking-tight leading-none">Program Schedule</h2>
             </div>
 
             <!-- Timeline Container -->
-            <div class="relative pl-[65px] mt-10 w-full pr-1">
+            <div class="relative pl-[65px] md:pl-[120px] mt-10 w-full pr-1 max-w-4xl mx-auto">
                 
                 <!-- Master Vertical Line for ALL Modules -->
-                <div class="absolute left-[70px] top-6 bottom-4 w-[2.5px] bg-[#2D2D2D] z-0"></div>
+                <div class="absolute left-[70px] md:left-[125px] top-6 bottom-4 w-[2.5px] bg-[#2D2D2D] z-0"></div>
 
                 <!-- ================= MODULE 01 (RED) ================= -->
                 <!-- Module 01 Header -->
-                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 border-b-2 border-[#2D2D2D]/10">
-                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
-                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
-                        <span class="text-3xl font-black leading-none mt-0.5">01</span>
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] md:-ml-[120px] shadow-sm mb-8 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 md:px-6 py-2 md:py-4 flex flex-col justify-center items-center text-center w-[65px] md:w-[120px] flex-shrink-0">
+                        <span class="text-[0.65rem] md:text-[0.9rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl md:text-5xl font-black leading-none mt-0.5 md:mt-1">01</span>
                     </div>
-                    <div class="bg-brand-red text-white p-3 flex-1 flex justify-between items-center">
+                    <div class="bg-brand-red text-white p-3 md:p-5 flex-1 flex justify-between items-center">
                         <div>
-                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Management</h3>
-                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">5 Class, 5 Assessment</p>
+                            <h3 class="font-bold text-[1.2rem] md:text-[1.8rem] leading-tight tracking-wide">Management</h3>
+                            <p class="text-[0.65rem] md:text-[0.9rem] opacity-90 mt-0.5 md:mt-1 tracking-wider">5 Class, 5 Assessment</p>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 md:gap-4">
                             <div class="text-right leading-none">
-                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
-                                <span class="block text-[0.95rem] font-bold">Nafew</span>
+                                <span class="block text-[0.55rem] md:text-[0.8rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] md:text-[1.2rem] font-bold">Nafew</span>
                             </div>
-                            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Instructor Nafew" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Instructor Nafew" class="w-9 h-9 md:w-14 md:h-14 rounded-[4px] border-[1.5px] border-white object-cover shadow-sm">
                         </div>
                     </div>
                 </div>
 
                 <!-- M1 Item 1 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">13</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">13</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Introduction to Product Management</h4>
-                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Introduction to Product Management</h4>
+                                   <p class="text-brand-red text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">PM Journey Breakdown &bull; Networking &bull; Group Formation &bull; Icebreaker &bull; Expectation Setting</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">PM Journey Breakdown &bull; Networking &bull; Group Formation &bull; Icebreaker &bull; Expectation Setting</div>
                     </div>
                 </div>
 
                 <!-- M1 Item 2 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">20</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">20</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Business Fundamentals for PMs</h4>
-                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Business Fundamentals for PMs</h4>
+                                   <p class="text-brand-red text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Supply Chain Basics &bull; How Businesses Operate End-to-End &bull; Product Lifecycle &bull; Roles vs Reality</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">Supply Chain Basics &bull; How Businesses Operate End-to-End &bull; Product Lifecycle &bull; Roles vs Reality</div>
                     </div>
                 </div>
                 
                 <!-- M1 Item 3 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">27</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">27</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUN</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Customer Centered Approach + User Survey</h4>
-                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Customer Centered Approach + User Survey</h4>
+                                   <p class="text-brand-red text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">User Persona &bull; Empathy Mapping &bull; User Interviews &bull; Pain Point Identification</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">User Persona &bull; Empathy Mapping &bull; User Interviews &bull; Pain Point Identification</div>
                     </div>
                 </div>
                 
                 <!-- M1 Item 4 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">04</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">04</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Product Strategy, Planning & PRD</h4>
-                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Product Strategy, Planning & PRD</h4>
+                                   <p class="text-brand-red text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Market &bull; Competitor Thinking &bull; Positioning</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">Market &bull; Competitor Thinking &bull; Positioning</div>
                     </div>
                 </div>
                 
                 <!-- M1 Item 5 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">11</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">11</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-red rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-red rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Roadmap, Agile & Sprint Execution</h4>
-                                   <p class="text-brand-red text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Roadmap, Agile & Sprint Execution</h4>
+                                   <p class="text-brand-red text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Project Management &bull; Sprint Planning &bull; Scrum &bull; Jira workflows</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">Project Management &bull; Sprint Planning &bull; Scrum &bull; Jira workflows</div>
                     </div>
                 </div>
 
 
                 <!-- ================= MODULE 02 (BLUE) ================= -->
                 <!-- Module 02 Header -->
-                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
-                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
-                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
-                        <span class="text-3xl font-black leading-none mt-0.5">02</span>
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] md:-ml-[120px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 md:px-6 py-2 md:py-4 flex flex-col justify-center items-center text-center w-[65px] md:w-[120px] flex-shrink-0">
+                        <span class="text-[0.65rem] md:text-[0.9rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl md:text-5xl font-black leading-none mt-0.5 md:mt-1">02</span>
                     </div>
-                    <div class="bg-brand-blue text-white p-3 flex-1 flex justify-between items-center">
+                    <div class="bg-brand-blue text-white p-3 md:p-5 flex-1 flex justify-between items-center">
                         <div>
-                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Design</h3>
-                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">4 Class, 2 Assessment</p>
+                            <h3 class="font-bold text-[1.2rem] md:text-[1.8rem] leading-tight tracking-wide">Design</h3>
+                            <p class="text-[0.65rem] md:text-[0.9rem] opacity-90 mt-0.5 md:mt-1 tracking-wider">4 Class, 2 Assessment</p>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 md:gap-4">
                             <div class="text-right leading-none">
-                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
-                                <span class="block text-[0.95rem] font-bold">Suniv</span>
+                                <span class="block text-[0.55rem] md:text-[0.8rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] md:text-[1.2rem] font-bold">Suniv</span>
                             </div>
-                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Instructor Suniv" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Instructor Suniv" class="w-9 h-9 md:w-14 md:h-14 rounded-[4px] border-[1.5px] border-white object-cover shadow-sm">
                         </div>
                     </div>
                 </div>
 
                 <!-- M2 Item 1 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">18</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">18</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-blue rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-blue rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">UI/UX Principles for PMs</h4>
-                                   <p class="text-brand-blue text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">UI/UX Principles for PMs</h4>
+                                   <p class="text-brand-blue text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Typography &bull; Color Theory &bull; Layout Structure &bull; Visual Hierarchy</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">Typography &bull; Color Theory &bull; Layout Structure &bull; Visual Hierarchy</div>
                     </div>
                 </div>
 
                 <!-- M2 Item 2 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">25</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">25</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">JUL</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-blue rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-blue rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Prototyping & Wireframing</h4>
-                                   <p class="text-brand-blue text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Prototyping & Wireframing</h4>
+                                   <p class="text-brand-blue text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Figma Basics &bull; Lo-Fi vs Hi-Fi &bull; User Flows &bull; Usability Testing</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">Figma Basics &bull; Lo-Fi vs Hi-Fi &bull; User Flows &bull; Usability Testing</div>
                     </div>
                 </div>
 
                 <!-- M2 Item 3 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">01</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">01</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-blue rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-blue rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Usability Testing & Feedback</h4>
-                                   <p class="text-brand-blue text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Usability Testing & Feedback</h4>
+                                   <p class="text-brand-blue text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">A/B Testing &bull; Heatmaps &bull; Iterative Design Process</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">A/B Testing &bull; Heatmaps &bull; Iterative Design Process</div>
                     </div>
                 </div>
 
                 <!-- ================= MODULE 03 (ORANGE) ================= -->
                 <!-- Module 03 Header -->
-                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
-                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
-                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
-                        <span class="text-3xl font-black leading-none mt-0.5">03</span>
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] md:-ml-[120px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 md:px-6 py-2 md:py-4 flex flex-col justify-center items-center text-center w-[65px] md:w-[120px] flex-shrink-0">
+                        <span class="text-[0.65rem] md:text-[0.9rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl md:text-5xl font-black leading-none mt-0.5 md:mt-1">03</span>
                     </div>
-                    <div class="bg-brand-orange text-white p-3 flex-1 flex justify-between items-center">
+                    <div class="bg-brand-orange text-white p-3 md:p-5 flex-1 flex justify-between items-center">
                         <div>
-                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Data & Analytics</h3>
-                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">3 Class, 3 Assessment</p>
+                            <h3 class="font-bold text-[1.2rem] md:text-[1.8rem] leading-tight tracking-wide">Data & Analytics</h3>
+                            <p class="text-[0.65rem] md:text-[0.9rem] opacity-90 mt-0.5 md:mt-1 tracking-wider">3 Class, 3 Assessment</p>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 md:gap-4">
                             <div class="text-right leading-none">
-                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
-                                <span class="block text-[0.95rem] font-bold">Arnob</span>
+                                <span class="block text-[0.55rem] md:text-[0.8rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] md:text-[1.2rem] font-bold">Arnob</span>
                             </div>
-                            <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Instructor Arnob" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                            <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Instructor Arnob" class="w-9 h-9 md:w-14 md:h-14 rounded-[4px] border-[1.5px] border-white object-cover shadow-sm">
                         </div>
                     </div>
                 </div>
 
                 <!-- M3 Item 1 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">08</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">08</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-orange rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-orange rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Metrics that Matter</h4>
-                                   <p class="text-brand-orange text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Metrics that Matter</h4>
+                                   <p class="text-brand-orange text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">KPIs vs Vanity Metrics &bull; OKRs &bull; The North Star Metric Framework</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">KPIs vs Vanity Metrics &bull; OKRs &bull; The North Star Metric Framework</div>
                     </div>
                 </div>
 
                 <!-- M3 Item 2 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">15</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">15</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-orange rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-orange rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Data-Driven Decision Making</h4>
-                                   <p class="text-brand-orange text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Data-Driven Decision Making</h4>
+                                   <p class="text-brand-orange text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">SQL Basics for PMs &bull; Funnel Analysis &bull; Cohort Tracking &bull; Data Visualization</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">SQL Basics for PMs &bull; Funnel Analysis &bull; Cohort Tracking &bull; Data Visualization</div>
                     </div>
                 </div>
 
                 <!-- ================= MODULE 04 (PURPLE) ================= -->
                 <!-- Module 04 Header -->
-                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
-                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
-                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
-                        <span class="text-3xl font-black leading-none mt-0.5">04</span>
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] md:-ml-[120px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 md:px-6 py-2 md:py-4 flex flex-col justify-center items-center text-center w-[65px] md:w-[120px] flex-shrink-0">
+                        <span class="text-[0.65rem] md:text-[0.9rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl md:text-5xl font-black leading-none mt-0.5 md:mt-1">04</span>
                     </div>
-                    <div class="bg-brand-purple text-white p-3 flex-1 flex justify-between items-center">
+                    <div class="bg-brand-purple text-white p-3 md:p-5 flex-1 flex justify-between items-center">
                         <div>
-                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Growth & Scaling</h3>
-                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">4 Class, 2 Assessment</p>
+                            <h3 class="font-bold text-[1.2rem] md:text-[1.8rem] leading-tight tracking-wide">Growth & Scaling</h3>
+                            <p class="text-[0.65rem] md:text-[0.9rem] opacity-90 mt-0.5 md:mt-1 tracking-wider">4 Class, 2 Assessment</p>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 md:gap-4">
                             <div class="text-right leading-none">
-                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
-                                <span class="block text-[0.95rem] font-bold">Samiha</span>
+                                <span class="block text-[0.55rem] md:text-[0.8rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] md:text-[1.2rem] font-bold">Samiha</span>
                             </div>
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor Samiha" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Instructor Samiha" class="w-9 h-9 md:w-14 md:h-14 rounded-[4px] border-[1.5px] border-white object-cover shadow-sm">
                         </div>
                     </div>
                 </div>
 
                 <!-- M4 Item 1 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">22</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">22</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-purple rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-purple rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Go-to-Market Strategy</h4>
-                                   <p class="text-brand-purple text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Go-to-Market Strategy</h4>
+                                   <p class="text-brand-purple text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">GTM Planning &bull; Launch Strategies &bull; Distribution Channels &bull; Marketing Alignment</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">GTM Planning &bull; Launch Strategies &bull; Distribution Channels &bull; Marketing Alignment</div>
                     </div>
                 </div>
 
                 <!-- M4 Item 2 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">29</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">29</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">AUG</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-purple rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-purple rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Growth Loops & Acquisition</h4>
-                                   <p class="text-brand-purple text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Growth Loops & Acquisition</h4>
+                                   <p class="text-brand-purple text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">Viral Engines &bull; Acquisition Tactics &bull; User Retention Strategies</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">Viral Engines &bull; Acquisition Tactics &bull; User Retention Strategies</div>
                     </div>
                 </div>
 
                 <!-- ================= MODULE 05 (GREEN) ================= -->
                 <!-- Module 05 Header -->
-                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
-                    <div class="bg-[#2D2D2D] text-white px-3 py-2 flex flex-col justify-center items-center text-center w-[65px] flex-shrink-0">
-                        <span class="text-[0.65rem] font-medium leading-tight text-gray-300">Module</span>
-                        <span class="text-3xl font-black leading-none mt-0.5">05</span>
+                <div class="flex items-stretch rounded-[4px] overflow-hidden relative z-10 -ml-[65px] md:-ml-[120px] shadow-sm mb-8 mt-12 border-b-2 border-[#2D2D2D]/10">
+                    <div class="bg-[#2D2D2D] text-white px-3 md:px-6 py-2 md:py-4 flex flex-col justify-center items-center text-center w-[65px] md:w-[120px] flex-shrink-0">
+                        <span class="text-[0.65rem] md:text-[0.9rem] font-medium leading-tight text-gray-300">Module</span>
+                        <span class="text-3xl md:text-5xl font-black leading-none mt-0.5 md:mt-1">05</span>
                     </div>
-                    <div class="bg-brand-green text-white p-3 flex-1 flex justify-between items-center">
+                    <div class="bg-brand-green text-white p-3 md:p-5 flex-1 flex justify-between items-center">
                         <div>
-                            <h3 class="font-bold text-[1.2rem] leading-tight tracking-wide">Interview Prep</h3>
-                            <p class="text-[0.65rem] opacity-90 mt-0.5 tracking-wider">3 Class, Mock Tests</p>
+                            <h3 class="font-bold text-[1.2rem] md:text-[1.8rem] leading-tight tracking-wide">Interview Prep</h3>
+                            <p class="text-[0.65rem] md:text-[0.9rem] opacity-90 mt-0.5 md:mt-1 tracking-wider">3 Class, Mock Tests</p>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-2 md:gap-4">
                             <div class="text-right leading-none">
-                                <span class="block text-[0.55rem] opacity-90 mb-0.5">Instructor</span>
-                                <span class="block text-[0.95rem] font-bold">Munaem</span>
+                                <span class="block text-[0.55rem] md:text-[0.8rem] opacity-90 mb-0.5">Instructor</span>
+                                <span class="block text-[0.95rem] md:text-[1.2rem] font-bold">Munaem</span>
                             </div>
-                            <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Instructor Munaem" class="w-9 h-9 rounded-sm border-[1.5px] border-white object-cover shadow-sm">
+                            <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Instructor Munaem" class="w-9 h-9 md:w-14 md:h-14 rounded-[4px] border-[1.5px] border-white object-cover shadow-sm">
                         </div>
                     </div>
                 </div>
 
                 <!-- M5 Item 1 -->
                 <div class="relative mb-6 group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">05</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">SEP</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">05</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">SEP</span>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-green rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-green rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Behavioral & Case Studies</h4>
-                                   <p class="text-brand-green text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Behavioral & Case Studies</h4>
+                                   <p class="text-brand-green text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">STAR Method &bull; Product Sense Scenarios &bull; Execution Queries</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">STAR Method &bull; Product Sense Scenarios &bull; Execution Queries</div>
                     </div>
                 </div>
                 
                 <!-- Final Timeline Item with UP Arrow -->
                 <div class="relative group">
-                    <div class="absolute -left-[65px] top-3 text-center w-[45px]">
-                        <span class="block text-[1.7rem] font-medium text-gray-400 leading-none">12</span>
-                        <span class="block text-[0.7rem] font-bold text-gray-400 uppercase tracking-widest mt-1">SEP</span>
+                    <div class="absolute -left-[65px] md:-left-[120px] top-3 text-center w-[45px] md:w-[80px]">
+                        <span class="block text-[1.7rem] md:text-[2.2rem] font-medium text-gray-400 leading-none">12</span>
+                        <span class="block text-[0.7rem] md:text-[0.9rem] font-bold text-gray-400 uppercase tracking-widest mt-1">SEP</span>
                         
                         <!-- Bottom Blue Button (Moved to very end) -->
-                        <div class="bg-[#008CFF] w-[38px] h-[38px] mx-auto mt-2 rounded-[3px] flex items-center justify-center shadow-md cursor-pointer hover:bg-blue-600 transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M18 15l-6-6-6 6"/></svg>
+                        <div class="bg-[#008CFF] w-[38px] h-[38px] md:w-[48px] md:h-[48px] mx-auto mt-2 md:mt-4 rounded-[3px] md:rounded-[6px] flex items-center justify-center shadow-md cursor-pointer hover:bg-blue-600 transition-colors" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 md:w-8 md:h-8"><path d="M18 15l-6-6-6 6"/></svg>
                         </div>
                     </div>
-                    <div class="absolute -left-[5px] top-[26px] w-[21px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
-                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
-                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 relative shadow-sm ml-4">
-                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] bg-brand-green rounded-r-md"></div>
-                        <div class="flex justify-between items-start pl-2">
-                            <div class="flex items-start gap-2.5">
-                               <div class="mt-1.5 w-[14px] h-[14px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] bg-[#2D2D2D] rounded-full"></div></div>
+                    <div class="absolute -left-[5px] top-[26px] w-[21px] md:w-[35px] h-[2.5px] bg-[#2D2D2D] z-0"></div>
+                    <div class="absolute -left-[11px] top-[20px] w-[14px] h-[14px] md:w-[18px] md:h-[18px] md:-left-[13px] md:top-[18px] rounded-full bg-white border-[2.5px] border-[#2D2D2D] z-10"></div>
+                    <div class="border border-gray-300 rounded-[5px] bg-white p-3.5 md:p-5 relative shadow-sm ml-4 md:ml-8 hover:shadow-md transition-shadow cursor-default">
+                        <div class="absolute left-0 top-6 bottom-6 w-[3.5px] md:w-[5px] bg-brand-green rounded-r-md"></div>
+                        <div class="flex justify-between items-start pl-2 md:pl-4">
+                            <div class="flex items-start gap-2.5 md:gap-4">
+                               <div class="mt-1.5 md:mt-2 w-[14px] h-[14px] md:w-[18px] md:h-[18px] rounded-full border-[2px] border-[#2D2D2D] flex items-center justify-center flex-shrink-0"><div class="w-[6px] h-[6px] md:w-[8px] md:h-[8px] bg-[#2D2D2D] rounded-full"></div></div>
                                <div>
-                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] leading-[1.2] pr-10">Final Mock Interviews</h4>
-                                   <p class="text-brand-green text-[0.75rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
+                                   <h4 class="text-[#2D2D2D] font-bold text-[1.05rem] md:text-[1.3rem] leading-[1.2] pr-10">Final Mock Interviews</h4>
+                                   <p class="text-brand-green text-[0.75rem] md:text-[0.9rem] font-bold mt-1 tracking-wide">09:00 pm - 11:00 pm</p>
                                </div>
                             </div>
-                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 rounded-[3px] text-[0.6rem] font-semibold absolute right-3 top-3.5 tracking-wider">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
+                            <div class="bg-[#2D2D2D] text-white flex items-center px-1.5 py-0.5 md:px-2 md:py-1 rounded-[3px] text-[0.6rem] md:text-[0.8rem] font-semibold absolute right-3 top-3.5 tracking-wider">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-3 h-3 md:w-4 md:h-4 mr-1 opacity-90"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2-hr
                             </div>
                         </div>
-                        <div class="bg-gray-100/80 mt-3 rounded-[3px] p-2 text-center text-gray-500 font-medium text-[0.55rem] ml-2 leading-[1.6]">1-on-1 Evaluations &bull; Real-time Feedback &bull; Resume Polishing</div>
+                        <div class="bg-gray-100/80 mt-3 md:mt-4 rounded-[3px] p-2 md:p-3 text-center text-gray-500 font-medium text-[0.55rem] md:text-[0.8rem] ml-2 md:ml-4 leading-[1.6]">1-on-1 Evaluations &bull; Real-time Feedback &bull; Resume Polishing</div>
                     </div>
                 </div>
 
@@ -911,188 +938,240 @@
         </div>
 
         <!-- ================= SECTION: Class Management ================= -->
-        <div class="w-full pt-10 px-5 pb-16 bg-white">
-            <div class="text-center mb-8">
-                <p class="text-gray-500 text-[0.8rem] font-medium tracking-wide mb-0.5">What's our Modality of</p>
-                <h2 class="text-[#2DA94F] text-[1.7rem] font-black tracking-tight leading-none">Class Management</h2>
+        <div class="w-full pt-10 px-5 pb-16 bg-[#f9fafb]">
+            <div class="text-center mb-10 max-w-3xl mx-auto">
+                <p class="text-gray-500 text-[0.8rem] md:text-[1rem] font-medium tracking-wide mb-0.5">What's our Modality of</p>
+                <h2 class="text-[#2DA94F] text-[1.7rem] md:text-[2.5rem] font-black tracking-tight leading-none">Class Management</h2>
             </div>
-            <div class="flex flex-col gap-6 px-1">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-1 max-w-5xl mx-auto">
                 <div class="relative pt-[1.5px] w-full">
                     <div class="absolute top-0 left-6 right-6 h-[6px] bg-[#2DA94F] rounded-t-[4px] z-0"></div>
-                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 rounded-[4px] z-10">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/512px-Google_Meet_icon_%282020%29.svg.png" alt="Google Meet" class="w-9 h-9 mb-4 object-contain">
-                        <h3 class="text-[1.35rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Meet</h3>
-                        <p class="text-gray-500 text-[0.75rem] leading-[1.55]">Online classes will be conducted via Google Meet, where students, instructors and Teaching Assistant will be present in real-time, to have an interactive class.</p>
+                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 md:p-8 md:pt-7 rounded-[4px] z-10 hover:-translate-y-1 transition-transform">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Google_Meet_icon_%282020%29.svg/512px-Google_Meet_icon_%282020%29.svg.png" alt="Google Meet" class="w-9 h-9 md:w-12 md:h-12 mb-4 object-contain">
+                        <h3 class="text-[1.35rem] md:text-[1.5rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Meet</h3>
+                        <p class="text-gray-500 text-[0.75rem] md:text-[0.85rem] leading-[1.55]">Online classes will be conducted via Google Meet, where students, instructors and Teaching Assistant will be present in real-time, to have an interactive class.</p>
                     </div>
                 </div>
                 <div class="relative pt-[1.5px] w-full">
                     <div class="absolute top-0 left-6 right-6 h-[6px] bg-[#F9AB00] rounded-t-[4px] z-0"></div>
-                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 rounded-[4px] z-10">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Google_Classroom_Logo.png/512px-Google_Classroom_Logo.png" alt="Google Classroom" class="w-9 h-9 mb-4 object-contain">
-                        <h3 class="text-[1.35rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Classroom</h3>
-                        <p class="text-gray-500 text-[0.75rem] leading-[1.55]">Online quiz, assessment needs to be submitted via Google Classroom, to have easier evaluation process adn weekly basis checking via Teaching Assistant.</p>
+                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 md:p-8 md:pt-7 rounded-[4px] z-10 hover:-translate-y-1 transition-transform">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Google_Classroom_Logo.png/512px-Google_Classroom_Logo.png" alt="Google Classroom" class="w-9 h-9 md:w-12 md:h-12 mb-4 object-contain">
+                        <h3 class="text-[1.35rem] md:text-[1.5rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Classroom</h3>
+                        <p class="text-gray-500 text-[0.75rem] md:text-[0.85rem] leading-[1.55]">Online quiz, assessment needs to be submitted via Google Classroom, to have easier evaluation process adn weekly basis checking via Teaching Assistant.</p>
                     </div>
                 </div>
                 <div class="relative pt-[1.5px] w-full">
                     <div class="absolute top-0 left-6 right-6 h-[6px] bg-[#7884CB] rounded-t-[4px] z-0"></div>
-                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 rounded-[4px] z-10">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Google_Chat_icon_%282020%29.svg/512px-Google_Chat_icon_%282020%29.svg.png" alt="Google Chat" class="w-9 h-9 mb-4 object-contain">
-                        <h3 class="text-[1.35rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Chat</h3>
-                        <p class="text-gray-500 text-[0.75rem] leading-[1.55]">Communicate with your Teaching assistant anytime, also collaborate with your classmates for practice and for any kind of support, we have dedicated channels.</p>
+                    <div class="relative bg-white border border-gray-200 shadow-sm p-6 pt-5 md:p-8 md:pt-7 rounded-[4px] z-10 hover:-translate-y-1 transition-transform">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Google_Chat_icon_%282020%29.svg/512px-Google_Chat_icon_%282020%29.svg.png" alt="Google Chat" class="w-9 h-9 md:w-12 md:h-12 mb-4 object-contain">
+                        <h3 class="text-[1.35rem] md:text-[1.5rem] font-bold text-[#555] mb-2 leading-tight tracking-tight">Google Chat</h3>
+                        <p class="text-gray-500 text-[0.75rem] md:text-[0.85rem] leading-[1.55]">Communicate with your Teaching assistant anytime, also collaborate with your classmates for practice and for any kind of support, we have dedicated channels.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ================= SECTION: FAQ ================= -->
-        <div class="w-full pt-4 px-5 pb-10 bg-white">
-            <div class="border border-gray-200 rounded-[3px] flex flex-col shadow-sm">
+        <!-- ================= NEW SECTION: FAQ ================= -->
+        <div class="w-full pt-10 md:pt-16 px-5 pb-10 bg-white">
+            <div class="text-center mb-8 max-w-3xl mx-auto">
+                <h2 class="text-brand-dark text-[1.65rem] md:text-[2.5rem] font-black tracking-tight leading-none">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="border border-gray-200 rounded-[3px] flex flex-col shadow-sm max-w-3xl mx-auto">
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">What is the class modality?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-[#f8f9fa] hover:bg-gray-100 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">What is the class modality?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-white border-t border-gray-100">
+                        Our classes are conducted completely online via Google Meet. It's a live, interactive environment where you can engage with the instructor and peers directly.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">Are the classes recorded if I miss the class?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-white hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">Are the classes recorded if I miss the class?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-[#fdfdfd] border-t border-gray-100">
+                        Yes, all live sessions are recorded. You will be given access to these recordings for up to 6 months after the bootcamp ends, allowing you to revise at your own pace.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">What are the job placement opportunities?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-[#f8f9fa] hover:bg-gray-100 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">What are the job placement opportunities?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-white border-t border-gray-100">
+                        We provide robust job placement support including resume reviews, mock interviews, and direct referrals to our hiring partners across top tech companies in Bangladesh.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How can I communicate with the instructors?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-white hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">How can I communicate with the instructors?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-[#fdfdfd] border-t border-gray-100">
+                        You can ask questions directly during the live Google Meet classes. Outside of class hours, you can reach out via dedicated Google Chat channels.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">What are the prerequisites for this course?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-[#f8f9fa] hover:bg-gray-100 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">What are the prerequisites for this course?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-white border-t border-gray-100">
+                        There are no strict technical prerequisites. Basic understanding of business, a logical mindset, and passion for problem solving are all you need to get started!
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">Will I receive a certificate upon completion?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-white hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">Will I receive a certificate upon completion?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-[#fdfdfd] border-t border-gray-100">
+                        Yes, upon successfully attending the classes, submitting assessments, and completing the final mock interview, you will receive a verified HDNB Certificate.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How can I communicate with teaching assistants and groupmates?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-[#f8f9fa] hover:bg-gray-100 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">How can I communicate with teaching assistants and groupmates?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-white border-t border-gray-100">
+                        We use Google Chat spaces to build a community. You will be assigned a specific group where your Teaching Assistant and peers will collaborate throughout the bootcamp.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-white border-b border-gray-200 cursor-pointer">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How much time do I need to invest in this course?</span>
+                <div class="faq-item border-b border-gray-200">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-white hover:bg-gray-50 transition-colors focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">How much time do I need to invest in this course?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-[#fdfdfd] border-t border-gray-100">
+                        We recommend dedicating about 4 to 6 hours per week. This includes 2 hours of live classes, and the rest for assignments, readings, and group practice.
+                    </div>
                 </div>
                 
-                <div class="flex items-start gap-4 px-4 py-[14px] bg-[#f8f9fa] cursor-pointer rounded-b-[3px]">
-                    <span class="text-[1.3rem] font-bold text-[#111] leading-none mt-[2px]">+</span>
-                    <span class="text-[0.9rem] text-[#333] font-medium leading-[1.35]">How can I contact you if I have more questions?</span>
+                <div class="faq-item">
+                    <button class="w-full text-left flex items-start gap-4 px-4 py-[14px] md:py-4 bg-[#f8f9fa] hover:bg-gray-100 transition-colors focus:outline-none rounded-b-[3px]" onclick="toggleFaq(this)">
+                        <span class="icon text-[1.3rem] md:text-[1.5rem] font-bold text-[#111] leading-none mt-[2px] transform transition-transform duration-300">+</span>
+                        <span class="text-[0.9rem] md:text-[1rem] text-[#333] font-medium leading-[1.35]">How can I contact you if I have more questions?</span>
+                    </button>
+                    <div class="faq-answer hidden px-4 py-3 md:px-11 text-gray-600 text-[0.85rem] md:text-[0.95rem] bg-white border-t border-gray-100">
+                        You can easily reach our support team by clicking the Messenger or WhatsApp buttons in the "Send us Message" section right below.
+                    </div>
                 </div>
 
             </div>
         </div>
 
         <!-- ================= SECTION: Contact / Send us Message ================= -->
-        <div class="w-full pt-8 px-5 pb-16 bg-white">
+        <div class="w-full pt-8 md:pt-14 px-5 pb-16 bg-white max-w-4xl mx-auto md:flex md:items-center md:gap-10">
             
-            <div class="text-center mb-6">
-                <p class="text-gray-500 text-[0.85rem] font-medium tracking-wide mb-0.5">Have any Question?</p>
-                <h2 class="text-brand-red text-[1.65rem] font-black tracking-tight leading-none">Send us Message</h2>
-            </div>
+            <div class="md:w-1/2">
+                <div class="text-center md:text-left mb-6">
+                    <p class="text-gray-500 text-[0.85rem] md:text-[1rem] font-medium tracking-wide mb-0.5">Have any Question?</p>
+                    <h2 class="text-brand-red text-[1.65rem] md:text-[2.5rem] font-black tracking-tight leading-none">Send us Message</h2>
+                </div>
 
-            <!-- Custom Vector Illustration (Support Agents) -->
-            <div class="w-full flex justify-center mb-8 px-2">
-                <svg viewBox="0 0 400 250" class="w-full h-auto drop-shadow-sm">
-                    <defs>
-                        <pattern id="dotsPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                            <circle fill="#e5e7eb" cx="2" cy="2" r="1.5"></circle>
-                        </pattern>
-                    </defs>
-                    <polygon points="40,160 140,60 140,160" fill="url(#dotsPattern)" />
-                    <polygon points="360,110 260,210 360,210" fill="url(#dotsPattern)" />
+                <!-- Custom Vector Illustration (Support Agents) -->
+                <div class="w-full flex justify-center md:justify-start mb-8 md:mb-0 px-2 md:px-0">
+                    <svg viewBox="0 0 400 250" class="w-full max-w-[400px] h-auto drop-shadow-sm">
+                        <defs>
+                            <pattern id="dotsPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                                <circle fill="#e5e7eb" cx="2" cy="2" r="1.5"></circle>
+                            </pattern>
+                        </defs>
+                        <polygon points="40,160 140,60 140,160" fill="url(#dotsPattern)" />
+                        <polygon points="360,110 260,210 360,210" fill="url(#dotsPattern)" />
 
-                    <!-- Desks -->
-                    <rect x="20" y="230" width="360" height="3" fill="#e2e8f0" />
-                    
-                    <!-- Back Rests -->
-                    <rect x="50" y="160" width="30" height="70" fill="#cbd5e1" />
-                    <rect x="230" y="160" width="30" height="70" fill="#cbd5e1" />
+                        <!-- Desks -->
+                        <rect x="20" y="230" width="360" height="3" fill="#e2e8f0" />
+                        
+                        <!-- Back Rests -->
+                        <rect x="50" y="160" width="30" height="70" fill="#cbd5e1" />
+                        <rect x="230" y="160" width="30" height="70" fill="#cbd5e1" />
 
-                    <!-- ================= Agent 1 ================= -->
-                    <path d="M70 230 Q70 150 120 150 Q170 150 170 230" fill="#E5252A" />
-                    <path d="M120 150 L105 180 L135 180 Z" fill="#c51f24" />
-                    <path d="M120 150 L100 170 L120 175 Z" fill="#fff" />
-                    <path d="M120 150 L140 170 L120 175 Z" fill="#fff" />
-                    <circle cx="120" cy="120" r="22" fill="#ffbfa9" />
-                    <path d="M110 135 L110 155 L130 155 L130 135 Z" fill="#ffbfa9" />
-                    <path d="M95 120 C95 85 145 85 145 120 C145 140 150 140 150 140 C120 160 90 140 90 140 C90 140 95 140 95 120 Z" fill="#2d3748" />
-                    <circle cx="120" cy="120" r="18" fill="#ffbfa9" />
-                    <path d="M105 105 Q120 90 135 105" fill="none" stroke="#2d3748" stroke-width="5" stroke-linecap="round" />
-                    <circle cx="125" cy="115" r="2" fill="#1a202c" />
-                    <circle cx="138" cy="115" r="2" fill="#1a202c" />
-                    <path d="M130 125 Q135 130 140 125" fill="none" stroke="#1a202c" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M100 120 A 20 20 0 0 1 140 120" fill="none" stroke="#4a5568" stroke-width="3" />
-                    <rect x="96" y="115" width="8" height="16" rx="4" fill="#4a5568" />
-                    <path d="M100 125 L120 132" stroke="#4a5568" stroke-width="2" stroke-linecap="round" />
-                    <path d="M80 180 Q60 210 100 220" fill="none" stroke="#ffbfa9" stroke-width="15" stroke-linecap="round" />
-                    <path d="M80 180 Q60 210 100 220" fill="none" stroke="#E5252A" stroke-width="15" stroke-linecap="round" stroke-dasharray="25 100" />
-                    <path d="M150 180 Q180 160 170 125" fill="none" stroke="#ffbfa9" stroke-width="12" stroke-linecap="round" />
-                    <path d="M150 180 Q180 160 170 125" fill="none" stroke="#E5252A" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 100" />
-                    <circle cx="170" cy="125" r="8" fill="#ffbfa9" />
-                    <path d="M165 125 L165 110 M170 125 L170 108 M175 125 L175 112" stroke="#ffbfa9" stroke-width="3" stroke-linecap="round" />
-                    <rect x="110" y="160" width="80" height="55" rx="3" fill="#2d3748" />
-                    <rect x="115" y="165" width="70" height="45" fill="#4a5568" />
-                    <path d="M140 215 L160 215 L155 230 L145 230 Z" fill="#1a202c" />
-                    <ellipse cx="150" cy="230" rx="18" ry="4" fill="#1a202c" />
-                    <rect x="95" y="225" width="40" height="5" fill="#4a5568" />
-                    <path d="M130 90 Q130 60 160 60 Q190 60 190 90 Q190 110 170 115 L160 125 L160 115 Q130 110 130 90 Z" fill="#fff" stroke="#cbd5e1" stroke-width="2" />
-                    <circle cx="150" cy="85" r="3" fill="#4a5568" />
-                    <circle cx="160" cy="85" r="3" fill="#4a5568" />
-                    <circle cx="170" cy="85" r="3" fill="#4a5568" />
+                        <!-- ================= Agent 1 ================= -->
+                        <path d="M70 230 Q70 150 120 150 Q170 150 170 230" fill="#E5252A" />
+                        <path d="M120 150 L105 180 L135 180 Z" fill="#c51f24" />
+                        <path d="M120 150 L100 170 L120 175 Z" fill="#fff" />
+                        <path d="M120 150 L140 170 L120 175 Z" fill="#fff" />
+                        <circle cx="120" cy="120" r="22" fill="#ffbfa9" />
+                        <path d="M110 135 L110 155 L130 155 L130 135 Z" fill="#ffbfa9" />
+                        <path d="M95 120 C95 85 145 85 145 120 C145 140 150 140 150 140 C120 160 90 140 90 140 C90 140 95 140 95 120 Z" fill="#2d3748" />
+                        <circle cx="120" cy="120" r="18" fill="#ffbfa9" />
+                        <path d="M105 105 Q120 90 135 105" fill="none" stroke="#2d3748" stroke-width="5" stroke-linecap="round" />
+                        <circle cx="125" cy="115" r="2" fill="#1a202c" />
+                        <circle cx="138" cy="115" r="2" fill="#1a202c" />
+                        <path d="M130 125 Q135 130 140 125" fill="none" stroke="#1a202c" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M100 120 A 20 20 0 0 1 140 120" fill="none" stroke="#4a5568" stroke-width="3" />
+                        <rect x="96" y="115" width="8" height="16" rx="4" fill="#4a5568" />
+                        <path d="M100 125 L120 132" stroke="#4a5568" stroke-width="2" stroke-linecap="round" />
+                        <path d="M80 180 Q60 210 100 220" fill="none" stroke="#ffbfa9" stroke-width="15" stroke-linecap="round" />
+                        <path d="M80 180 Q60 210 100 220" fill="none" stroke="#E5252A" stroke-width="15" stroke-linecap="round" stroke-dasharray="25 100" />
+                        <path d="M150 180 Q180 160 170 125" fill="none" stroke="#ffbfa9" stroke-width="12" stroke-linecap="round" />
+                        <path d="M150 180 Q180 160 170 125" fill="none" stroke="#E5252A" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 100" />
+                        <circle cx="170" cy="125" r="8" fill="#ffbfa9" />
+                        <path d="M165 125 L165 110 M170 125 L170 108 M175 125 L175 112" stroke="#ffbfa9" stroke-width="3" stroke-linecap="round" />
+                        <rect x="110" y="160" width="80" height="55" rx="3" fill="#2d3748" />
+                        <rect x="115" y="165" width="70" height="45" fill="#4a5568" />
+                        <path d="M140 215 L160 215 L155 230 L145 230 Z" fill="#1a202c" />
+                        <ellipse cx="150" cy="230" rx="18" ry="4" fill="#1a202c" />
+                        <rect x="95" y="225" width="40" height="5" fill="#4a5568" />
+                        <path d="M130 90 Q130 60 160 60 Q190 60 190 90 Q190 110 170 115 L160 125 L160 115 Q130 110 130 90 Z" fill="#fff" stroke="#cbd5e1" stroke-width="2" />
+                        <circle cx="150" cy="85" r="3" fill="#4a5568" />
+                        <circle cx="160" cy="85" r="3" fill="#4a5568" />
+                        <circle cx="170" cy="85" r="3" fill="#4a5568" />
 
-                    <!-- ================= Agent 2 ================= -->
-                    <path d="M230 230 Q230 150 280 150 Q330 150 330 230" fill="#E5252A" />
-                    <path d="M280 150 L265 180 L295 180 Z" fill="#c51f24" />
-                    <circle cx="280" cy="120" r="20" fill="#c58371" />
-                    <path d="M270 135 L270 155 L290 155 L290 135 Z" fill="#c58371" />
-                    <path d="M260 115 C260 85 300 85 300 115 C300 125 295 125 295 125 C275 115 265 115 265 125 C260 125 260 115 260 115 Z" fill="#1a202c" />
-                    <circle cx="275" cy="115" r="2" fill="#1a202c" />
-                    <circle cx="288" cy="115" r="2" fill="#1a202c" />
-                    <path d="M280 125 Q285 130 290 125" fill="none" stroke="#1a202c" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M260 120 A 20 20 0 0 1 300 120" fill="none" stroke="#4a5568" stroke-width="3" />
-                    <rect x="256" y="115" width="8" height="16" rx="4" fill="#4a5568" />
-                    <path d="M260 125 L280 132" stroke="#4a5568" stroke-width="2" stroke-linecap="round" />
-                    <path d="M240 180 Q220 210 260 220" fill="none" stroke="#c58371" stroke-width="15" stroke-linecap="round" />
-                    <path d="M240 180 Q220 210 260 220" fill="none" stroke="#E5252A" stroke-width="15" stroke-linecap="round" stroke-dasharray="25 100" />
-                    <path d="M310 180 Q340 170 330 135" fill="none" stroke="#c58371" stroke-width="12" stroke-linecap="round" />
-                    <path d="M310 180 Q340 170 330 135" fill="none" stroke="#E5252A" stroke-width="12" stroke-linecap="round" stroke-dasharray="25 100" />
-                    <circle cx="330" cy="135" r="10" fill="#c58371" />
-                    <path d="M325 135 L325 115 Q335 115 335 130" fill="#c58371" stroke="#a05e4c" stroke-width="1.5" stroke-linecap="round" />
-                    <path d="M340 130 L345 130 M340 135 L345 135 M340 140 L345 140" stroke="#a05e4c" stroke-width="1.5" stroke-linecap="round" />
-                    <rect x="270" y="160" width="80" height="55" rx="3" fill="#2d3748" />
-                    <rect x="275" y="165" width="70" height="45" fill="#4a5568" />
-                    <path d="M300 215 L320 215 L315 230 L305 230 Z" fill="#1a202c" />
-                    <ellipse cx="310" cy="230" rx="18" ry="4" fill="#1a202c" />
-                    <rect x="255" y="225" width="40" height="5" fill="#4a5568" />
-                    <path d="M280 80 Q280 50 310 50 Q340 50 340 80 Q340 100 320 105 L310 115 L310 105 Q280 100 280 80 Z" fill="#fff" stroke="#cbd5e1" stroke-width="2" />
-                    <circle cx="300" cy="75" r="3" fill="#4a5568" />
-                    <circle cx="310" cy="75" r="3" fill="#4a5568" />
-                    <circle cx="320" cy="75" r="3" fill="#4a5568" />
-                </svg>
+                        <!-- ================= Agent 2 ================= -->
+                        <path d="M230 230 Q230 150 280 150 Q330 150 330 230" fill="#E5252A" />
+                        <path d="M280 150 L265 180 L295 180 Z" fill="#c51f24" />
+                        <circle cx="280" cy="120" r="20" fill="#c58371" />
+                        <path d="M270 135 L270 155 L290 155 L290 135 Z" fill="#c58371" />
+                        <path d="M260 115 C260 85 300 85 300 115 C300 125 295 125 295 125 C275 115 265 115 265 125 C260 125 260 115 260 115 Z" fill="#1a202c" />
+                        <circle cx="275" cy="115" r="2" fill="#1a202c" />
+                        <circle cx="288" cy="115" r="2" fill="#1a202c" />
+                        <path d="M280 125 Q285 130 290 125" fill="none" stroke="#1a202c" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M260 120 A 20 20 0 0 1 300 120" fill="none" stroke="#4a5568" stroke-width="3" />
+                        <rect x="256" y="115" width="8" height="16" rx="4" fill="#4a5568" />
+                        <path d="M260 125 L280 132" stroke="#4a5568" stroke-width="2" stroke-linecap="round" />
+                        <path d="M240 180 Q220 210 260 220" fill="none" stroke="#c58371" stroke-width="15" stroke-linecap="round" />
+                        <path d="M240 180 Q220 210 260 220" fill="none" stroke="#E5252A" stroke-width="15" stroke-linecap="round" stroke-dasharray="25 100" />
+                        <path d="M310 180 Q340 170 330 135" fill="none" stroke="#c58371" stroke-width="12" stroke-linecap="round" />
+                        <path d="M310 180 Q340 170 330 135" fill="none" stroke="#E5252A" stroke-width="12" stroke-linecap="round" stroke-dasharray="25 100" />
+                        <circle cx="330" cy="135" r="10" fill="#c58371" />
+                        <path d="M325 135 L325 115 Q335 115 335 130" fill="#c58371" stroke="#a05e4c" stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M340 130 L345 130 M340 135 L345 135 M340 140 L345 140" stroke="#a05e4c" stroke-width="1.5" stroke-linecap="round" />
+                        <rect x="270" y="160" width="80" height="55" rx="3" fill="#2d3748" />
+                        <rect x="275" y="165" width="70" height="45" fill="#4a5568" />
+                        <path d="M300 215 L320 215 L315 230 L305 230 Z" fill="#1a202c" />
+                        <ellipse cx="310" cy="230" rx="18" ry="4" fill="#1a202c" />
+                        <rect x="255" y="225" width="40" height="5" fill="#4a5568" />
+                        <path d="M280 80 Q280 50 310 50 Q340 50 340 80 Q340 100 320 105 L310 115 L310 105 Q280 100 280 80 Z" fill="#fff" stroke="#cbd5e1" stroke-width="2" />
+                        <circle cx="300" cy="75" r="3" fill="#4a5568" />
+                        <circle cx="310" cy="75" r="3" fill="#4a5568" />
+                        <circle cx="320" cy="75" r="3" fill="#4a5568" />
+                    </svg>
+                </div>
             </div>
 
             <!-- Call to Action Buttons -->
-            <div class="space-y-4">
-                <button class="w-full bg-[#006AFF] hover:bg-blue-700 transition-colors text-white font-bold py-4 rounded-[4px] text-[1.05rem] flex justify-center items-center gap-2">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.915 1.488 5.498 3.795 7.155v3.475a.5.5 0 0 0 .768.423l3.41-1.89c1.554.433 3.228.667 4.982.667 5.523 0 10-4.145 10-9.258C24 6.145 19.523 2 12 2zm1.182 12.39-3.08-3.29-6.002 3.29 6.6-7.008 3.167 3.29 5.914-3.29-6.6 7.008z"/></svg>
+            <div class="md:w-1/2 space-y-4">
+                <button class="w-full bg-[#006AFF] hover:bg-blue-700 transition-colors text-white font-bold py-4 md:py-5 rounded-[4px] text-[1.05rem] md:text-[1.2rem] flex justify-center items-center gap-2">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 md:w-7 md:h-7"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.915 1.488 5.498 3.795 7.155v3.475a.5.5 0 0 0 .768.423l3.41-1.89c1.554.433 3.228.667 4.982.667 5.523 0 10-4.145 10-9.258C24 6.145 19.523 2 12 2zm1.182 12.39-3.08-3.29-6.002 3.29 6.6-7.008 3.167 3.29 5.914-3.29-6.6 7.008z"/></svg>
                     Messenger
                 </button>
-                <button class="w-full bg-[#25D366] hover:bg-green-600 transition-colors text-white font-bold py-4 rounded-[4px] text-[1.05rem] flex justify-center items-center gap-2">
-                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                <button class="w-full bg-[#25D366] hover:bg-green-600 transition-colors text-white font-bold py-4 md:py-5 rounded-[4px] text-[1.05rem] md:text-[1.2rem] flex justify-center items-center gap-2">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 md:w-7 md:h-7"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                     WhatsApp
                 </button>
             </div>
@@ -1100,8 +1179,27 @@
 
     </div>
 
+    <!-- JavaScript for Interactive FAQ Accordion -->
+    <script>
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.icon');
+            const isHidden = answer.classList.contains('hidden');
+            
+            // Close all currently opened FAQs
+            document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.faq-item .icon').forEach(el => {
+                el.classList.remove('rotate-45');
+                el.style.color = '#111'; // Reset color
+            });
+
+            // If the clicked one was hidden, open it
+            if (isHidden) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-45');
+                icon.style.color = '#E5252A'; // Red cross for active state
+            }
+        }
+    </script>
 </body>
 </html>
-
-
-```
