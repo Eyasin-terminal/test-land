@@ -104,79 +104,81 @@
         <!-- ================= SECTION: Enrollment Form (Before Hero Section) ================= -->
         <div class="w-full pt-8 px-5 pb-10 bg-[#f8f9fa] border-b border-gray-200">
             <div class="text-center mb-6 max-w-3xl mx-auto">
-                <p class="text-gray-500 text-[0.8rem] md:text-[1rem] font-medium tracking-wide mb-0.5">Secure Your Seat</p>
-                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.2rem] font-black tracking-tight leading-none">Enrollment Form</h2>
+                <p class="text-gray-500 text-[0.8rem] md:text-[1rem] font-medium tracking-wide mb-0.5">Know More</p>
+                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.2rem] font-black tracking-tight leading-none">Contact Form</h2>
             </div>
 
             <form class="w-full max-w-3xl mx-auto bg-white p-5 md:p-8 rounded-[4px] border border-gray-200 shadow-sm space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
                 
                 <!-- Full Name -->
                 <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">পূর্ণ নাম (Full Name) <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Full Name<span class="text-brand-red">*</span></label>
                     <input type="text" required placeholder="আপনার পূর্ণ নাম" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
                 </div>
 
                 <!-- Email Address -->
                 <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">ইমেইল এড্রেস (Email Address) <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Email Address<span class="text-brand-red">*</span></label>
                     <input type="email" required placeholder="example@mail.com" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
                 </div>
 
                 <!-- Phone Number -->
                 <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">ফোন নম্বর (Phone Number) <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Phone Number<span class="text-brand-red">*</span></label>
                     <input type="tel" required placeholder="01XXXXXXXXX" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
                 </div>
 
                 <!-- Profession -->
                 <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">পেশা (Profession) <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Profession<span class="text-brand-red">*</span></label>
                     <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
-                        <option value="" disabled selected>নির্বাচন করুন (Select)</option>
-                        <option value="student">১. শিক্ষার্থী (Student)</option>
-                        <option value="professional">২. পেশাজীবী (Professional)</option>
-                        <option value="job_seeker">৩. চাকরিপ্রার্থী (Job Seeker)</option>
+                        <option value="" disabled selected>Select</option>
+                        <option value="student">1.Student</option>
+                        <option value="professional">2.Professional</option>
+                        <option value="job_seeker">3.Job Seeker</option>
                     </select>
                 </div>
 
                 <!-- Division -->
                 <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">বিভাগ (Division) <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Division<span class="text-brand-red">*</span></label>
                     <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
-                        <option value="" disabled selected>নির্বাচন করুন (Select)</option>
-                        <option value="dhaka">১. ঢাকা (Dhaka)</option>
-                        <option value="chattogram">২. চট্টগ্রাম (Chattogram)</option>
-                        <option value="rajshahi">৩. রাজশাহী (Rajshahi)</option>
-                        <option value="khulna">৪. খুলনা (Khulna)</option>
-                        <option value="sylhet">৫. সিলেট (Sylhet)</option>
-                        <option value="other">৬. বরিশাল/রংপুর/অন্যান্য</option>
+                        <option value="" disabled selected>Select</option>
+                        <option value="dhaka">1. Dhaka</option>
+                        <option value="chattogram">2. Chattogram </option>
+                        <option value="rajshahi">3. Rajshahi </option>
+                        <option value="khulna">4. Khulna</option>
+                        <option value="sylhet">5. Sylhet</option>
+                        <option value="barisal">6. Barisal</option>
+                        <option value="mymensingh">7. Mymensingh</option>
+                        <option value="rangpur">8. Rangpur</option>
                     </select>
                 </div>
 
                 <!-- Gender -->
                 <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">লিঙ্গ (Gender) <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Gender<span class="text-brand-red">*</span></label>
                     <div class="flex items-center gap-5 mt-1.5 md:mt-3">
                         <label class="flex items-center gap-1.5 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
                             <input type="radio" name="gender" value="male" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
-                            ১. পুরুষ (Male)
+                            1. Male
                         </label>
                         <label class="flex items-center gap-1.5 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
                             <input type="radio" name="gender" value="female" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
-                            ২. নারী (Female)
+                            2. Female
                         </label>
                     </div>
                 </div>
 
                 <!-- Educational Qualification -->
                 <div class="md:col-span-2">
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">শিক্ষাগত যোগ্যতা <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
+                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Educational Qualification <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
                     <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
-                        <option value="" disabled selected>নির্বাচন করুন (Select)</option>
-                        <option value="hsc">১. HSC বা সমমান</option>
-                        <option value="honors">২. স্নাতক (Honors/BSc)</option>
-                        <option value="masters">৩. স্নাতকোত্তর (Masters/MSc)</option>
-                        <option value="other">৪. অন্যান্য (Other)</option>
+                        <option value="" disabled selected>Select</option>
+                        <option value="hsc">1.  HSC or equivalent</option>
+                        <option value="honors">2. Honors/BS</option>
+                        <option value="masters">3. Masters/MSc/equivalent</option>
+                        <option value="other">4. Other</option>
                     </select>
                 </div>
 
@@ -227,16 +229,16 @@
 
         <div class="flex justify-between md:justify-around items-center mx-10 md:mx-auto max-w-2xl mt-8 md:mt-12 mb-8 md:mb-12">
             <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">05</span>
+                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">3</span>
                 <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Months.</span>
             </div>
             <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">19</span>
+                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">24</span>
                 <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Classes.</span>
             </div>
             <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">90</span>
-                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Seats.</span>
+                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">48</span>
+                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Hours.</span>
             </div>
         </div>
 
@@ -294,7 +296,7 @@
 
         <div class="px-5 mt-6 md:mt-8 space-y-3 md:space-y-0 md:space-x-4 pb-8 max-w-2xl mx-auto md:flex justify-center">
             <button class="w-full md:w-auto md:px-12 bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded text-[0.9rem] md:text-[1.05rem]">
-                Apply Now
+                Talk With Us
             </button>
             <button class="w-full md:w-auto md:px-12 bg-white hover:bg-gray-50 transition-colors border-2 border-brand-red text-brand-red font-bold py-3 md:py-3.5 rounded text-[0.9rem] md:text-[1.05rem]">
                 Browse Syllabus
@@ -306,7 +308,7 @@
             <div class="flex items-start mb-6 md:mb-10 justify-center md:justify-start">
                 <div class="w-5 h-11 md:h-14 bg-brand-red mr-4 flex-shrink-0"></div>
                 <h2 class="text-[1.35rem] md:text-[2rem] font-black text-gray-600 leading-[1.15] tracking-tight">
-                    Our Bootcamp<br>Designed for You
+                    Our Program<br>Designed for You
                 </h2>
             </div>
 
