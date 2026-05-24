@@ -1547,5 +1547,63 @@
             }
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all Week Headers using their unique class combination
+            const weekHeaders = document.querySelectorAll('.items-stretch.rounded-\\[4px\\].z-10');
+            
+            weekHeaders.forEach((header, index) => {
+                // 1. Make headers look clickable
+                header.style.cursor = 'pointer';
+                header.classList.add('hover:opacity-90', 'transition-opacity');
+                
+                // 2. Add a dropdown arrow (chevron) to the right side of the header
+                const rightSection = header.querySelector('.flex-1.flex.justify-between.items-center');
+                if (rightSection) {
+                    rightSection.insertAdjacentHTML('beforeend', `
+                        <div class="ml-2 md:ml-4 flex items-center justify-center transform transition-transform duration-300 chevron-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    `);
+                }
+
+                // 3. Create a wrapper container for this week's classes
+                const contentWrapper = document.createElement('div');
+                contentWrapper.className = 'week-content transition-all duration-300 hidden';
+                
+                // 4. Group all classes under this week and move them into the wrapper
+                let nextEl = header.nextElementSibling;
+                while (nextEl && nextEl.classList.contains('group')) {
+                    let currentClass = nextEl;
+                    nextEl = nextEl.nextElementSibling; // grab the next one before moving the current one
+                    contentWrapper.appendChild(currentClass);
+                }
+                
+                // Insert the new wrapper immediately after the Week header
+                header.parentNode.insertBefore(contentWrapper, header.nextSibling);
+
+                // 5. Add click event to toggle the expand/collapse state
+                header.addEventListener('click', () => {
+                    const isHidden = contentWrapper.classList.contains('hidden');
+                    const chevron = header.querySelector('.chevron-icon');
+                    
+                    if (isHidden) {
+                        contentWrapper.classList.remove('hidden');
+                        if (chevron) chevron.classList.add('rotate-180');
+                    } else {
+                        contentWrapper.classList.add('hidden');
+                        if (chevron) chevron.classList.remove('rotate-180');
+                    }
+                });
+                
+                // 6. Automatically open Week 01 by default so the section doesn't look empty
+                if (index === 0) {
+                    header.click();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
