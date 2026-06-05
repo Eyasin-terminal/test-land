@@ -1509,94 +1509,54 @@
 
             </div>
         </div>
-        <!-- ================= SECTION: Batch Gallery (Coverflow) ================= -->
-<div class="w-full bg-blue-600 pt-16 md:pt-24 pb-20 px-5 border-t border-blue-700 overflow-hidden">
-    <div class="max-w-6xl mx-auto mb-12 text-center md:mb-16">
-        <p class="text-white text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Social Proof</p>
-        <h2 class="text-white text-[2.2rem] md:text-[3rem] font-black tracking-tight leading-none">Inside the Batches</h2>
-        <p class="mt-4 text-white max-w-xl mx-auto text-[0.9rem] md:text-[1.05rem]">Real moments, real connections. See what your journey could look like.</p>
+     <!-- ================= SECTION: Batch Gallery (Asymmetric Bento Grid) ================= -->
+<div class="w-full bg-white pt-16 md:pt-24 pb-20 px-5 border-t border-gray-100">
+    <div class="max-w-6xl mx-auto mb-10 md:mb-16 text-center">
+        <p class="text-blue-600 text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Social Proof</p>
+        <h2 class="text-[#111] text-[2.2rem] md:text-[3rem] font-black tracking-tight leading-none">Inside the Batches</h2>
+        <p class="mt-4 text-gray-500 max-w-xl mx-auto text-[0.9rem] md:text-[1.05rem]">Real moments, real connections. No stock photos—just our community building together.</p>
     </div>
 
-    <div class="max-w-6xl mx-auto relative px-4">
-        <!-- 
-          SWIPER CONTAINER 
-          init="false" is added so our script below can apply the desktop settings before it boots up.
-        -->
-        <swiper-container 
-            class="batch-gallery-swiper pb-12"
-            init="false"
-            effect="coverflow" 
-            grab-cursor="true" 
-            centered-slides="true"
-            slides-per-view="1"
-            loop="true" 
-            autoplay-delay="3000" 
-            autoplay-disable-on-interaction="false"
-            coverflow-effect-rotate="50" 
-            coverflow-effect-stretch="0" 
-            coverflow-effect-depth="100" 
-            coverflow-effect-modifier="1" 
-            coverflow-effect-slide-shadows="true"
-            pagination="true" 
-            pagination-clickable="true"
-        >
-            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
-                <img src="https://picsum.photos/id/101/800/600" alt="Batch Photo 1" class="w-full h-full object-cover">
-            </swiper-slide>
-            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
-                <img src="https://picsum.photos/id/102/800/600" alt="Batch Photo 2" class="w-full h-full object-cover">
-            </swiper-slide>
-            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
-                <img src="https://picsum.photos/id/103/800/600" alt="Batch Photo 3" class="w-full h-full object-cover">
-            </swiper-slide>
-            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
-                <img src="https://picsum.photos/id/104/800/600" alt="Batch Photo 4" class="w-full h-full object-cover">
-            </swiper-slide>
-            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
-                <img src="https://picsum.photos/id/105/800/600" alt="Batch Photo 5" class="w-full h-full object-cover">
-            </swiper-slide>
-        </swiper-container>
-
-        <!-- Script to handle Mobile vs Desktop layouts on the same Swiper -->
-        <script>
-            // Ensure DOM is fully loaded before manipulating Swiper
-            document.addEventListener('DOMContentLoaded', function() {
-                const swiperEl = document.querySelector('.batch-gallery-swiper');
-                
-                if (swiperEl) {
-                    const params = {
-                        breakpoints: {
-                            // When window width is >= 1024px (desktop)
-                            1024: {
-                                slidesPerView: 3,
-                                coverflowEffect: {
-                                    rotate: 0, 
-                                    stretch: 0, 
-                                    depth: 150, 
-                                    modifier: 1, 
-                                    slideShadows: false 
-                                }
-                            }
-                        }
-                    };
-                    
-                    // Assign the desktop parameters and initialize
-                    Object.assign(swiperEl, params);
-                    swiperEl.initialize();
-                }
-            });
-        </script>
+    <!-- 
+      Bento Grid Container 
+      Mobile: 4 columns total (Hero takes 4, others take 2)
+      Desktop: 4 columns total (Hero takes 2 columns + 2 rows, others take 1 column + 1 row)
+    -->
+    <div class="max-w-6xl mx-auto grid grid-cols-4 gap-3 md:gap-5">
         
-        <!-- Pagination Styles (Updated for dark background) -->
-        <style>
-            .batch-gallery-swiper::part(bullet) {
-                background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-                opacity: 1;
-            }
-            .batch-gallery-swiper::part(bullet-active) {
-                background: #ffffff; /* Solid white for active */
-            }
-        </style>
+        <!-- Image 1: The Hero Moment (Large Left on Desktop, Top Full on Mobile) -->
+        <div class="col-span-4 md:col-span-2 md:row-span-2 relative group overflow-hidden bg-gray-100 rounded-[3px] aspect-[4/3] md:aspect-auto">
+            <img src="https://picsum.photos/id/101/800/800" alt="Main Batch Photo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+            <!-- Subtle gradient and text overlay on hover -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-8">
+                <span class="text-white font-bold tracking-wide uppercase text-sm">Graduation Day</span>
+            </div>
+        </div>
+
+        <!-- Image 2: Top Right 1 -->
+        <div class="col-span-2 md:col-span-1 relative group overflow-hidden bg-gray-100 rounded-[3px] aspect-square">
+            <img src="https://picsum.photos/id/102/500/500" alt="Student Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
+        <!-- Image 3: Top Right 2 -->
+        <div class="col-span-2 md:col-span-1 relative group overflow-hidden bg-gray-100 rounded-[3px] aspect-square">
+            <img src="https://picsum.photos/id/103/500/500" alt="Group Discussion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
+        <!-- Image 4: Bottom Right 1 -->
+        <div class="col-span-2 md:col-span-1 relative group overflow-hidden bg-gray-100 rounded-[3px] aspect-square">
+            <img src="https://picsum.photos/id/104/500/500" alt="Networking Event" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
+        <!-- Image 5: Bottom Right 2 -->
+        <div class="col-span-2 md:col-span-1 relative group overflow-hidden bg-gray-100 rounded-[3px] aspect-square">
+            <img src="https://picsum.photos/id/107/500/500" alt="Workshop Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
     </div>
 </div>
 
@@ -1786,7 +1746,7 @@
             });
         });
     </script>
-       <!-- Swiper.js Web Component Bundle (modern approach) -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+       <!-- Swiper.js Web Component Bundle (modern approach)
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
 </body>
 </html>
