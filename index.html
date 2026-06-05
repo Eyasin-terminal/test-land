@@ -397,7 +397,7 @@
                         <p class="text-[0.75rem] text-gray-400 uppercase font-bold tracking-wider mb-2">Currently At</p>
                         <!-- Company Logo Placeholder -->
                         <div class="h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
-                            <img src="assets/download.png" alt="Company Logo" class="h-full w-full object-contain object-left">
+                            <img src="https://via.placeholder.com/120x30?text=Company+Logo" alt="Company Logo" class="h-full w-full object-contain object-left">
                         </div>
                     </div>
 
@@ -410,6 +410,40 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- ================= SECTION: Teacher Overview (Edge-to-Edge) ================= -->
+<div class="w-full bg-[#f9fafb] pt-12 pb-0 md:py-20">
+    <div class="max-w-md md:max-w-4xl mx-auto flex flex-col md:flex-row bg-white md:border md:border-gray-200 shadow-sm overflow-hidden">
+        
+        <!-- Edge-to-Edge Image on Mobile -->
+        <div class="w-full md:w-1/2 aspect-square md:aspect-auto bg-gray-200">
+            <img src="assets/1779609893009~2.jpg" alt="Yeasin Ahammed" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Content Area -->
+        <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+            <div class="inline-block bg-blue-50 text-blue-600 font-bold text-xs px-3 py-1 uppercase tracking-widest w-max mb-6">
+                Meet The Mentor
+            </div>
+            
+            <h3 class="text-[#111] text-[2.5rem] font-black leading-none tracking-tight">Yeasin <br/>Ahammed</h3>
+            <p class="text-gray-500 text-[1.1rem] font-medium mt-3 border-l-2 border-black pl-3">Lead Instructor &mdash; Product Mgmt</p>
+            
+            <div class="mt-10 mb-8">
+                <p class="text-[0.7rem] text-gray-400 uppercase font-black tracking-widest mb-3">Industry Experience</p>
+                <!-- Company Logo Placeholder -->
+                <div class="h-10 w-36">
+                    <img src="https://via.placeholder.com/140x40?text=Company+Logo" alt="Company Logo" class="h-full w-full object-contain object-left">
+                </div>
+            </div>
+
+            <a href="https://www.linkedin.com/in/yeasinahammed/" target="_blank" class="flex items-center justify-between w-full border-b-2 border-black pb-3 group hover:border-blue-600 transition-colors">
+                <span class="text-black font-bold uppercase text-sm group-hover:text-blue-600 transition-colors">LinkedIn Profile</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 text-black group-hover:text-blue-600 transition-colors"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+        </div>
+
     </div>
 </div>
 <!-- ================= SECTION: Experience a Demo Class ================= -->
@@ -1509,6 +1543,96 @@
 
             </div>
         </div>
+<!-- ================= SECTION: Batch Gallery (Coverflow) ================= -->
+<div class="w-full bg-blue-600 pt-16 md:pt-24 pb-20 px-5 border-t border-blue-700 overflow-hidden">
+    <div class="max-w-6xl mx-auto mb-12 text-center md:mb-16">
+        <p class="text-white text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Social Proof</p>
+        <h2 class="text-white text-[2.2rem] md:text-[3rem] font-black tracking-tight leading-none">Inside the Batches</h2>
+        <p class="mt-4 text-white max-w-xl mx-auto text-[0.9rem] md:text-[1.05rem]">Real moments, real connections. See what your journey could look like.</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto relative px-4">
+        <!-- 
+          SWIPER CONTAINER 
+          init="false" is added so our script below can apply the desktop settings before it boots up.
+        -->
+        <swiper-container 
+            class="batch-gallery-swiper pb-12"
+            init="false"
+            effect="coverflow" 
+            grab-cursor="true" 
+            centered-slides="true"
+            slides-per-view="1"
+            loop="true" 
+            autoplay-delay="3000" 
+            autoplay-disable-on-interaction="false"
+            coverflow-effect-rotate="50" 
+            coverflow-effect-stretch="0" 
+            coverflow-effect-depth="100" 
+            coverflow-effect-modifier="1" 
+            coverflow-effect-slide-shadows="true"
+            pagination="true" 
+            pagination-clickable="true"
+        >
+            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://picsum.photos/id/101/800/600" alt="Batch Photo 1" class="w-full h-full object-cover">
+            </swiper-slide>
+            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://picsum.photos/id/102/800/600" alt="Batch Photo 2" class="w-full h-full object-cover">
+            </swiper-slide>
+            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://picsum.photos/id/103/800/600" alt="Batch Photo 3" class="w-full h-full object-cover">
+            </swiper-slide>
+            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://picsum.photos/id/104/800/600" alt="Batch Photo 4" class="w-full h-full object-cover">
+            </swiper-slide>
+            <swiper-slide class="aspect-[4/3] bg-white rounded-lg overflow-hidden shadow-md">
+                <img src="https://picsum.photos/id/105/800/600" alt="Batch Photo 5" class="w-full h-full object-cover">
+            </swiper-slide>
+        </swiper-container>
+
+        <!-- Script to handle Mobile vs Desktop layouts on the same Swiper -->
+        <script>
+            // Ensure DOM is fully loaded before manipulating Swiper
+            document.addEventListener('DOMContentLoaded', function() {
+                const swiperEl = document.querySelector('.batch-gallery-swiper');
+                
+                if (swiperEl) {
+                    const params = {
+                        breakpoints: {
+                            // When window width is >= 1024px (desktop)
+                            1024: {
+                                slidesPerView: 3,
+                                coverflowEffect: {
+                                    rotate: 0, 
+                                    stretch: 0, 
+                                    depth: 150, 
+                                    modifier: 1, 
+                                    slideShadows: false 
+                                }
+                            }
+                        }
+                    };
+                    
+                    // Assign the desktop parameters and initialize
+                    Object.assign(swiperEl, params);
+                    swiperEl.initialize();
+                }
+            });
+        </script>
+        
+        <!-- Pagination Styles (Updated for dark background) -->
+        <style>
+            .batch-gallery-swiper::part(bullet) {
+                background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+                opacity: 1;
+            }
+            .batch-gallery-swiper::part(bullet-active) {
+                background: #ffffff; /* Solid white for active */
+            }
+        </style>
+    </div>
+</div>
 
         <!-- ================= SECTION: Contact / Send us Message ================= -->
         <div class="w-full pt-8 md:pt-14 px-5 pb-16 bg-white max-w-4xl mx-auto md:flex md:items-center md:gap-10">
@@ -1696,5 +1820,8 @@
             });
         });
     </script>
+    <!-- Swiper.js Web Component Bundle (modern approach) -->
+    <!-- Swiper.js Web Component Bundle (modern approach) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 </html>
