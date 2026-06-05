@@ -136,6 +136,7 @@
                         <option value="student">Student</option>
                         <option value="professional">Professional</option>
                         <option value="job_seeker">Job Seeker</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
 
@@ -175,8 +176,9 @@
                     <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Educational Qualification <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
                     <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
                         <option value="" disabled selected>Select</option>
-                        <option value="hsc">HSC or equivalent</option>
-                        <option value="honors">Honors</option>
+                        <option value="hsc">SSC/equivalent</option>
+                        <option value="hsc">HSC/equivalent</option>
+                        <option value="honors">Honors/equivalent</option>
                         <option value="masters">Masters/equivalent</option>
                         <option value="other">Other</option>
                     </select>
@@ -184,8 +186,8 @@
 
                 <!-- Submit Button -->
                 <div class="pt-3 md:pt-4 md:col-span-2">
-                    <button type="button" class="w-full bg-brand-red hover:bg-red-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded-[3px] text-[0.95rem] md:text-[1.1rem] shadow-sm">
-                        Submit Application
+                    <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded-[3px] text-[0.95rem] md:text-[1.1rem] shadow-sm">
+                    Submit Application
                     </button>
                 </div>
             </form>
@@ -367,55 +369,50 @@
             </div>
         </div>
 
-        <!-- ================= SECTION: Teacher Overview ================= -->
-        <div class="w-full pt-12 md:pt-20 px-5 pb-8 bg-[#f9fafb]">
-            <div class="text-center mb-7 md:mb-12">
-                <p class="text-gray-500 text-[0.8rem] md:text-[1rem] font-medium mb-0.5">Meet the Instructors</p>
-                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.5rem] font-black tracking-tight leading-none">Teacher Overview</h2>
+<!-- ================= SECTION: Teacher Overview (Executive Horizontal) ================= -->
+<div class="w-full pt-16 md:pt-20 px-5 pb-16 bg-[#f9fafb]">
+    <div class="text-center mb-10">
+        <p class="text-blue-600 text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Learn From The Best</p>
+        <h2 class="text-[#111] text-[2rem] md:text-[2.5rem] font-black tracking-tight">Meet the Instructor</h2>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-sm hover:shadow-lg transition-shadow duration-300">
+        <div class="flex flex-col md:flex-row">
+            <!-- Image Section -->
+            <div class="md:w-2/5 h-64 md:h-auto bg-gray-100 relative">
+                <img src="assets/1779609893009~2.jpg" alt="Yeasin Ahammed" class="w-full h-full object-cover object-top">
             </div>
 
-            <!-- Instructor Cards Container -->
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Instructor Card 1 -->
-                <div class="relative bg-white border border-gray-300 rounded-[4px] shadow-sm w-full mx-auto mt-2 hover:-translate-y-1 transition-transform">
-                    <div class="absolute -top-[2px] left-3 right-3 h-[4px] bg-brand-blue rounded-t-[4px]"></div>
-                    <div class="p-5">
-                        <div class="flex items-center gap-4">
-                            <div class="w-16 h-16 bg-brand-blue rounded-sm overflow-hidden flex-shrink-0">
-                                <img src="assets/1779609893009~2.jpg" alt="Yeasin Ahammed" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <h3 class="text-[#222] text-[1.2rem] font-bold leading-tight">Yeasin Ahammed</h3>
-                                <p class="text-gray-500 text-[0.85rem] leading-tight mt-1">Lead Instructor</p>
-                                <p class="text-gray-500 text-[0.85rem] font-bold leading-tight">Product Management</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="border-gray-200 mx-5">
-                    
-                    <!-- Truck Lagbe Logo -->
-                    <div class="py-4 px-5 flex justify-center items-center">
-                        <div class="flex items-center gap-2">
-                            <svg viewBox="0 0 24 24" class="w-7 h-7 text-[#0066FF]" fill="currentColor">
-                                <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                            </svg>
-                            <span class="text-[1.15rem] font-black text-[#0066FF] tracking-tight">Truck Lagbe</span>
+            <!-- Content Section -->
+            <div class="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+                <h3 class="text-[#111] text-[1.8rem] font-bold leading-tight">Yeasin Ahammed</h3>
+                <p class="text-gray-500 text-[1rem] font-medium mt-1">Lead Instructor &bull; Product Management</p>
+                
+                <p class="text-gray-600 mt-6 text-sm leading-relaxed border-l-2 border-blue-600 pl-4">
+                    Bringing real-world product management frameworks directly from the industry to the classroom.
+                </p>
+
+                <div class="mt-8 pt-8 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <p class="text-[0.75rem] text-gray-400 uppercase font-bold tracking-wider mb-2">Currently At</p>
+                        <!-- Company Logo Placeholder -->
+                        <div class="h-8 w-28 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="https://via.placeholder.com/120x30?text=Company+Logo" alt="Company Logo" class="h-full w-full object-contain object-left">
                         </div>
                     </div>
 
-                    <hr class="border-gray-200 mx-5">
-                    
-                    <!-- LinkedIn Link -->
-                    <a href="https://www.linkedin.com/in/yeasinahammed/" target="_blank" class="py-3 px-5 flex justify-end items-center gap-2 cursor-pointer group hover:bg-gray-50 transition-colors rounded-b-[4px]">
-                        <div class="bg-[#0077b5] text-white p-[3px] rounded-sm flex items-center justify-center">
-                            <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://www.linkedin.com/in/yeasinahammed/" target="_blank" class="group flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-blue-600 transition-colors">
+                        <span>LinkedIn</span>
+                        <div class="bg-gray-100 group-hover:bg-blue-50 p-2 rounded-full transition-colors">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                         </div>
-                        <span class="text-gray-500 font-bold text-[0.85rem] group-hover:text-brand-blue transition-colors">Check LinkedIn</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4 text-gray-400 group-hover:text-brand-blue transition-colors"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" /></svg>
                     </a>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- ================= SECTION: Experience a Demo Class ================= -->
         <div class="w-full pt-12 md:pt-16 pb-12 px-5 bg-[#f8f9fa] border-y border-gray-200 relative">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-8 md:mb-12">
