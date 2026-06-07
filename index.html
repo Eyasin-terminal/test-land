@@ -105,156 +105,101 @@
     <div class="w-full bg-white min-h-screen shadow-2xl relative pb-10 overflow-x-hidden">
 
         <!-- ================= SECTION: Enrollment Form (Before Hero Section) ================= -->
-        <div class="w-full pt-8 px-5 pb-10 bg-[#f8f9fa] border-b border-gray-200">
-            <div class="text-center mb-6 max-w-3xl mx-auto">
-                <p class="text-[#111] text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Know More</p>
-                <h2 class="text-brand-blue text-[1.65rem] md:text-[2.2rem] font-black tracking-tight leading-none">Contact Form</h2>
-            </div>
-
-            <form class="w-full max-w-3xl mx-auto bg-white p-5 md:p-8 rounded-[4px] border border-gray-200 shadow-sm space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-6">
-                
-                <!-- Full Name -->
-                <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Full Name<span class="text-brand-red">*</span></label>
-                    <input type="text" required placeholder="Your name here" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
-                </div>
-
-                <!-- Email Address -->
-                <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Email Address<span class="text-brand-red">*</span></label>
-                    <input type="email" required placeholder="example@mail.com" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
-                </div>
-
-                <!-- Phone Number -->
-                <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Phone Number<span class="text-brand-red">*</span></label>
-                    <input type="tel" required placeholder="01XXXXXXXXX" class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white">
-                </div>
-
-                <!-- Profession -->
-                <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Profession<span class="text-brand-red">*</span></label>
-                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
-                        <option value="" disabled selected>Select</option>
-                        <option value="student">Student</option>
-                        <option value="professional">Professional</option>
-                        <option value="job_seeker">Job Seeker</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <!-- Division -->
-                <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Division<span class="text-brand-red">*</span></label>
-                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
-                        <option value="" disabled selected>Select</option>
-                        <option value="dhaka">Dhaka</option>
-                        <option value="chattogram">Chattogram </option>
-                        <option value="rajshahi">Rajshahi </option>
-                        <option value="khulna">Kulna</option>
-                        <option value="sylhet">Sylhet</option>
-                        <option value="barisal">Barisal</option>
-                        <option value="mymensingh">Mymensingh</option>
-                        <option value="rangpur">Rangpur</option>
-                    </select>
-                </div>
-
-                <!-- Gender -->
-                <div>
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Gender<span class="text-brand-red">*</span></label>
-                    <div class="flex items-center gap-5 mt-1.5 md:mt-3">
-                        <label class="flex items-center gap-1.5 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
-                            <input type="radio" name="gender" value="male" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
-                            Male
-                        </label>
-                        <label class="flex items-center gap-1.5 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
-                            <input type="radio" name="gender" value="female" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
-                            Female
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Educational Qualification -->
-                <div class="md:col-span-2">
-                    <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1">Educational Qualification <span class="text-gray-500 font-normal">(Education)</span> <span class="text-brand-red">*</span></label>
-                    <select required class="w-full border border-gray-300 rounded-[3px] px-3 py-2 md:py-2.5 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700">
-                        <option value="" disabled selected>Select</option>
-                        <option value="hsc">SSC/equivalent</option>
-                        <option value="hsc">HSC/equivalent</option>
-                        <option value="honors">Honors/equivalent</option>
-                        <option value="masters">Masters/equivalent</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="pt-3 md:pt-4 md:col-span-2">
-                    <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded-[3px] text-[0.95rem] md:text-[1.1rem] shadow-sm">
-                    Send
-                    </button>
-                </div>
-            </form>
-        </div>
-
-  <!-- ================= HERO SECTION ================= -->
-        <div class="px-5 pt-10 pb-6 max-w-5xl mx-auto flex justify-between items-center">
-            <div class="flex items-center">
-            <a href="#" class="block cursor-pointer">
-                <img src="assets/Skill.webp" alt="Brand Logo" class="h-10 md:h-14 w-auto object-contain transition-transform hover:opacity-90">
-            </a>
-            </div>
-            <!-- Desktop only Login placeholder (optional alignment helper) -->
-            <div class="hidden md:block"></div>
-        </div>
-
-        <div class="text-center px-4 mt-2 max-w-3xl mx-auto">
-            <p class="text-gray-500 text-xs md:text-sm font-semibold mb-1 tracking-wide">Starting from July 01, 2026</p>
-            <h2 class="text-brand-blue text-[1.7rem] md:text-[3rem] font-black leading-[1.1] tracking-tight">Product Management</h2>
-            <h2 class="text-brand-dark text-[1.7rem] md:text-[3rem] font-black leading-[1.1] tracking-tight">Career Bootcamp</h2>
-            <p class="text-gray-600 text-[0.7rem] md:text-[1rem] font-semibold mt-3 md:mt-5">Designed & Instructed by the Top Instructor</p>
-        </div>
-
-        <div class="mx-auto w-[90%] max-w-[300px] md:max-w-md mt-6 md:mt-8 border border-gray-200 rounded py-2.5 md:py-3 flex justify-center items-center space-x-2 shadow-sm bg-white">
-            <span class="text-gray-600 text-[0.8rem] md:text-[0.95rem] font-medium">Live online class with</span>
-            <img src="assets/images.png" class="w-5 h-5 md:w-6 md:h-6 object-contain" alt="Google Meet">
-            <span class="text-gray-800 text-[0.8rem] md:text-[0.95rem] font-bold">Google Meet</span>
-        </div>
-
-        <div class="flex justify-between md:justify-around items-center mx-10 md:mx-auto max-w-2xl mt-8 md:mt-12 mb-8 md:mb-12">
-            <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">3</span>
-                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Months.</span>
-            </div>
-            <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">24</span>
-                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Classes.</span>
-            </div>
-            <div class="flex items-baseline space-x-1">
-                <span class="text-[2.5rem] md:text-[4rem] font-black text-brand-dark leading-none">48</span>
-                <span class="text-[0.55rem] md:text-[0.85rem] font-bold text-gray-400 uppercase tracking-widest">Hours.</span>
-            </div>
-        </div>
-
-        <div class="relative w-full max-w-4xl mx-auto shadow-lg md:rounded-[8px] overflow-hidden">
-            <img src="assets/Gemini_Generated_Image_.png" alt="Mentors Banner" class="w-full h-auto object-cover block">
-        </div>
-
-        <div class="px-7 mt-6 md:mt-10 text-center text-[0.65rem] md:text-[0.95rem] text-gray-700 font-medium leading-[1.6] max-w-4xl mx-auto">
-            Prepare for Product Management career with our 19-class course led by five experts. Live sessions, comprehensive coverage of all aspects, and job placement support.
-        </div>
-
-        <div class="px-5 mt-6 md:mt-8 space-y-3 md:space-y-0 md:space-x-4 pb-8 max-w-2xl mx-auto md:flex justify-center">
+<!-- Applied a top-to-bottom gradient fading into white -->
+<div class="w-full pt-12 px-5 pb-12 bg-gradient-to-b from-[#e6f0fa] via-[#f0f5fb] to-white relative">
     
-    <!-- Talk With Us (Scrolls to the absolute top of the page) -->
-    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="w-full md:w-auto md:px-12 bg-blue-600 hover:bg-blue-700 transition-colors text-white font-bold py-3.5 md:py-4 rounded text-[0.9rem] md:text-[1.05rem]">
-        Talk With Us
-    </button>
-    
-    <!-- Browse Syllabus (Scrolls to the roadmap section) -->
-    <button onclick="document.getElementById('roadmap').scrollIntoView({ behavior: 'smooth' });" class="w-full md:w-auto md:px-12 bg-white hover:bg-blue-50 transition-colors border-2 border-blue-600 text-blue-600 font-bold py-3 md:py-3.5 rounded text-[0.9rem] md:text-[1.05rem]">
-        Browse Syllabus
-    </button>
-    
+    <!-- Decorative background glow (Optional: adds depth behind the form) -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-4xl h-32 bg-blue-400/10 blur-3xl rounded-full z-0"></div>
+
+    <div class="text-center mb-8 max-w-3xl mx-auto relative z-10">
+        <p class="text-brand-slateMed text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Know More</p>
+        <h2 class="text-brand-blue text-[1.65rem] md:text-[2.2rem] font-black tracking-tight leading-none">Contact Form</h2>
+    </div>
+
+    <!-- The Form: Upgraded with a stronger shadow and slight backdrop blur for a premium feel -->
+    <form class="w-full max-w-3xl mx-auto bg-white/95 backdrop-blur-sm p-6 md:p-10 rounded-sm border border-white/80 shadow-2xl space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-6 relative z-10">
+        
+        <!-- Full Name -->
+        <div>
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Full Name<span class="text-brand-red ml-1">*</span></label>
+            <input type="text" required placeholder="Your name here" class="w-full border border-gray-200 rounded-sm px-4 py-2.5 md:py-3 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white shadow-inner">
+        </div>
+
+        <!-- Email Address -->
+        <div>
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Email Address<span class="text-brand-red ml-1">*</span></label>
+            <input type="email" required placeholder="example@mail.com" class="w-full border border-gray-200 rounded-sm px-4 py-2.5 md:py-3 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white shadow-inner">
+        </div>
+
+        <!-- Phone Number -->
+        <div>
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Phone Number<span class="text-brand-red ml-1">*</span></label>
+            <input type="tel" required placeholder="01XXXXXXXXX" class="w-full border border-gray-200 rounded-sm px-4 py-2.5 md:py-3 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white shadow-inner">
+        </div>
+
+        <!-- Profession -->
+        <div>
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Profession<span class="text-brand-red ml-1">*</span></label>
+            <select required class="w-full border border-gray-200 rounded-sm px-4 py-2.5 md:py-3 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700 shadow-inner">
+                <option value="" disabled selected>Select</option>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+                <option value="job_seeker">Job Seeker</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Division -->
+        <div>
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Division<span class="text-brand-red ml-1">*</span></label>
+            <select required class="w-full border border-gray-200 rounded-sm px-4 py-2.5 md:py-3 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700 shadow-inner">
+                <option value="" disabled selected>Select</option>
+                <option value="dhaka">Dhaka</option>
+                <option value="chattogram">Chattogram </option>
+                <option value="rajshahi">Rajshahi </option>
+                <option value="khulna">Khulna</option>
+                <option value="sylhet">Sylhet</option>
+                <option value="barisal">Barisal</option>
+                <option value="mymensingh">Mymensingh</option>
+                <option value="rangpur">Rangpur</option>
+            </select>
+        </div>
+
+        <!-- Gender -->
+        <div>
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Gender<span class="text-brand-red ml-1">*</span></label>
+            <div class="flex items-center gap-6 mt-2 md:mt-3">
+                <label class="flex items-center gap-2 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
+                    <input type="radio" name="gender" value="male" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
+                    Male
+                </label>
+                <label class="flex items-center gap-2 text-[0.85rem] md:text-[0.95rem] text-gray-700 cursor-pointer">
+                    <input type="radio" name="gender" value="female" required class="w-4 h-4 text-brand-blue focus:ring-brand-blue border-gray-300">
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <!-- Educational Qualification -->
+        <div class="md:col-span-2">
+            <label class="block text-[0.8rem] md:text-[0.9rem] font-bold text-[#2D2D2D] mb-1.5">Educational Qualification <span class="text-gray-400 font-normal">(Education)</span> <span class="text-brand-red ml-1">*</span></label>
+            <select required class="w-full border border-gray-200 rounded-sm px-4 py-2.5 md:py-3 text-[0.85rem] md:text-[0.95rem] focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-colors bg-white text-gray-700 shadow-inner">
+                <option value="" disabled selected>Select</option>
+                <option value="ssc">SSC/equivalent</option>
+                <option value="hsc">HSC/equivalent</option>
+                <option value="honors">Honors/equivalent</option>
+                <option value="masters">Masters/equivalent</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-4 md:col-span-2">
+            <button type="button" class="w-full bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white font-bold py-4 rounded-sm text-[0.95rem] md:text-[1.1rem] shadow-md hover:shadow-lg">
+                Submit Application
+            </button>
+        </div>
+    </form>
 </div>
 
         <!-- ================= SECTION: Designed for You ================= -->
@@ -378,33 +323,34 @@
         </div>
 
 <!-- ================= SECTION: Teacher Overview (Executive Horizontal) ================= -->
-<div class="w-full pt-16 md:pt-20 px-5 pb-16 bg-[#f9fafb]">
-    <div class="text-center mb-8 md:mb-10">
-    <p class="text-[#111] text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Learn From The Best</p>
-    <h2 class="text-brand-blue text-[2rem] md:text-[2.5rem] font-black tracking-tight leading-none">Meet the Instructor</h2>
+<!-- Applied the top-to-bottom ice blue to white gradient -->
+<div class="w-full pt-16 md:pt-20 px-5 pb-16 bg-gradient-to-b from-[#e6f0fa] via-[#f0f5fb] to-white relative">
+    
+    <!-- Decorative background glow for depth behind the card -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-4xl h-48 bg-blue-400/10 blur-3xl rounded-full z-0 pointer-events-none"></div>
+
+    <div class="text-center mb-8 md:mb-10 relative z-10">
+        <p class="text-brand-slateMed text-[0.85rem] md:text-[1rem] font-bold tracking-widest uppercase mb-2">Learn From The Best</p>
+        <h2 class="text-brand-blue text-[2rem] md:text-[2.5rem] font-black tracking-tight leading-none">Meet the Instructor</h2>
     </div>
 
-    <!-- Added overflow-hidden to prevent image from breaking out of rounded corners on mobile -->
-    <div class="max-w-4xl mx-auto bg-white border border-gray-200 rounded-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+    <!-- Instructor Card: Upgraded with shadow-xl and a subtle white border to pop against the gradient -->
+    <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm border border-white/80 shadow-xl rounded-sm hover:shadow-2xl transition-shadow duration-300 overflow-hidden relative z-10">
         <div class="flex flex-col md:flex-row">
             
             <!-- Image Section -->
-            <!-- Explicit heights set for mobile and tablet to ensure the image scales nicely -->
             <div class="w-full md:w-2/5 h-[300px] sm:h-[400px] md:h-auto bg-gray-100 relative">
                 <img src="assets/1779609893009~2.jpg" alt="Yeasin Ahammed" class="w-full h-full object-cover object-top">
             </div>
 
             <!-- Content Section -->
-            <!-- Responsive padding applied (smaller on mobile) -->
-            <div class="w-full md:w-3/5 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
+            <div class="w-full md:w-3/5 p-6 sm:p-8 md:p-10 flex flex-col justify-center bg-white">
                 <h3 class="text-[#111] text-[1.6rem] md:text-[1.8rem] font-bold leading-tight">Yeasin Ahammed</h3>
                 <p class="text-gray-500 text-[0.95rem] md:text-[1rem] font-medium mt-1">Lead Instructor &bull; Product Management</p>
                 
-                <!-- Updated Experience Section (Mobile Optimized Bullets) -->
                 <div class="mt-6 border-l-2 border-blue-600 pl-4 md:pl-5">
-                    <p class="text-brand-blue  text-[0.9rem] md:text-[0.95rem] font-bold mb-3 md:mb-4">6+ Years of Industry Experience</p>
+                    <p class="text-brand-blue text-[0.9rem] md:text-[0.95rem] font-bold mb-3 md:mb-4">6+ Years of Industry Experience</p>
                     <ul class="text-gray-600 text-[0.85rem] md:text-[0.9rem] leading-relaxed space-y-2.5 md:space-y-2">
-                        <!-- items-start ensures the dot stays at the top if the text wraps to 2 lines on a phone -->
                         <li class="flex items-start gap-2.5">
                             <div class="w-1.5 h-1.5 bg-gray-400 rounded-full flex-shrink-0 mt-1.5"></div>
                             <span class="leading-snug">Former Digital Product Manager at Apon Bazar</span>
@@ -424,8 +370,6 @@
                     </ul>
                 </div>
 
-                <!-- Footer Row (Mobile Stacked, Desktop Row) -->
-                <!-- flex-col on mobile to stack the company and the LinkedIn button neatly -->
                 <div class="mt-8 pt-6 md:pt-8 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-5 sm:gap-4">
                     <div>
                         <p class="text-[0.7rem] md:text-[0.75rem] text-gray-400 uppercase font-bold tracking-wider mb-2">Currently At</p>
